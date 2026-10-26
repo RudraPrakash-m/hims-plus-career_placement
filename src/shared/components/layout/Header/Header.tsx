@@ -21,7 +21,7 @@ import {
     RoleSwitcher,
     type SearchItem,
 } from "./parts";
-import { MODULE, ROLE_DESCRIPTIONS, USER_ROLES, appsForRole, createSampleNotifications } from "./header.data";
+import { MODULE, USER_ROLES, appsForRole, createSampleNotifications } from "./header.data";
 
 const getToggleIcon = (docked: boolean, collapsed: boolean) => {
     if (!docked) return PanelLeft;
@@ -178,9 +178,6 @@ const Header = ({
                     <HeaderDivider />
                     <ProfileMenu
                         user={user}
-                        roles={USER_ROLES}
-                        roleDescriptions={ROLE_DESCRIPTIONS}
-                        onRoleChange={onRoleChange}
                         onAccountSettings={() => navigate("/settings/account")}
                         onChangePassword={() => navigate("/settings/account?tab=security")}
                         onThemeSettings={onThemeSettings}

@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
-import { ChevronDown, Clock, Search, Star, Trash2, X } from "lucide-react";
+import { ChevronDown, Search, Star, X } from "lucide-react";
 import { IMAGES } from "@/assets/images";
 import { useT } from "@/shared/i18n/I18nProvider";
 import { animLevel } from "@/shared/utils/interactionFx";
@@ -237,7 +237,7 @@ const Sidebar: React.FC<Readonly<SidebarProps>> = ({ collapsed, mobileOpen, onNa
     const t = useT();
     const navigate = useNavigate();
     const { pathname } = useLocation();
-    const { favourites, recents, showRecents, setShowRecents, clearHistory } = useNavMemory();
+    const { favourites } = useNavMemory();
     const [search, setSearch] = useState<string>("");
     const inputRef = useRef<HTMLInputElement>(null);
     const wantFocus = useRef(false);
@@ -254,13 +254,6 @@ const Sidebar: React.FC<Readonly<SidebarProps>> = ({ collapsed, mobileOpen, onNa
         return leaf && { label: leaf.label, path: leaf.path, icon: leaf.icon };
     };
     const favItems = favourites.map(leafItem).filter((i): i is MenuItem => !!i);
-    const recentItems = showRecents
-        ? recents
-              .filter((r) => !favourites.some((f) => f.toLowerCase() === r.to.toLowerCase()))
-              .map((r) => leafItem(r.to))
-              .filter((i): i is MenuItem => !!i)
-              .slice(0, 3)
-        : [];
 
     // After the rail's search icon expands the sidebar, move focus into the new input.
     useEffect(() => {
@@ -380,54 +373,20 @@ const Sidebar: React.FC<Readonly<SidebarProps>> = ({ collapsed, mobileOpen, onNa
                         </p>
                     )}
 
-                    {!query && !collapsed && (favItems.length > 0 || recentItems.length > 0) && (
+                    {!query && !collapsed && favItems.length > 0 && (
                         <div className="app-sidebar__quick">
-                            {favItems.length > 0 && (
-                                <div>
-                                    <p className="app-sidebar__section">
-                                        <Star size={12} /> <span className="flex-1">{t("Favourites")}</span>
-                                    </p>
-                                    <ul className="app-sidebar__list">
-                                        {favItems.map((i) => (
-                                            <li key={i.path}>
-                                                <Leaf item={i} depth={0} collapsed={false} onNavigate={onNavigate} />
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            )}
-                            {recentItems.length > 0 && (
-                                <div>
-                                    <p className="app-sidebar__section">
-                                        <Clock size={12} /> <span className="flex-1">{t("Recently visited")}</span>
-                                        <button
-                                            type="button"
-                                            aria-label={t("Clear recently visited")}
-                                            title={t("Clear recently visited")}
-                                            onClick={clearHistory}
-                                            className="app-sidebar__section-btn"
-                                        >
-                                            <Trash2 size={12} />
-                                        </button>
-                                        <button
-                                            type="button"
-                                            aria-label={t("Hide recently visited")}
-                                            title={t("Hide recently visited")}
-                                            onClick={() => setShowRecents(false)}
-                                            className="app-sidebar__section-btn"
-                                        >
-                                            <X size={12} />
-                                        </button>
-                                    </p>
-                                    <ul className="app-sidebar__list">
-                                        {recentItems.map((i) => (
-                                            <li key={i.path}>
-                                                <Leaf item={i} depth={0} collapsed={false} onNavigate={onNavigate} />
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            )}
+                            <div>
+                                <p className="app-sidebar__section">
+                                    <Star size={12} /> <span className="flex-1">{t("Favourites")}</span>
+                                </p>
+                                <ul className="app-sidebar__list">
+                                    {favItems.map((i) => (
+                                        <li key={i.path}>
+                                            <Leaf item={i} depth={0} collapsed={false} onNavigate={onNavigate} />
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
                             <hr className="app-sidebar__rule" />
                         </div>
                     )}
