@@ -20,11 +20,58 @@
     }
   },
   {
+    "name": "certifications",
+    "label": "Certifications",
+    "type": "text",
+    "gridColumn": 4,
+    "validation": {
+      "required": false
+    }
+  },
+  {
+    "name": "portfolioLinks",
+    "label": "Portfolio / Links",
+    "type": "text",
+    "gridColumn": 6,
+    "validation": {
+      "required": false
+    }
+  },
+  {
+    "name": "profileCompletion",
+    "label": "Profile Completion",
+    "type": "select",
+    "placeholder": "-- Select --",
+    "gridColumn": 6,
+    "options": [
+      {
+        "label": "Completed (100%)",
+        "value": "Completed"
+      },
+      {
+        "label": "In Progress (75%)",
+        "value": "In Progress"
+      },
+      {
+        "label": "Partially Complete (50%)",
+        "value": "Partially Complete"
+      },
+      {
+        "label": "Needs Attention (25%)",
+        "value": "Needs Attention"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Profile Completion status is required"
+    }
+  },
+  {
     "name": "skills",
     "label": "Skills",
     "type": "multiselect",
     "placeholder": "-- Select --",
-    "gridColumn": 3,
+    "gridColumn": 12,
     "options": [
       {
         "label": "Python & Data Science",
@@ -81,20 +128,11 @@
     }
   },
   {
-    "name": "certifications",
-    "label": "Certifications",
-    "type": "text",
-    "gridColumn": 4,
-    "validation": {
-      "required": false
-    }
-  },
-  {
     "name": "resume",
     "label": "Resume",
     "type": "file",
     "accept": ".pdf,.doc,.docx",
-    "gridColumn": 3,
+    "gridColumn": 6,
     "validation": {
       "required": true,
       "message": "Resume is required"
@@ -105,47 +143,9 @@
     "label": "Projects / Experience",
     "type": "textarea",
     "rows": 2,
-    "gridColumn": 4,
+    "gridColumn": 6,
     "validation": {
       "required": false
-    }
-  },
-  {
-    "name": "portfolioLinks",
-    "label": "Portfolio / Links",
-    "type": "text",
-    "gridColumn": 3,
-    "validation": {
-      "required": false
-    }
-  },
-  {
-    "name": "profileCompletion",
-    "label": "Profile Completion",
-    "type": "select",
-    "placeholder": "-- Select --",
-    "gridColumn": 4,
-    "options": [
-      {
-        "label": "Completed (100%)",
-        "value": "Completed"
-      },
-      {
-        "label": "In Progress (75%)",
-        "value": "In Progress"
-      },
-      {
-        "label": "Partially Complete (50%)",
-        "value": "Partially Complete"
-      },
-      {
-        "label": "Needs Attention (25%)",
-        "value": "Needs Attention"
-      }
-    ],
-    "validation": {
-      "required": true,
-      "message": "Profile Completion status is required"
     }
   }
 ]

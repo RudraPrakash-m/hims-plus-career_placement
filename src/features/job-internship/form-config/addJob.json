@@ -129,7 +129,7 @@
     "name": "applicationStartDate",
     "label": "Application Start Date",
     "type": "date",
-    "gridColumn": 3,
+    "gridColumn": 4,
     "validation": {
       "required": true,
       "message": "Application Start Date is required"
@@ -139,10 +139,47 @@
     "name": "applicationEndDate",
     "label": "Application End Date",
     "type": "date",
-    "gridColumn": 3,
+    "gridColumn": 4,
     "validation": {
       "required": true,
       "message": "Application End Date is required"
+    }
+  },
+  {
+    "name": "status",
+    "label": "Status",
+    "type": "select",
+    "placeholder": "-- Select --",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "Draft",
+        "value": "Draft"
+      },
+      {
+        "label": "Submitted",
+        "value": "Submitted"
+      },
+      {
+        "label": "Approved",
+        "value": "Approved"
+      },
+      {
+        "label": "Published",
+        "value": "Published"
+      },
+      {
+        "label": "Closed",
+        "value": "Closed"
+      },
+      {
+        "label": "Cancelled",
+        "value": "Cancelled"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Status is required"
     }
   },
   {
@@ -150,7 +187,7 @@
     "label": "Required Documents",
     "type": "multiselect",
     "placeholder": "-- Select --",
-    "gridColumn": 3,
+    "gridColumn": 12,
     "options": [
       {
         "label": "Resume / Curriculum Vitae (CV)",
@@ -183,43 +220,6 @@
     ],
     "validation": {
       "required": false
-    }
-  },
-  {
-    "name": "status",
-    "label": "Status",
-    "type": "select",
-    "placeholder": "-- Select --",
-    "gridColumn": 3,
-    "options": [
-      {
-        "label": "Draft",
-        "value": "Draft"
-      },
-      {
-        "label": "Submitted",
-        "value": "Submitted"
-      },
-      {
-        "label": "Approved",
-        "value": "Approved"
-      },
-      {
-        "label": "Published",
-        "value": "Published"
-      },
-      {
-        "label": "Closed",
-        "value": "Closed"
-      },
-      {
-        "label": "Cancelled",
-        "value": "Cancelled"
-      }
-    ],
-    "validation": {
-      "required": true,
-      "message": "Status is required"
     }
   },
   {

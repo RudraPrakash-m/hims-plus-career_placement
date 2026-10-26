@@ -99,7 +99,7 @@
     "name": "startDate",
     "label": "Start Date",
     "type": "date",
-    "gridColumn": 3,
+    "gridColumn": 4,
     "validation": {
       "required": true,
       "message": "Start Date is required"
@@ -109,7 +109,7 @@
     "name": "endDate",
     "label": "End Date",
     "type": "date",
-    "gridColumn": 3,
+    "gridColumn": 4,
     "validation": {
       "required": true,
       "message": "End Date is required"
@@ -119,7 +119,7 @@
     "name": "scheduleDuration",
     "label": "Schedule / Duration",
     "type": "text",
-    "gridColumn": 3,
+    "gridColumn": 4,
     "validation": {
       "required": true,
       "message": "Schedule / Duration is required"
@@ -130,7 +130,7 @@
     "label": "Registration",
     "type": "select",
     "placeholder": "-- Select --",
-    "gridColumn": 3,
+    "gridColumn": 4,
     "options": [
       {
         "label": "Open (Registration Enabled)",
@@ -152,47 +152,6 @@
     "validation": {
       "required": true,
       "message": "Registration is required"
-    }
-  },
-  {
-    "name": "skillsCovered",
-    "label": "Skills Covered",
-    "type": "multiselect",
-    "placeholder": "-- Select --",
-    "gridColumn": 4,
-    "options": [
-      {
-        "label": "Full Stack Web Development (React, TypeScript & Node.js)",
-        "value": "Full Stack Web Dev"
-      },
-      {
-        "label": "Cloud Computing & DevOps (AWS / Azure / Docker)",
-        "value": "Cloud & DevOps"
-      },
-      {
-        "label": "Data Science, Analytics & Python",
-        "value": "Data Science & Python"
-      },
-      {
-        "label": "Machine Learning, AI & Foundation Models",
-        "value": "Machine Learning & AI"
-      },
-      {
-        "label": "Cybersecurity & Network Defense",
-        "value": "Cybersecurity"
-      },
-      {
-        "label": "Data Structures, Algorithms & Competitive Coding",
-        "value": "DSA & Algorithms"
-      },
-      {
-        "label": "Workplace Communication & Professional Soft Skills",
-        "value": "Soft Skills & Communication"
-      }
-    ],
-    "validation": {
-      "required": true,
-      "message": "Skills Covered is required"
     }
   },
   {
@@ -262,11 +221,52 @@
     }
   },
   {
+    "name": "skillsCovered",
+    "label": "Skills Covered",
+    "type": "multiselect",
+    "placeholder": "-- Select --",
+    "gridColumn": 12,
+    "options": [
+      {
+        "label": "Full Stack Web Development (React, TypeScript & Node.js)",
+        "value": "Full Stack Web Dev"
+      },
+      {
+        "label": "Cloud Computing & DevOps (AWS / Azure / Docker)",
+        "value": "Cloud & DevOps"
+      },
+      {
+        "label": "Data Science, Analytics & Python",
+        "value": "Data Science & Python"
+      },
+      {
+        "label": "Machine Learning, AI & Foundation Models",
+        "value": "Machine Learning & AI"
+      },
+      {
+        "label": "Cybersecurity & Network Defense",
+        "value": "Cybersecurity"
+      },
+      {
+        "label": "Data Structures, Algorithms & Competitive Coding",
+        "value": "DSA & Algorithms"
+      },
+      {
+        "label": "Workplace Communication & Professional Soft Skills",
+        "value": "Soft Skills & Communication"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Skills Covered is required"
+    }
+  },
+  {
     "name": "certificate",
     "label": "Certificate",
     "type": "file",
     "accept": ".pdf,.doc,.docx,.jpg,.jpeg,.png",
-    "gridColumn": 4,
+    "gridColumn": 6,
     "validation": {
       "required": false
     }
@@ -276,7 +276,7 @@
     "label": "Eligibility",
     "type": "textarea",
     "rows": 2,
-    "gridColumn": 8,
+    "gridColumn": 6,
     "validation": {
       "required": true,
       "message": "Eligibility is required"

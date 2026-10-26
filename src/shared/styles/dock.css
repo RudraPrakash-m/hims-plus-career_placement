@@ -8,7 +8,7 @@
 /* Room for the dock. Released when the dock is auto-hidden (AppDock sets data-dock="hidden" on <html>) or below lg. */
 @media (min-width: 1024px) {
     html:not([data-dock='hidden']) .dock-reserve {
-        padding-right: calc(var(--layout-page-p) + 4.25rem);
+        padding-right: calc(var(--layout-page-p) + 3.5rem);
     }
 }
 
@@ -167,6 +167,17 @@ html[data-motion='reduced'] :is(.is-mag-1, .is-mag-2, .is-mag-3) {
     opacity: 1;
 }
 
+@keyframes fx-dock-panel-scale-in {
+    from {
+        opacity: 0;
+        transform: translateY(-50%) scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(-50%) scale(1);
+    }
+}
+
 /* Launcher panel, to the left of the dock. */
 .app-dock__panel {
     position: absolute;
@@ -183,8 +194,12 @@ html[data-motion='reduced'] :is(.is-mag-1, .is-mag-2, .is-mag-3) {
     background-color: var(--surface);
     color: var(--foreground);
     box-shadow: 0 20px 40px -8px rgb(var(--shadow-color) / 0.16), 0 8px 16px -8px rgb(var(--shadow-color) / 0.08);
-    animation: fx-scale-in var(--duration-normal) var(--ease-emphasized) both;
+    animation: fx-dock-panel-scale-in var(--duration-normal) var(--ease-emphasized) both;
     transform-origin: right center;
+}
+
+html[data-anim='off'] .app-dock__panel {
+    animation: none;
 }
 
 .app-launcher {

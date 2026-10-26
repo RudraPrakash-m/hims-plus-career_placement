@@ -3,7 +3,7 @@
     "name": "reportTitle",
     "label": "Report Title / Configuration Name",
     "type": "text",
-    "gridColumn": 3,
+    "gridColumn": 4,
     "validation": {
       "required": true,
       "message": "Report Title is required"
@@ -14,7 +14,7 @@
     "label": "Academic Session",
     "type": "select",
     "placeholder": "-- Select --",
-    "gridColumn": 3,
+    "gridColumn": 4,
     "options": [
       {
         "label": "2024 - 2025",
@@ -84,7 +84,7 @@
     "label": "Employer / Industry",
     "type": "select",
     "placeholder": "-- Select --",
-    "gridColumn": 3,
+    "gridColumn": 4,
     "options": [
       {
         "label": "All Employers & Industry Sectors",
@@ -149,7 +149,7 @@
     "label": "Opportunity Type",
     "type": "select",
     "placeholder": "-- Select --",
-    "gridColumn": 3,
+    "gridColumn": 4,
     "options": [
       {
         "label": "All Opportunity Types",
@@ -342,19 +342,19 @@
     "name": "startDate",
     "label": "Reporting Period Start",
     "type": "date",
-    "gridColumn": 2
+    "gridColumn": 4
   },
   {
     "name": "endDate",
     "label": "Reporting Period End",
     "type": "date",
-    "gridColumn": 2
+    "gridColumn": 4
   },
   {
     "name": "remarks",
     "label": "Report Scope, Notes & Objectives",
     "type": "textarea",
     "rows": 3,
-    "gridColumn": 4
+    "gridColumn": 12
   }
 ]
