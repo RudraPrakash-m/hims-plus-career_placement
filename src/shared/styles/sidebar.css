@@ -296,13 +296,32 @@
     animation: fx-sweep 0.8s var(--fx-out) both;
 }
 
-/* Selected sub item: a saffron dot at the right end instead of the bar. */
-.tree-node .nav-active {
-    background-image: radial-gradient(circle at calc(100% - 16px) 50%, rgb(245 158 11) 0 3.5px, rgb(245 158 11 / 0.25) 4px 6.5px, transparent 7px);
+/* Selected sub item: a saffron dot at the right end instead of the left bar. */
+.tree-node .nav-active::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: auto;
+    bottom: auto;
+    right: 13px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: rgb(245 158 11);
+    box-shadow: 0 0 0 3px rgb(245 158 11 / 0.25);
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity var(--duration-fast);
+    z-index: 1;
 }
 
-.tree-node .nav-active::before {
-    display: none;
+/* On hover or when starred, the favourite icon overrides the active dot without movement */
+.tree-node .nav-fav:hover .nav-active::before,
+.tree-node .nav-fav.is-starred .nav-active::before,
+.tree-node .nav-fav:has(.nav-fav__star.is-on) .nav-active::before {
+    opacity: 0;
 }
 
 /* Icon of the selected item / its section: orange gradient tile. */

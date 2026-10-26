@@ -99,7 +99,7 @@ const Leaf: React.FC<Readonly<LeafProps>> = ({ item, depth, collapsed, onNavigat
 
     const fav = favourites.includes(item.path);
     return (
-        <div className="nav-fav">
+        <div className={`nav-fav ${fav ? "is-starred" : ""}`}>
             {link()}
             <button
                 type="button"
