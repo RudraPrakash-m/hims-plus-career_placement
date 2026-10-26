@@ -1,7 +1,7 @@
 import { useMemo, useState, useCallback } from "react";
-import { Button, Card, DataTable, Modal, PageHeader, showToast, useAppNavigate, type TableColumnDef } from '@mfe/components';
+import { Button, Card, DataTable, Modal, PageHeader, Select, showToast, useAppNavigate, type TableColumnDef } from '@mfe/components';
 import { exportToExcel, exportToPDF } from '@mfe/utils';
-import { Plus, Eye, Pencil, Trash2, CheckCircle2, AlertTriangle, XCircle, Clock, CheckCheck, ShieldAlert } from "lucide-react";
+import { Plus, Eye, Pencil, Trash2, CheckCircle2, AlertTriangle, XCircle, Clock, CheckCheck, ShieldAlert, RotateCw } from "lucide-react";
 
 export type SourceModuleType =
   | "Student Lifecycle"
@@ -207,6 +207,28 @@ const getSourceModuleBadgeClass = (module: SourceModuleType) => {
   }
 };
 
+const SOURCE_MODULE_OPTIONS = [
+  { value: "All", label: "All Modules" },
+  { value: "Student Lifecycle", label: "Student Lifecycle" },
+  { value: "Internship Management", label: "Internship Management" },
+  { value: "Alumni", label: "Alumni" },
+];
+
+const SYNC_STATUS_OPTIONS = [
+  { value: "All", label: "All Sync Statuses" },
+  { value: "Successful", label: "Successful" },
+  { value: "Pending", label: "Pending" },
+  { value: "Failed", label: "Failed" },
+];
+
+const RECONCILIATION_OPTIONS = [
+  { value: "All", label: "All Reconciliation Statuses" },
+  { value: "Reconciled", label: "Reconciled" },
+  { value: "Auto-Reconciled", label: "Auto-Reconciled" },
+  { value: "Requires Manual Review", label: "Requires Manual Review" },
+  { value: "Pending", label: "Pending" },
+];
+
 const IntegrationHimsModulesView = () => {
   const navigate = useAppNavigate();
 
@@ -335,13 +357,15 @@ const IntegrationHimsModulesView = () => {
     { id: "lastSyncTimestamp", header: "Last Synced", accessorFn: (row) => row.lastSyncTimestamp },
   ];
 
-  const handleExportExcel = async () => {
-    await exportToExcel(EXPORT_COLUMNS, filteredData, "hims_integration_audit_log");
+  const handleExportExcel = async (rows?: HimsIntegrationRecord[]) => {
+    const recordsToExport = rows && rows.length > 0 ? rows : filteredData;
+    await exportToExcel(EXPORT_COLUMNS, recordsToExport, "hims_integration_audit_log");
     showToast.success("HIMS integration log exported to Excel (.xlsx).");
   };
 
-  const handleExportPDF = async () => {
-    await exportToPDF(EXPORT_COLUMNS, filteredData, "hims_integration_audit_log", "Integration with HIMS Modules - Audit Report");
+  const handleExportPDF = async (rows?: HimsIntegrationRecord[]) => {
+    const recordsToExport = rows && rows.length > 0 ? rows : filteredData;
+    await exportToPDF(EXPORT_COLUMNS, recordsToExport, "hims_integration_audit_log", "Integration with HIMS Modules - Audit Report");
     showToast.success("HIMS integration log exported as PDF.");
   };
 
@@ -429,14 +453,84 @@ const IntegrationHimsModulesView = () => {
           { label: "HIMS Integration" },
         ]}
         actions={
-          <Button
-            icon={<Plus size={16} />}
-            onClick={() => navigate("/integration-hims-modules")}
-          >
-            Add Mapping
-          </Button>
+          <div className="flex items-center gap-2">
+            <Button
+              variant="outline"
+              icon={<RotateCw size={16} />}
+              onClick={handleTriggerBatchSync}
+            >
+              Batch Sync
+            </Button>
+            <Button
+              icon={<Plus size={16} />}
+              onClick={() => navigate("/integration-hims-modules")}
+            >
+              Add Mapping
+            </Button>
+          </div>
         }
       />
+
+      {/* Sync & Integration KPI statistics */}
+      <div className="grid grid-cols-2 gap-4 md:grid-cols-5">
+        <div className="rounded-lg border bg-card p-4">
+          <p className="text-xs font-medium text-muted">Total Mappings</p>
+          <p className="mt-1 text-2xl font-bold text-foreground">{stats.total}</p>
+        </div>
+        <div className="rounded-lg border bg-card p-4">
+          <p className="text-xs font-medium text-muted">Successful Sync</p>
+          <p className="mt-1 text-2xl font-bold text-emerald-600">{stats.successful}</p>
+        </div>
+        <div className="rounded-lg border bg-card p-4">
+          <p className="text-xs font-medium text-muted">Pending Sync</p>
+          <p className="mt-1 text-2xl font-bold text-amber-600">{stats.pending}</p>
+        </div>
+        <div className="rounded-lg border bg-card p-4">
+          <p className="text-xs font-medium text-muted">Sync Failures</p>
+          <p className="mt-1 text-2xl font-bold text-rose-600">{stats.failed}</p>
+        </div>
+        <div className="rounded-lg border bg-card p-4">
+          <p className="text-xs font-medium text-muted">Requires Review</p>
+          <p className="mt-1 text-2xl font-bold text-indigo-600">{stats.needsReview}</p>
+        </div>
+      </div>
+
+      {/* Filter Toolbar */}
+      <Card title="Filter & Query Mappings">
+        <div className="flex flex-wrap items-end gap-3">
+          <Select
+            label="Source Module"
+            options={SOURCE_MODULE_OPTIONS}
+            value={sourceModuleFilter}
+            onChange={(val: string | number) => setSourceModuleFilter(String(val))}
+            wrapperClassName="min-w-44 flex-1 max-w-xs"
+          />
+          <Select
+            label="Sync Status"
+            options={SYNC_STATUS_OPTIONS}
+            value={syncStatusFilter}
+            onChange={(val: string | number) => setSyncStatusFilter(String(val))}
+            wrapperClassName="min-w-44 flex-1 max-w-xs"
+          />
+          <Select
+            label="Reconciliation Status"
+            options={RECONCILIATION_OPTIONS}
+            value={reconciliationFilter}
+            onChange={(val: string | number) => setReconciliationFilter(String(val))}
+            wrapperClassName="min-w-44 flex-1 max-w-xs"
+          />
+          <div className="flex gap-2">
+            <Button
+              type="button"
+              variant="outline"
+              size="sm"
+              onClick={resetFilters}
+            >
+              Reset Filters
+            </Button>
+          </div>
+        </div>
+      </Card>
 
       {/* DATA TABLE */}
       <Card flush>
@@ -448,6 +542,8 @@ const IntegrationHimsModulesView = () => {
         rowLabel={(row) => `${row.studentIdentifier} - ${row.studentName}`}
         searchPlaceholder="Search by HIMS ID, student name, roll no, internship, alumni record..."
         exportFileName="hims_integration_registry"
+        onExportExcel={handleExportExcel}
+        onExportPDF={handleExportPDF}
         selectable={false}
         selectedKeys={selectedKeys}
         onSelectionChange={setSelectedKeys}
