@@ -1,0 +1,246 @@
+[
+  {
+    "name": "student",
+    "label": "Student",
+    "type": "select",
+    "placeholder": "Select student",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "Aarav Sharma (STU-2022-001) - CSE",
+        "value": "Aarav Sharma (STU-2022-001)"
+      },
+      {
+        "label": "Priya Patel (STU-2022-045) - IT",
+        "value": "Priya Patel (STU-2022-045)"
+      },
+      {
+        "label": "Rahul Verma (STU-2023-018) - ECE",
+        "value": "Rahul Verma (STU-2023-018)"
+      },
+      {
+        "label": "Sneha Rao (STU-2023-089) - Mechanical",
+        "value": "Sneha Rao (STU-2023-089)"
+      },
+      {
+        "label": "Kavita Reddy (STU-2022-112) - Civil",
+        "value": "Kavita Reddy (STU-2022-112)"
+      },
+      {
+        "label": "Aditya Nair (STU-2022-077) - MCA",
+        "value": "Aditya Nair (STU-2022-077)"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Student selection is required"
+    }
+  },
+  {
+    "name": "employer",
+    "label": "Employer",
+    "type": "select",
+    "placeholder": "Select employer",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "Tata Consultancy Services (TCS)",
+        "value": "Tata Consultancy Services"
+      },
+      {
+        "label": "Infosys Technologies Ltd.",
+        "value": "Infosys Technologies"
+      },
+      {
+        "label": "Google India Pvt. Ltd.",
+        "value": "Google India"
+      },
+      {
+        "label": "Amazon Web Services (AWS)",
+        "value": "Amazon Web Services"
+      },
+      {
+        "label": "Microsoft India",
+        "value": "Microsoft India"
+      },
+      {
+        "label": "Wipro Technologies",
+        "value": "Wipro Technologies"
+      },
+      {
+        "label": "Deloitte Consulting",
+        "value": "Deloitte Consulting"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Employer selection is required"
+    }
+  },
+  {
+    "name": "opportunityDrive",
+    "label": "Opportunity / Drive",
+    "type": "select",
+    "placeholder": "Select linked opportunity or drive",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "TCS National Campus Drive 2024",
+        "value": "TCS National Campus Drive 2024"
+      },
+      {
+        "label": "Infosys Power Programmer Drive 2024",
+        "value": "Infosys Power Programmer Drive 2024"
+      },
+      {
+        "label": "Google Off-Campus Full-time Recruitment 2024",
+        "value": "Google Off-Campus Full-time Recruitment 2024"
+      },
+      {
+        "label": "AWS Cloud & DevOps Summer Internship 2024",
+        "value": "AWS Cloud & DevOps Summer Internship 2024"
+      },
+      {
+        "label": "Wipro Elite National Talent Hunt",
+        "value": "Wipro Elite National Talent Hunt"
+      },
+      {
+        "label": "Deloitte US-India Analyst Drive",
+        "value": "Deloitte US-India Analyst Drive"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Opportunity / Drive is required"
+    }
+  },
+  {
+    "name": "outcomeStatus",
+    "label": "Outcome Status",
+    "type": "select",
+    "placeholder": "Select outcome status",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "Selected",
+        "value": "Selected"
+      },
+      {
+        "label": "Offer Issued",
+        "value": "Offer Issued"
+      },
+      {
+        "label": "Offer Accepted",
+        "value": "Offer Accepted"
+      },
+      {
+        "label": "Offer Declined",
+        "value": "Offer Declined"
+      },
+      {
+        "label": "Joined",
+        "value": "Joined"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Outcome Status is required"
+    }
+  },
+  {
+    "name": "offerJoiningDate",
+    "label": "Offer / Joining Date",
+    "type": "date",
+    "placeholder": "Select offer or joining date",
+    "gridColumn": 4,
+    "validation": {
+      "required": true,
+      "message": "Offer / Joining Date is required"
+    }
+  },
+  {
+    "name": "salaryPackage",
+    "label": "Salary / Package",
+    "type": "text",
+    "placeholder": "e.g. ₹ 9.5 LPA or ₹ 45,000 / month",
+    "gridColumn": 4,
+    "validation": {
+      "required": true,
+      "message": "Salary / Package information is required"
+    }
+  },
+  {
+    "name": "employmentType",
+    "label": "Employment Type",
+    "type": "select",
+    "placeholder": "Select employment type",
+    "gridColumn": 6,
+    "options": [
+      {
+        "label": "Full-Time Job",
+        "value": "Full-Time Job"
+      },
+      {
+        "label": "Internship",
+        "value": "Internship"
+      },
+      {
+        "label": "Apprenticeship",
+        "value": "Apprenticeship"
+      },
+      {
+        "label": "Part-Time",
+        "value": "Part-Time"
+      },
+      {
+        "label": "Contractual",
+        "value": "Contractual"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Employment Type is required"
+    }
+  },
+  {
+    "name": "verificationStatus",
+    "label": "Verification Status",
+    "type": "select",
+    "placeholder": "Select verification status",
+    "gridColumn": 6,
+    "options": [
+      {
+        "label": "Verified",
+        "value": "Verified"
+      },
+      {
+        "label": "Pending Verification",
+        "value": "Pending Verification"
+      },
+      {
+        "label": "Under Review",
+        "value": "Under Review"
+      },
+      {
+        "label": "Rejected",
+        "value": "Rejected"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Verification Status is required"
+    }
+  },
+  {
+    "name": "employerFeedback",
+    "label": "Employer Feedback",
+    "type": "textarea",
+    "rows": 3,
+    "placeholder": "Record feedback on candidate readiness, technical competence, interview performance, and curriculum recommendations...",
+    "gridColumn": 12,
+    "validation": {
+      "required": true,
+      "message": "Employer feedback is required"
+    }
+  }
+]

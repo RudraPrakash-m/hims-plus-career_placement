@@ -1,0 +1,255 @@
+[
+  {
+    "name": "opportunityType",
+    "label": "Opportunity Type",
+    "type": "select",
+    "placeholder": "Select opportunity type",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "Job (Full-Time)",
+        "value": "Job (Full-Time)"
+      },
+      {
+        "label": "Job (Part-Time)",
+        "value": "Job (Part-Time)"
+      },
+      {
+        "label": "Internship",
+        "value": "Internship"
+      },
+      {
+        "label": "Apprenticeship",
+        "value": "Apprenticeship"
+      },
+      {
+        "label": "Campus Placement Drive",
+        "value": "Campus Placement Drive"
+      },
+      {
+        "label": "Fellowship / Training Programme",
+        "value": "Fellowship"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Opportunity Type is required"
+    }
+  },
+  {
+    "name": "employer",
+    "label": "Employer",
+    "type": "select",
+    "placeholder": "Select registered employer",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "ABC Technologies Pvt. Ltd.",
+        "value": "ABC Technologies Pvt. Ltd."
+      },
+      {
+        "label": "XYZ Industries",
+        "value": "XYZ Industries"
+      },
+      {
+        "label": "Digital Solutions",
+        "value": "Digital Solutions"
+      },
+      {
+        "label": "Eastern Enterprises",
+        "value": "Eastern Enterprises"
+      },
+      {
+        "label": "Tata Consultancy Services (TCS)",
+        "value": "Tata Consultancy Services"
+      },
+      {
+        "label": "Infosys Limited",
+        "value": "Infosys Limited"
+      },
+      {
+        "label": "Wipro Technologies",
+        "value": "Wipro Technologies"
+      },
+      {
+        "label": "Tech Mahindra",
+        "value": "Tech Mahindra"
+      },
+      {
+        "label": "Cognizant Technology Solutions",
+        "value": "Cognizant Technology Solutions"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Employer is required"
+    }
+  },
+  {
+    "name": "jobTitle",
+    "label": "Job Title / Role",
+    "type": "text",
+    "placeholder": "Enter job title or role (e.g., Software Development Engineer)",
+    "gridColumn": 4,
+    "validation": {
+      "required": true,
+      "message": "Job Title / Role is required"
+    }
+  },
+  {
+    "name": "locationWorkMode",
+    "label": "Location / Work Mode",
+    "type": "text",
+    "placeholder": "Enter location and work mode (e.g., Bhubaneswar, Odisha - Hybrid)",
+    "gridColumn": 4,
+    "validation": {
+      "required": true,
+      "message": "Location / Work Mode is required"
+    }
+  },
+  {
+    "name": "salaryStipend",
+    "label": "Salary / Stipend",
+    "type": "text",
+    "placeholder": "Enter salary or stipend (e.g., 6 - 8 LPA or ₹25,000 / month)",
+    "gridColumn": 4,
+    "validation": {
+      "required": false
+    }
+  },
+  {
+    "name": "vacancies",
+    "label": "Vacancies",
+    "type": "number",
+    "placeholder": "Enter number of openings (e.g., 5)",
+    "min": 1,
+    "gridColumn": 4,
+    "validation": {
+      "required": true,
+      "message": "Number of vacancies is required"
+    }
+  },
+  {
+    "name": "applicationStartDate",
+    "label": "Application Start Date",
+    "type": "date",
+    "placeholder": "Select start date",
+    "gridColumn": 3,
+    "validation": {
+      "required": true,
+      "message": "Application Start Date is required"
+    }
+  },
+  {
+    "name": "applicationEndDate",
+    "label": "Application End Date",
+    "type": "date",
+    "placeholder": "Select end date",
+    "gridColumn": 3,
+    "validation": {
+      "required": true,
+      "message": "Application End Date is required"
+    }
+  },
+  {
+    "name": "requiredDocuments",
+    "label": "Required Documents",
+    "type": "multiselect",
+    "placeholder": "Select required documents",
+    "gridColumn": 3,
+    "options": [
+      {
+        "label": "Resume / Curriculum Vitae (CV)",
+        "value": "Resume / CV"
+      },
+      {
+        "label": "Academic Transcripts & Marksheets",
+        "value": "Transcripts"
+      },
+      {
+        "label": "Cover Letter",
+        "value": "Cover Letter"
+      },
+      {
+        "label": "Government ID / Aadhaar Card",
+        "value": "Govt ID"
+      },
+      {
+        "label": "Recommendation / Bonafide Letter",
+        "value": "Recommendation Letter"
+      },
+      {
+        "label": "Portfolio / GitHub Repository",
+        "value": "Portfolio"
+      },
+      {
+        "label": "Experience Certificate",
+        "value": "Experience Certificate"
+      }
+    ],
+    "validation": {
+      "required": false
+    }
+  },
+  {
+    "name": "status",
+    "label": "Status",
+    "type": "select",
+    "placeholder": "Select status",
+    "gridColumn": 3,
+    "options": [
+      {
+        "label": "Draft",
+        "value": "Draft"
+      },
+      {
+        "label": "Submitted",
+        "value": "Submitted"
+      },
+      {
+        "label": "Approved",
+        "value": "Approved"
+      },
+      {
+        "label": "Published",
+        "value": "Published"
+      },
+      {
+        "label": "Closed",
+        "value": "Closed"
+      },
+      {
+        "label": "Cancelled",
+        "value": "Cancelled"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Status is required"
+    }
+  },
+  {
+    "name": "jobDescription",
+    "label": "Job Description",
+    "type": "textarea",
+    "rows": 2,
+    "placeholder": "Enter role responsibilities, job overview, and key deliverables",
+    "gridColumn": 6,
+    "validation": {
+      "required": true,
+      "message": "Job Description is required"
+    }
+  },
+  {
+    "name": "eligibilityCriteria",
+    "label": "Eligibility Criteria",
+    "type": "textarea",
+    "rows": 2,
+    "placeholder": "Specify programme, academic score (CGPA/% min), skills, and experience criteria",
+    "gridColumn": 6,
+    "validation": {
+      "required": true,
+      "message": "Eligibility Criteria is required"
+    }
+  }
+]

@@ -1,0 +1,66 @@
+{
+  "appendFields": [
+    {
+      "name": "sku",
+      "label": "SKU",
+      "type": "text",
+      "placeholder": "Enter SKU",
+      "validation": {
+        "required": true,
+        "message": "SKU is required"
+      }
+    },
+    {
+      "name": "category",
+      "label": "Category",
+      "type": "select",
+      "placeholder": "Select category",
+      "options": [
+        {
+          "label": "Electronics",
+          "value": "Electronics"
+        },
+        {
+          "label": "Clothing",
+          "value": "Clothing"
+        },
+        {
+          "label": "Home & Garden",
+          "value": "Home & Garden"
+        },
+        {
+          "label": "Sports",
+          "value": "Sports"
+        },
+        {
+          "label": "Books",
+          "value": "Books"
+        }
+      ],
+      "validation": {
+        "required": true,
+        "message": "Category is required"
+      }
+    },
+    {
+      "name": "purchaseDate",
+      "label": "Purchase Date",
+      "type": "date",
+      "placeholder": "Select date",
+      "validation": {
+        "required": true,
+        "message": "Purchase Date is required"
+      }
+    },
+    {
+      "name": "amount",
+      "label": "Amount",
+      "type": "number",
+      "placeholder": "Enter amount",
+      "validation": {
+        "required": true,
+        "message": "Amount is required"
+      }
+    }
+  ]
+}

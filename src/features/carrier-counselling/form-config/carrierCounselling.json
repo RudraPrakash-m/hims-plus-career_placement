@@ -1,0 +1,236 @@
+[
+  {
+    "name": "sessionType",
+    "label": "Session Type",
+    "type": "select",
+    "placeholder": "Select session type",
+    "gridColumn": 3,
+    "options": [
+      {
+        "label": "Counselling",
+        "value": "Counselling"
+      },
+      {
+        "label": "Mentoring",
+        "value": "Mentoring"
+      },
+      {
+        "label": "Career Guidance",
+        "value": "Career Guidance"
+      },
+      {
+        "label": "Follow-up",
+        "value": "Follow-up"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Session Type is required"
+    }
+  },
+  {
+    "name": "student",
+    "label": "Student",
+    "type": "select",
+    "placeholder": "Select student",
+    "gridColumn": 3,
+    "options": [
+      {
+        "label": "Aarav Sharma (STU-2022-001) - B.Tech CSE",
+        "value": "Aarav Sharma"
+      },
+      {
+        "label": "Priya Patel (STU-2022-045) - B.Tech IT",
+        "value": "Priya Patel"
+      },
+      {
+        "label": "Rahul Verma (STU-2023-018) - MCA",
+        "value": "Rahul Verma"
+      },
+      {
+        "label": "Sneha Rao (STU-2023-089) - B.Tech ECE",
+        "value": "Sneha Rao"
+      },
+      {
+        "label": "Vikram Das (STU-2022-104) - B.Tech ME",
+        "value": "Vikram Das"
+      },
+      {
+        "label": "Ananya Mishra (STU-2023-052) - B.Sc CS",
+        "value": "Ananya Mishra"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Student is required"
+    }
+  },
+  {
+    "name": "counsellor",
+    "label": "Counsellor / Mentor",
+    "type": "select",
+    "placeholder": "Select counsellor or mentor",
+    "gridColumn": 3,
+    "options": [
+      {
+        "label": "Dr. S. K. Mohapatra (Head of Career Services)",
+        "value": "Dr. S. K. Mohapatra"
+      },
+      {
+        "label": "Prof. Anjali Mehta (Senior Industry Mentor)",
+        "value": "Prof. Anjali Mehta"
+      },
+      {
+        "label": "Dr. Rajesh Jena (Technical Career Counsellor)",
+        "value": "Dr. Rajesh Jena"
+      },
+      {
+        "label": "Ms. Neha Gupta (Placement & Soft Skills Coach)",
+        "value": "Ms. Neha Gupta"
+      },
+      {
+        "label": "Mr. Alok Patnaik (Alumni Mentor & Tech Lead)",
+        "value": "Mr. Alok Patnaik"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Counsellor / Mentor is required"
+    }
+  },
+  {
+    "name": "dateTime",
+    "label": "Date and Time",
+    "type": "datetime-local",
+    "placeholder": "Select session date and time",
+    "gridColumn": 3,
+    "validation": {
+      "required": true,
+      "message": "Date and Time is required"
+    }
+  },
+  {
+    "name": "modeVenue",
+    "label": "Mode / Venue",
+    "type": "select",
+    "placeholder": "Select mode or venue",
+    "gridColumn": 3,
+    "options": [
+      {
+        "label": "Online - Google Meet",
+        "value": "Online - Google Meet"
+      },
+      {
+        "label": "Online - Zoom Meeting",
+        "value": "Online - Zoom"
+      },
+      {
+        "label": "In-person - Counselling Room 101",
+        "value": "In-person - Room 101"
+      },
+      {
+        "label": "In-person - Placement Cell Boardroom",
+        "value": "In-person - Placement Cell"
+      },
+      {
+        "label": "In-person - Department Mentor Cabin",
+        "value": "In-person - Mentor Cabin"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Mode / Venue is required"
+    }
+  },
+  {
+    "name": "purposeTopic",
+    "label": "Purpose / Topic",
+    "type": "text",
+    "placeholder": "e.g., Resume Review, Technical Mock Interview, Career Roadmap",
+    "gridColumn": 3,
+    "validation": {
+      "required": true,
+      "message": "Purpose / Topic is required"
+    }
+  },
+  {
+    "name": "attendance",
+    "label": "Attendance",
+    "type": "select",
+    "placeholder": "Select attendance",
+    "gridColumn": 3,
+    "options": [
+      {
+        "label": "Present",
+        "value": "Present"
+      },
+      {
+        "label": "Absent",
+        "value": "Absent"
+      },
+      {
+        "label": "Excused",
+        "value": "Excused"
+      },
+      {
+        "label": "Pending",
+        "value": "Pending"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Attendance is required"
+    }
+  },
+    {
+    "name": "status",
+    "label": "Status",
+    "type": "select",
+    "placeholder": "Select status",
+    "gridColumn": 3,
+    "options": [
+      {
+        "label": "Scheduled",
+        "value": "Scheduled"
+      },
+      {
+        "label": "Completed",
+        "value": "Completed"
+      },
+      {
+        "label": "Cancelled",
+        "value": "Cancelled"
+      },
+      {
+        "label": "Rescheduled",
+        "value": "Rescheduled"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Status is required"
+    }
+  },
+  {
+    "name": "sessionNotes",
+    "label": "Session Notes",
+    "type": "textarea",
+    "rows": 2,
+    "placeholder": "Enter session notes, observations, and discussion summary",
+    "gridColumn": 6,
+    "validation": {
+      "required": false
+    }
+  },
+  {
+    "name": "followUpAction",
+    "label": "Follow-up Action",
+    "type": "textarea",
+    "rows": 2,
+    "placeholder": "Enter recommended next actions and follow-up timeline",
+    "gridColumn": 6,
+    "validation": {
+      "required": false
+    }
+  }
+]

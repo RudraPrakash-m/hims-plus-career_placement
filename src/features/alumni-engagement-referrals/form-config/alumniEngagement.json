@@ -1,0 +1,181 @@
+[
+  {
+    "name": "alumniProfile",
+    "label": "Alumni Profile",
+    "type": "select",
+    "placeholder": "Select verified alumni mentor",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "Mr. Alok Patnaik (Batch 2018) - Staff Engineer @ Google India",
+        "value": "Mr. Alok Patnaik"
+      },
+      {
+        "label": "Ms. Neha Swaminathan (Batch 2019) - Senior SDE @ Amazon AWS",
+        "value": "Ms. Neha Swaminathan"
+      },
+      {
+        "label": "Mr. Debashish Jena (Batch 2020) - Lead Data Scientist @ Microsoft",
+        "value": "Mr. Debashish Jena"
+      },
+      {
+        "label": "Ms. Priyanka Mahapatra (Batch 2021) - Cloud Consultant @ Oracle",
+        "value": "Ms. Priyanka Mahapatra"
+      },
+      {
+        "label": "Mr. Tanmay Mohanty (Batch 2019) - Engineering Manager @ Cisco",
+        "value": "Mr. Tanmay Mohanty"
+      },
+      {
+        "label": "Ms. Ananya Das (Batch 2022) - Quantitative Analyst @ JPMorgan Chase",
+        "value": "Ms. Ananya Das"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Alumni Profile is required"
+    }
+  },
+  {
+    "name": "industryRole",
+    "label": "Industry / Role",
+    "type": "text",
+    "placeholder": "Enter industry and role (e.g., Information Technology / Staff Software Engineer)",
+    "gridColumn": 4,
+    "validation": {
+      "required": true,
+      "message": "Industry / Role is required"
+    }
+  },
+  {
+    "name": "studentMentee",
+    "label": "Student / Mentee",
+    "type": "select",
+    "placeholder": "Select mapped student mentee",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "Aarav Sharma (STU-2022-001) - B.Tech CSE",
+        "value": "Aarav Sharma"
+      },
+      {
+        "label": "Priya Patel (STU-2022-045) - B.Tech IT",
+        "value": "Priya Patel"
+      },
+      {
+        "label": "Rahul Verma (STU-2023-018) - MCA",
+        "value": "Rahul Verma"
+      },
+      {
+        "label": "Sneha Rao (STU-2023-089) - B.Tech ECE",
+        "value": "Sneha Rao"
+      },
+      {
+        "label": "Vikram Das (STU-2022-104) - B.Tech ME",
+        "value": "Vikram Das"
+      },
+      {
+        "label": "Ananya Mishra (STU-2023-052) - B.Sc CS",
+        "value": "Ananya Mishra"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Student / Mentee mapping is required"
+    }
+  },
+  {
+    "name": "mentoringAvailability",
+    "label": "Mentoring Availability",
+    "type": "select",
+    "placeholder": "Select availability and mentoring topics",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "Weekends (System Design & Tech Architecture Mentoring)",
+        "value": "Weekends - System Design"
+      },
+      {
+        "label": "Weekday Evenings (Resume Review & Mock Interviews)",
+        "value": "Weekday Evenings - Mock Interviews"
+      },
+      {
+        "label": "Bi-weekly (Career Roadmap & Higher Studies Mentorship)",
+        "value": "Bi-weekly - Career Roadmap"
+      },
+      {
+        "label": "Monthly Cohort Sessions (Industry Readiness & Leadership)",
+        "value": "Monthly - Industry Readiness"
+      },
+      {
+        "label": "On-demand / Project Guidance",
+        "value": "On-demand Project Guidance"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Mentoring Availability is required"
+    }
+  },
+  {
+    "name": "referralOpportunity",
+    "label": "Referral Opportunity",
+    "type": "text",
+    "placeholder": "Enter shared opportunity details (e.g., SDE 1 Referral - Ref ID: GOOG-2024-REF-01)",
+    "gridColumn": 4,
+    "validation": {
+      "required": false
+    }
+  },
+  {
+    "name": "sessionSchedule",
+    "label": "Session Schedule",
+    "type": "datetime-local",
+    "placeholder": "Select mentoring session date and time",
+    "gridColumn": 4,
+    "validation": {
+      "required": true,
+      "message": "Session Schedule date and time is required"
+    }
+  },
+  {
+    "name": "participationStatus",
+    "label": "Participation Status",
+    "type": "select",
+    "placeholder": "Select participation status",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "Accepted",
+        "value": "Accepted"
+      },
+      {
+        "label": "Completed",
+        "value": "Completed"
+      },
+      {
+        "label": "Cancelled",
+        "value": "Cancelled"
+      },
+      {
+        "label": "Scheduled / Pending",
+        "value": "Scheduled / Pending"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Participation Status is required"
+    }
+  },
+  {
+    "name": "feedback",
+    "label": "Feedback",
+    "type": "textarea",
+    "rows": 2,
+    "placeholder": "Record participant feedback, session takeaways, mentor rating, and recommended action steps",
+    "gridColumn": 8,
+    "validation": {
+      "required": false
+    }
+  }
+]

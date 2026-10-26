@@ -1,0 +1,41 @@
+[
+  {
+    "accessorKey": "id",
+    "header": "Employee ID",
+    "size": 100
+  },
+  {
+    "accessorKey": "employeeName",
+    "header": "Employee Name",
+    "size": 250,
+    "editable": true,
+    "type": "text",
+    "placeholder": "Enter name"
+  },
+  {
+    "accessorKey": "designation",
+    "header": "Designation",
+    "size": 250,
+    "editable": true,
+    "type": "text",
+    "placeholder": "Enter designation"
+  },
+  {
+    "accessorKey": "department",
+    "header": "Department",
+    "size": 200,
+    "editable": true,
+    "type": "select",
+    "options": [
+      { "label": "Engineering", "value": "Engineering" },
+      { "label": "HR", "value": "HR" },
+      { "label": "Marketing", "value": "Marketing" },
+      { "label": "Finance", "value": "Finance" }
+    ]
+  },
+  {
+    "accessorKey": "status",
+    "header": "Status",
+    "size": 120
+  }
+]

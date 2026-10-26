@@ -1,0 +1,36 @@
+.add-job-form button.ui-field,
+.add-job-form .ui-field:read-only:not(input, textarea) {
+    border-style: solid;
+    background-color: var(--input-bg);
+    border-color: var(--border-dark);
+}
+
+.add-job-form button.ui-field:hover:not(:disabled, .ui-field--disabled, .ui-field--error),
+.add-job-form .ui-field:read-only:not(input, textarea):hover:not(:disabled, .ui-field--disabled, .ui-field--error) {
+    border-color: var(--muted);
+}
+
+.add-job-form button.ui-field:focus,
+.add-job-form button.ui-field:focus-within,
+.add-job-form .ui-field:read-only:not(input, textarea):focus,
+.add-job-form .ui-field:read-only:not(input, textarea):focus-within {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--focus-ring) 30%, transparent);
+}
+
+.add-job-form button.ui-field.ui-field--error,
+.add-job-form .ui-field--error:read-only:not(input, textarea) {
+    border-color: var(--danger);
+}
+
+.add-job-form button.ui-field:disabled,
+.add-job-form button.ui-field.ui-field--disabled {
+    cursor: not-allowed;
+    border-color: var(--border);
+    background-color: var(--surface-active);
+    color: var(--muted-foreground);
+}
+
+.add-job-form div.flex.justify-center {
+    justify-content: flex-start;
+}

@@ -1,0 +1,279 @@
+[
+  {
+    "name": "opportunity",
+    "label": "Opportunity",
+    "type": "select",
+    "placeholder": "Select approved off-campus opportunity",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "Google India - Software Engineer (University Graduate)",
+        "value": "Google India - Software Engineer"
+      },
+      {
+        "label": "Amazon India - SDE 1 Off-Campus Hiring 2024",
+        "value": "Amazon India - SDE 1"
+      },
+      {
+        "label": "Microsoft India - Software Engineer (Off-Campus)",
+        "value": "Microsoft India - Software Engineer"
+      },
+      {
+        "label": "Oracle India - Associate Software Engineer",
+        "value": "Oracle India - Associate Software Engineer"
+      },
+      {
+        "label": "Cisco Systems - Technical Consulting Engineer",
+        "value": "Cisco Systems - Technical Consulting Engineer"
+      },
+      {
+        "label": "JPMorgan Chase - Software Analyst Off-Campus",
+        "value": "JPMorgan Chase - Software Analyst"
+      },
+      {
+        "label": "Accenture - Advanced Associate Software Engineer",
+        "value": "Accenture - Advanced ASE"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Opportunity is required"
+    }
+  },
+  {
+    "name": "employer",
+    "label": "Employer",
+    "type": "select",
+    "placeholder": "Select employer",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "Google India Pvt. Ltd.",
+        "value": "Google India"
+      },
+      {
+        "label": "Amazon Web Services (AWS) / Amazon India",
+        "value": "Amazon India"
+      },
+      {
+        "label": "Microsoft India Corporation",
+        "value": "Microsoft India"
+      },
+      {
+        "label": "Oracle Corporation India",
+        "value": "Oracle India"
+      },
+      {
+        "label": "Cisco Systems India",
+        "value": "Cisco Systems"
+      },
+      {
+        "label": "JPMorgan Chase & Co.",
+        "value": "JPMorgan Chase"
+      },
+      {
+        "label": "Accenture India",
+        "value": "Accenture"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Employer is required"
+    }
+  },
+  {
+    "name": "studentName",
+    "label": "Student / Applicant",
+    "type": "select",
+    "placeholder": "Select student applicant",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "Aarav Sharma (STU-2022-001) - B.Tech CSE",
+        "value": "Aarav Sharma"
+      },
+      {
+        "label": "Priya Patel (STU-2022-045) - B.Tech IT",
+        "value": "Priya Patel"
+      },
+      {
+        "label": "Rahul Verma (STU-2023-018) - MCA",
+        "value": "Rahul Verma"
+      },
+      {
+        "label": "Sneha Rao (STU-2023-089) - B.Tech ECE",
+        "value": "Sneha Rao"
+      },
+      {
+        "label": "Vikram Das (STU-2022-104) - B.Tech ME",
+        "value": "Vikram Das"
+      },
+      {
+        "label": "Ananya Mishra (STU-2023-052) - B.Sc CS",
+        "value": "Ananya Mishra"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Student selection is required"
+    }
+  },
+  {
+    "name": "applicationLinkMethod",
+    "label": "Application Link / Method",
+    "type": "text",
+    "placeholder": "Enter careers portal URL or application method (e.g., https://careers.google.com / Referral)",
+    "gridColumn": 4,
+    "validation": {
+      "required": true,
+      "message": "Application Link / Method is required"
+    }
+  },
+  {
+    "name": "studentApplicationStatus",
+    "label": "Student Application Status",
+    "type": "select",
+    "placeholder": "Select student application status",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "Applied (Confirmation Received)",
+        "value": "Applied"
+      },
+      {
+        "label": "Application Submitted - Awaiting Confirmation",
+        "value": "Submitted"
+      },
+      {
+        "label": "Not Applied",
+        "value": "Not Applied"
+      },
+      {
+        "label": "Draft Application Saved",
+        "value": "Draft Saved"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Student Application Status is required"
+    }
+  },
+  {
+    "name": "interviewSelectionStatus",
+    "label": "Interview / Selection Status",
+    "type": "select",
+    "placeholder": "Select interview / selection status",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "Online Assessment (OA) Cleared",
+        "value": "OA Cleared"
+      },
+      {
+        "label": "Technical Interview Round 1 Cleared",
+        "value": "Technical Round 1 Cleared"
+      },
+      {
+        "label": "Technical Interview Round 2 Cleared",
+        "value": "Technical Round 2 Cleared"
+      },
+      {
+        "label": "HR / Leadership Round Cleared",
+        "value": "HR Round Cleared"
+      },
+      {
+        "label": "Interview Pending / Scheduled",
+        "value": "Interview Scheduled"
+      },
+      {
+        "label": "Selected - Final Round Cleared",
+        "value": "Selected"
+      },
+      {
+        "label": "Not Selected",
+        "value": "Not Selected"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Interview / Selection Status is required"
+    }
+  },
+  {
+    "name": "offerDetails",
+    "label": "Offer Details",
+    "type": "text",
+    "placeholder": "Enter package and role details (e.g., 14.5 LPA CTC + 2L Bonus, SDE 1)",
+    "gridColumn": 4,
+    "validation": {
+      "required": false
+    }
+  },
+  {
+    "name": "joiningOutcome",
+    "label": "Joining Outcome",
+    "type": "select",
+    "placeholder": "Select joining outcome",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "Joined (Onboarding Completed)",
+        "value": "Joined"
+      },
+      {
+        "label": "Joining Awaited",
+        "value": "Joining Awaited"
+      },
+      {
+        "label": "Offer Accepted - Awaiting Verification",
+        "value": "Offer Accepted"
+      },
+      {
+        "label": "Offer Declined",
+        "value": "Offer Declined"
+      },
+      {
+        "label": "Deferred Joining",
+        "value": "Deferred"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Joining Outcome is required"
+    }
+  },
+  {
+    "name": "applicationDate",
+    "label": "Application / Offer Date",
+    "type": "date",
+    "placeholder": "Select application or offer date",
+    "gridColumn": 4,
+    "validation": {
+      "required": true,
+      "message": "Date is required"
+    }
+  },
+  {
+    "name": "supportingEvidence",
+    "label": "Supporting Evidence",
+    "type": "file",
+    "placeholder": "Upload offer letter, email confirmation, or portal screenshot",
+    "accept": ".pdf,.doc,.docx,.jpg,.jpeg,.png",
+    "gridColumn": 6,
+    "validation": {
+      "required": false
+    }
+  },
+  {
+    "name": "eligibility",
+    "label": "Eligibility",
+    "type": "textarea",
+    "rows": 2,
+    "placeholder": "Display eligibility criteria: B.Tech (CSE/IT/ECE), MCA with min 65% aggregate, 2024 pass-out batch, strong DSA & system design fundamentals.",
+    "gridColumn": 6,
+    "validation": {
+      "required": true,
+      "message": "Eligibility criteria is required"
+    }
+  }
+]

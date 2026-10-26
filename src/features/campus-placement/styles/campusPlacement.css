@@ -1,0 +1,36 @@
+.campus-placement-form button.ui-field,
+.campus-placement-form .ui-field:read-only:not(input, textarea) {
+    border-style: solid;
+    background-color: var(--input-bg);
+    border-color: var(--border-dark);
+}
+
+.campus-placement-form button.ui-field:hover:not(:disabled, .ui-field--disabled, .ui-field--error),
+.campus-placement-form .ui-field:read-only:not(input, textarea):hover:not(:disabled, .ui-field--disabled, .ui-field--error) {
+    border-color: var(--muted);
+}
+
+.campus-placement-form button.ui-field:focus,
+.campus-placement-form button.ui-field:focus-within,
+.campus-placement-form .ui-field:read-only:not(input, textarea):focus,
+.campus-placement-form .ui-field:read-only:not(input, textarea):focus-within {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--focus-ring) 30%, transparent);
+}
+
+.campus-placement-form button.ui-field.ui-field--error,
+.campus-placement-form .ui-field--error:read-only:not(input, textarea) {
+    border-color: var(--danger);
+}
+
+.campus-placement-form button.ui-field:disabled,
+.campus-placement-form button.ui-field.ui-field--disabled {
+    cursor: not-allowed;
+    border-color: var(--border);
+    background-color: var(--surface-active);
+    color: var(--muted-foreground);
+}
+
+.campus-placement-form div.flex.justify-center {
+    justify-content: flex-start;
+}

@@ -1,0 +1,291 @@
+[
+  {
+    "name": "academicSession",
+    "label": "Academic Session",
+    "type": "select",
+    "placeholder": "Select academic session",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "2024 - 2025",
+        "value": "2024 - 2025"
+      },
+      {
+        "label": "2023 - 2024",
+        "value": "2023 - 2024"
+      },
+      {
+        "label": "2025 - 2026",
+        "value": "2025 - 2026"
+      },
+      {
+        "label": "2022 - 2023",
+        "value": "2022 - 2023"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Academic Session is required"
+    }
+  },
+  {
+    "name": "institutionProgramme",
+    "label": "Institution / Programme",
+    "type": "select",
+    "placeholder": "Select institution and eligible programme",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "Faculty of Engineering & Technology - B.Tech (All Branches)",
+        "value": "FET - B.Tech"
+      },
+      {
+        "label": "School of Computer Applications - MCA & B.Sc CS",
+        "value": "SCA - MCA"
+      },
+      {
+        "label": "Department of Electronics & Communication - B.Tech ECE",
+        "value": "ECE - B.Tech"
+      },
+      {
+        "label": "Department of Mechanical & Civil - B.Tech Core",
+        "value": "Core - B.Tech"
+      },
+      {
+        "label": "School of Management & Business Studies - MBA",
+        "value": "SMBS - MBA"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Institution / Programme is required"
+    }
+  },
+  {
+    "name": "employerDrive",
+    "label": "Employer / Drive",
+    "type": "select",
+    "placeholder": "Select employer and campus drive",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "Tata Consultancy Services (TCS) - TCS National Campus Drive 2024",
+        "value": "TCS Campus Drive 2024"
+      },
+      {
+        "label": "Infosys Limited - Specialist Programmer Campus Drive",
+        "value": "Infosys Specialist Programmer"
+      },
+      {
+        "label": "Cognizant Technology Solutions - GenC Elevate Recruitment",
+        "value": "Cognizant GenC Elevate"
+      },
+      {
+        "label": "ABC Technologies Pvt. Ltd. - SDE Frontend Drive",
+        "value": "ABC Tech SDE Drive"
+      },
+      {
+        "label": "XYZ Industries - Data Analyst & BI Drive",
+        "value": "XYZ Industries Data Analyst"
+      },
+      {
+        "label": "Eastern Enterprises - Industrial Automation Apprentice Drive",
+        "value": "Eastern Enterprises Apprentice"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Employer / Drive is required"
+    }
+  },
+  {
+    "name": "eligibleStudent",
+    "label": "Eligible Student List",
+    "type": "select",
+    "placeholder": "Select eligible student matching criteria",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "Aarav Sharma (STU-2022-001) - B.Tech CSE (8.8 CGPA)",
+        "value": "Aarav Sharma"
+      },
+      {
+        "label": "Priya Patel (STU-2022-045) - B.Tech IT (8.2 CGPA)",
+        "value": "Priya Patel"
+      },
+      {
+        "label": "Rahul Verma (STU-2023-018) - MCA (7.9 CGPA)",
+        "value": "Rahul Verma"
+      },
+      {
+        "label": "Sneha Rao (STU-2023-089) - B.Tech ECE (8.5 CGPA)",
+        "value": "Sneha Rao"
+      },
+      {
+        "label": "Vikram Das (STU-2022-104) - B.Tech ME (7.4 CGPA)",
+        "value": "Vikram Das"
+      },
+      {
+        "label": "Ananya Mishra (STU-2023-052) - B.Sc CS (7.6 CGPA)",
+        "value": "Ananya Mishra"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Student selection is required"
+    }
+  },
+  {
+    "name": "registrationStatus",
+    "label": "Registration Status",
+    "type": "select",
+    "placeholder": "Select registration status",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "Registered",
+        "value": "Registered"
+      },
+      {
+        "label": "Pending Verification",
+        "value": "Pending Verification"
+      },
+      {
+        "label": "Withdrawn",
+        "value": "Withdrawn"
+      },
+      {
+        "label": "Not Registered",
+        "value": "Not Registered"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Registration Status is required"
+    }
+  },
+  {
+    "name": "selectionStages",
+    "label": "Selection Stages",
+    "type": "select",
+    "placeholder": "Select tracked stage",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "Aptitude & Coding Assessment Cleared",
+        "value": "Aptitude Cleared"
+      },
+      {
+        "label": "Technical Interview 1 Cleared",
+        "value": "Technical Round 1 Cleared"
+      },
+      {
+        "label": "Technical Interview 2 Cleared",
+        "value": "Technical Round 2 Cleared"
+      },
+      {
+        "label": "Managerial Round Cleared",
+        "value": "Managerial Round Cleared"
+      },
+      {
+        "label": "HR Interview Completed",
+        "value": "HR Interview Completed"
+      },
+      {
+        "label": "Final Selection & Offer Rolled Out",
+        "value": "Final Selection & Offer"
+      },
+      {
+        "label": "Assessment Stage Pending",
+        "value": "Stage Pending"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Selection Stage tracking is required"
+    }
+  },
+  {
+    "name": "offerStatus",
+    "label": "Offer Status",
+    "type": "select",
+    "placeholder": "Select offer status",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "Offer Issued",
+        "value": "Offer Issued"
+      },
+      {
+        "label": "Accepted",
+        "value": "Accepted"
+      },
+      {
+        "label": "Declined",
+        "value": "Declined"
+      },
+      {
+        "label": "Pending",
+        "value": "Pending"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Offer Status is required"
+    }
+  },
+  {
+    "name": "joiningStatus",
+    "label": "Joining Status",
+    "type": "select",
+    "placeholder": "Select joining status",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "Joined",
+        "value": "Joined"
+      },
+      {
+        "label": "Joining Awaited",
+        "value": "Joining Awaited"
+      },
+      {
+        "label": "Deferred",
+        "value": "Deferred"
+      },
+      {
+        "label": "Not Joined",
+        "value": "Not Joined"
+      },
+      {
+        "label": "Under Background Verification",
+        "value": "Under Verification"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Joining Status is required"
+    }
+  },
+  {
+    "name": "joiningDate",
+    "label": "Joining Date",
+    "type": "date",
+    "placeholder": "Select joining date",
+    "gridColumn": 4,
+    "validation": {
+      "required": false
+    }
+  },
+  {
+    "name": "remarks",
+    "label": "Remarks",
+    "type": "textarea",
+    "rows": 2,
+    "placeholder": "Record placement package details (CTC/stipend), joining date, bonding terms, and coordinator remarks",
+    "gridColumn": 12,
+    "validation": {
+      "required": false
+    }
+  }
+]

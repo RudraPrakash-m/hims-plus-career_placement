@@ -1,0 +1,200 @@
+[
+  {
+    "name": "sourceModule",
+    "label": "Source Module",
+    "type": "select",
+    "placeholder": "Select HIMS source module",
+    "gridColumn": 6,
+    "options": [
+      {
+        "label": "Student Lifecycle",
+        "value": "Student Lifecycle"
+      },
+      {
+        "label": "Internship Management",
+        "value": "Internship Management"
+      },
+      {
+        "label": "Alumni",
+        "value": "Alumni"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Source Module is required"
+    }
+  },
+  {
+    "name": "studentIdentifier",
+    "label": "HIMS Student Identifier",
+    "type": "text",
+    "placeholder": "e.g., HIMS-STU-2024-001",
+    "gridColumn": 6,
+    "validation": {
+      "required": true,
+      "message": "HIMS Student Identifier is required"
+    }
+  },
+  {
+    "name": "studentName",
+    "label": "Student Name",
+    "type": "text",
+    "placeholder": "Enter student full name",
+    "gridColumn": 6,
+    "validation": {
+      "required": true,
+      "message": "Student Name is required"
+    }
+  },
+  {
+    "name": "academicRollNo",
+    "label": "Academic Roll / Reg. No",
+    "type": "text",
+    "placeholder": "e.g., STU-2022-001",
+    "gridColumn": 6,
+    "validation": {
+      "required": true,
+      "message": "Academic Roll No is required"
+    }
+  },
+  {
+    "name": "internshipRecord",
+    "label": "Internship Record",
+    "type": "select",
+    "placeholder": "Link approved internship record",
+    "gridColumn": 6,
+    "options": [
+      {
+        "label": "AWS Cloud Solutions Summer Internship (AWS-INT-2024-08)",
+        "value": "AWS Cloud Solutions Summer Internship"
+      },
+      {
+        "label": "Full Stack AI Development Internship (MS-INT-2024-15)",
+        "value": "Full Stack AI Development Internship"
+      },
+      {
+        "label": "TCS Industrial Automation Apprenticeship (TCS-APP-2024-03)",
+        "value": "TCS Industrial Automation Apprenticeship"
+      },
+      {
+        "label": "Deloitte Risk & Advisory Consulting Internship (DEL-INT-2024-21)",
+        "value": "Deloitte Risk & Advisory Consulting Internship"
+      },
+      {
+        "label": "Google SWE Summer Practicum (GOOG-INT-2024-02)",
+        "value": "Google SWE Summer Practicum"
+      },
+      {
+        "label": "Interface Pending / Approved Interface Not Available",
+        "value": "Interface Pending"
+      },
+      {
+        "label": "Not Applicable (No Internship Associated)",
+        "value": "Not Applicable"
+      }
+    ]
+  },
+  {
+    "name": "alumniRecord",
+    "label": "Alumni Record",
+    "type": "select",
+    "placeholder": "Link eligible former-student record",
+    "gridColumn": 6,
+    "options": [
+      {
+        "label": "Eligible Alumni - Class of 2023 (ALUM-2023-018) - Infosys",
+        "value": "Eligible Alumni (ALUM-2023-018)"
+      },
+      {
+        "label": "Eligible Alumni - Class of 2022 (ALUM-2022-077) - Google",
+        "value": "Eligible Alumni (ALUM-2022-077)"
+      },
+      {
+        "label": "Eligible Alumni - Class of 2022 (ALUM-2022-112) - Deloitte",
+        "value": "Eligible Alumni (ALUM-2022-112)"
+      },
+      {
+        "label": "Eligible Alumni - Class of 2021 (ALUM-2021-042) - Microsoft",
+        "value": "Eligible Alumni (ALUM-2021-042)"
+      },
+      {
+        "label": "Pending Graduation Verification (Class of 2024)",
+        "value": "Pending Graduation Verification"
+      },
+      {
+        "label": "Not Applicable (Current Active Enrolled Student)",
+        "value": "Not Applicable (Current Student)"
+      }
+    ]
+  },
+  {
+    "name": "synchronizationStatus",
+    "label": "Synchronization Status",
+    "type": "select",
+    "placeholder": "Select synchronization state",
+    "gridColumn": 6,
+    "options": [
+      {
+        "label": "Successful",
+        "value": "Successful"
+      },
+      {
+        "label": "Pending",
+        "value": "Pending"
+      },
+      {
+        "label": "Failed",
+        "value": "Failed"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Synchronization Status is required"
+    }
+  },
+  {
+    "name": "reconciliation",
+    "label": "Reconciliation Status",
+    "type": "select",
+    "placeholder": "Select reconciliation state",
+    "gridColumn": 6,
+    "options": [
+      {
+        "label": "Reconciled & Verified",
+        "value": "Reconciled"
+      },
+      {
+        "label": "Requires Manual Review",
+        "value": "Requires Manual Review"
+      },
+      {
+        "label": "Auto-Reconciled",
+        "value": "Auto-Reconciled"
+      },
+      {
+        "label": "Pending Synchronization",
+        "value": "Pending"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Reconciliation Status is required"
+    }
+  },
+  {
+    "name": "errorDetails",
+    "label": "Error Details (For Troubleshooting)",
+    "type": "textarea",
+    "placeholder": "Log specific error codes, schema validation issues, API timeouts, or data mismatch details...",
+    "rows": 3,
+    "gridColumn": 12
+  },
+  {
+    "name": "reconciliationNotes",
+    "label": "Reconciliation & Resolution Remarks",
+    "type": "textarea",
+    "placeholder": "Document authorized reconciliation resolution, interface override reasoning, or sync approval notes...",
+    "rows": 3,
+    "gridColumn": 12
+  }
+]

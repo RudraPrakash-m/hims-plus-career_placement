@@ -1,0 +1,291 @@
+[
+  {
+    "name": "programmeName",
+    "label": "Programme Name",
+    "type": "text",
+    "placeholder": "Enter programme name (e.g., Full Stack Cloud Architecture & AI Internship)",
+    "gridColumn": 4,
+    "validation": {
+      "required": true,
+      "message": "Programme Name is required"
+    }
+  },
+  {
+    "name": "programmeType",
+    "label": "Programme Type",
+    "type": "select",
+    "placeholder": "Select programme type",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "Internship Programme",
+        "value": "Internship"
+      },
+      {
+        "label": "Industrial Training",
+        "value": "Training Programme"
+      },
+      {
+        "label": "Hands-on Technical Workshop",
+        "value": "Technical Workshop"
+      },
+      {
+        "label": "Industry Professional Certification",
+        "value": "Certification"
+      },
+      {
+        "label": "Skill Enhancement & Readiness Programme",
+        "value": "Skill Enhancement"
+      },
+      {
+        "label": "Intensive Coding Bootcamp",
+        "value": "Bootcamp"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Programme Type is required"
+    }
+  },
+  {
+    "name": "providerEmployer",
+    "label": "Provider / Employer",
+    "type": "select",
+    "placeholder": "Select or enter provider",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "AWS Academy / Amazon Web Services",
+        "value": "AWS Academy"
+      },
+      {
+        "label": "Google Cloud & Android Academy",
+        "value": "Google Developers"
+      },
+      {
+        "label": "Microsoft Learn & Azure Skills",
+        "value": "Microsoft Learn"
+      },
+      {
+        "label": "IBM SkillsBuild Academy",
+        "value": "IBM SkillsBuild"
+      },
+      {
+        "label": "Cisco Networking Academy",
+        "value": "Cisco Academy"
+      },
+      {
+        "label": "Oracle University & Academy",
+        "value": "Oracle Academy"
+      },
+      {
+        "label": "Tata Consultancy Services (TCS iON)",
+        "value": "TCS iON"
+      },
+      {
+        "label": "Infosys Springboard",
+        "value": "Infosys Springboard"
+      },
+      {
+        "label": "ABC Technologies Pvt. Ltd.",
+        "value": "ABC Technologies"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Provider / Employer is required"
+    }
+  },
+  {
+    "name": "startDate",
+    "label": "Start Date",
+    "type": "date",
+    "placeholder": "Select start date",
+    "gridColumn": 3,
+    "validation": {
+      "required": true,
+      "message": "Start Date is required"
+    }
+  },
+  {
+    "name": "endDate",
+    "label": "End Date",
+    "type": "date",
+    "placeholder": "Select end date",
+    "gridColumn": 3,
+    "validation": {
+      "required": true,
+      "message": "End Date is required"
+    }
+  },
+  {
+    "name": "scheduleDuration",
+    "label": "Schedule / Duration",
+    "type": "text",
+    "placeholder": "e.g., 8 Weeks (Mon-Fri, 2 hrs/day, 10:00 AM - 12:00 PM)",
+    "gridColumn": 3,
+    "validation": {
+      "required": true,
+      "message": "Schedule / Duration is required"
+    }
+  },
+  {
+    "name": "registration",
+    "label": "Registration",
+    "type": "select",
+    "placeholder": "Select registration status",
+    "gridColumn": 3,
+    "options": [
+      {
+        "label": "Open (Registration Enabled)",
+        "value": "Open"
+      },
+      {
+        "label": "Closed (Registration Full)",
+        "value": "Closed"
+      },
+      {
+        "label": "Upcoming (Opens Soon)",
+        "value": "Upcoming"
+      },
+      {
+        "label": "Invite Only / Faculty Nominated",
+        "value": "Invite Only"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Registration is required"
+    }
+  },
+  {
+    "name": "skillsCovered",
+    "label": "Skills Covered",
+    "type": "multiselect",
+    "placeholder": "Select skills addressed by the programme",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "Full Stack Web Development (React, TypeScript & Node.js)",
+        "value": "Full Stack Web Dev"
+      },
+      {
+        "label": "Cloud Computing & DevOps (AWS / Azure / Docker)",
+        "value": "Cloud & DevOps"
+      },
+      {
+        "label": "Data Science, Analytics & Python",
+        "value": "Data Science & Python"
+      },
+      {
+        "label": "Machine Learning, AI & Foundation Models",
+        "value": "Machine Learning & AI"
+      },
+      {
+        "label": "Cybersecurity & Network Defense",
+        "value": "Cybersecurity"
+      },
+      {
+        "label": "Data Structures, Algorithms & Competitive Coding",
+        "value": "DSA & Algorithms"
+      },
+      {
+        "label": "Workplace Communication & Professional Soft Skills",
+        "value": "Soft Skills & Communication"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Skills Covered is required"
+    }
+  },
+  {
+    "name": "attendanceParticipation",
+    "label": "Attendance / Participation",
+    "type": "select",
+    "placeholder": "Select attendance or participation",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "Regular (> 85% Attendance)",
+        "value": "Regular (> 85%)"
+      },
+      {
+        "label": "Satisfactory (75% - 85% Attendance)",
+        "value": "Satisfactory (75-85%)"
+      },
+      {
+        "label": "Active Participant",
+        "value": "Active Participant"
+      },
+      {
+        "label": "Low Attendance (< 75%)",
+        "value": "Low Attendance"
+      },
+      {
+        "label": "Not Attended",
+        "value": "Not Attended"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Attendance / Participation is required"
+    }
+  },
+  {
+    "name": "assessmentCompletion",
+    "label": "Assessment / Completion",
+    "type": "select",
+    "placeholder": "Select assessment / completion status",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "Completed & Passed",
+        "value": "Completed & Passed"
+      },
+      {
+        "label": "Assessment Cleared (Merit / Grade A)",
+        "value": "Cleared with Merit"
+      },
+      {
+        "label": "In Progress / Ongoing",
+        "value": "In Progress"
+      },
+      {
+        "label": "Assessment Pending / Evaluation Scheduled",
+        "value": "Assessment Pending"
+      },
+      {
+        "label": "Not Completed",
+        "value": "Not Completed"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Assessment / Completion status is required"
+    }
+  },
+  {
+    "name": "certificate",
+    "label": "Certificate",
+    "type": "file",
+    "placeholder": "Upload completion certificate details",
+    "accept": ".pdf,.doc,.docx,.jpg,.jpeg,.png",
+    "gridColumn": 4,
+    "validation": {
+      "required": false
+    }
+  },
+  {
+    "name": "eligibility",
+    "label": "Eligibility",
+    "type": "textarea",
+    "rows": 2,
+    "placeholder": "Define eligible student cohorts, academic branches, minimum marks/CGPA cutoff, and technical prerequisites",
+    "gridColumn": 8,
+    "validation": {
+      "required": true,
+      "message": "Eligibility is required"
+    }
+  }
+]

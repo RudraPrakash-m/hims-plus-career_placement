@@ -1,0 +1,364 @@
+[
+  {
+    "name": "reportTitle",
+    "label": "Report Title / Configuration Name",
+    "type": "text",
+    "placeholder": "e.g., Annual Placement & Employability Comprehensive Report 2024-2025",
+    "gridColumn": 3,
+    "validation": {
+      "required": true,
+      "message": "Report Title is required"
+    }
+  },
+  {
+    "name": "academicSession",
+    "label": "Academic Session",
+    "type": "select",
+    "placeholder": "Select reporting session",
+    "gridColumn": 3,
+    "options": [
+      {
+        "label": "2024 - 2025",
+        "value": "2024 - 2025"
+      },
+      {
+        "label": "2023 - 2024",
+        "value": "2023 - 2024"
+      },
+      {
+        "label": "2025 - 2026",
+        "value": "2025 - 2026"
+      },
+      {
+        "label": "2022 - 2023",
+        "value": "2022 - 2023"
+      },
+      {
+        "label": "All Academic Sessions",
+        "value": "All Sessions"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Academic Session is required"
+    }
+  },
+  {
+    "name": "institutionProgramme",
+    "label": "Institution / Programme",
+    "type": "select",
+    "placeholder": "Filter results by permitted institution or programme",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "All Permitted Institutions & Programmes",
+        "value": "All Programmes"
+      },
+      {
+        "label": "Faculty of Engineering & Technology - B.Tech (All Branches)",
+        "value": "FET - B.Tech"
+      },
+      {
+        "label": "School of Computer Applications - MCA & B.Sc CS",
+        "value": "SCA - MCA"
+      },
+      {
+        "label": "Department of Electronics & Communication - B.Tech ECE",
+        "value": "ECE - B.Tech"
+      },
+      {
+        "label": "Department of Mechanical & Civil - B.Tech Core",
+        "value": "Core - B.Tech"
+      },
+      {
+        "label": "School of Management & Business Studies - MBA",
+        "value": "SMBS - MBA"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Institution / Programme is required"
+    }
+  },
+  {
+    "name": "employer",
+    "label": "Employer / Industry",
+    "type": "select",
+    "placeholder": "Filter by employer or industry sector",
+    "gridColumn": 3,
+    "options": [
+      {
+        "label": "All Employers & Industry Sectors",
+        "value": "All Employers"
+      },
+      {
+        "label": "Tata Consultancy Services (TCS)",
+        "value": "Tata Consultancy Services"
+      },
+      {
+        "label": "Infosys Technologies Ltd.",
+        "value": "Infosys Technologies"
+      },
+      {
+        "label": "Google India Pvt. Ltd.",
+        "value": "Google India"
+      },
+      {
+        "label": "Amazon Web Services (AWS)",
+        "value": "Amazon Web Services"
+      },
+      {
+        "label": "Microsoft India",
+        "value": "Microsoft India"
+      },
+      {
+        "label": "Deloitte Consulting",
+        "value": "Deloitte Consulting"
+      },
+      {
+        "label": "Cognizant Technology Solutions",
+        "value": "Cognizant Technology Solutions"
+      },
+      {
+        "label": "Wipro Technologies",
+        "value": "Wipro Technologies"
+      },
+      {
+        "label": "IT & Software Services (Industry Sector)",
+        "value": "IT & Software Services"
+      },
+      {
+        "label": "Cloud & Product Engineering (Industry Sector)",
+        "value": "Cloud & Product Engineering"
+      },
+      {
+        "label": "Consulting & Financial Services (Industry Sector)",
+        "value": "Consulting & Financial Services"
+      },
+      {
+        "label": "Core Engineering & Manufacturing (Industry Sector)",
+        "value": "Core Engineering & Manufacturing"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Employer / Industry filter is required"
+    }
+  },
+  {
+    "name": "opportunityType",
+    "label": "Opportunity Type",
+    "type": "select",
+    "placeholder": "Filter job, internship, apprenticeship, or training",
+    "gridColumn": 3,
+    "options": [
+      {
+        "label": "All Opportunity Types",
+        "value": "All Opportunity Types"
+      },
+      {
+        "label": "Full-Time Job",
+        "value": "Full-Time Job"
+      },
+      {
+        "label": "Internship",
+        "value": "Internship"
+      },
+      {
+        "label": "Industrial Apprenticeship",
+        "value": "Industrial Apprenticeship"
+      },
+      {
+        "label": "Skill Enhancement Training",
+        "value": "Skill Enhancement Training"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Opportunity Type is required"
+    }
+  },
+  {
+    "name": "placementStatistics",
+    "label": "Placement Statistics Stage Focus",
+    "type": "select",
+    "placeholder": "Select placement stage metric focus",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "Comprehensive (Applications, Shortlist, Offers, Acceptance, Joining)",
+        "value": "Comprehensive Overview"
+      },
+      {
+        "label": "Applications & Applicant Pool",
+        "value": "Applications"
+      },
+      {
+        "label": "Shortlisted Candidates",
+        "value": "Shortlisted Candidates"
+      },
+      {
+        "label": "Offers Issued & Letters Released",
+        "value": "Offers Issued"
+      },
+      {
+        "label": "Offer Acceptances",
+        "value": "Offer Acceptances"
+      },
+      {
+        "label": "Joining Outcomes & Onboarding Verification",
+        "value": "Joining Outcomes"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Placement statistics focus is required"
+    }
+  },
+  {
+    "name": "employerParticipation",
+    "label": "Employer Participation Scope",
+    "type": "select",
+    "placeholder": "Filter by employer registration & drive participation",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "All Registered & Active Employers",
+        "value": "All Registered & Active"
+      },
+      {
+        "label": "Registered Employers Only",
+        "value": "Registered Employers"
+      },
+      {
+        "label": "Active Drive Participating Employers",
+        "value": "Active Participating"
+      },
+      {
+        "label": "High Volume Recruiters (>= 3 Drives)",
+        "value": "High Volume Recruiters"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Employer participation scope is required"
+    }
+  },
+  {
+    "name": "salaryTrends",
+    "label": "Salary Trends / CTC Range",
+    "type": "select",
+    "placeholder": "Filter by package bracket / salary trend",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "All Package Ranges & Salary Brackets",
+        "value": "All Packages"
+      },
+      {
+        "label": "Super Dream / Premium (> ₹20 LPA)",
+        "value": "> 20 LPA"
+      },
+      {
+        "label": "Dream Tier (₹10 - ₹20 LPA)",
+        "value": "10 - 20 LPA"
+      },
+      {
+        "label": "Standard Placement (₹5 - ₹10 LPA)",
+        "value": "5 - 10 LPA"
+      },
+      {
+        "label": "Entry Level Opportunities (< ₹5 LPA)",
+        "value": "< 5 LPA"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Salary trends filter is required"
+    }
+  },
+  {
+    "name": "studentEngagement",
+    "label": "Student Engagement Indicator",
+    "type": "select",
+    "placeholder": "Select student engagement metric indicator",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "All Engagement Indicators",
+        "value": "All Indicators"
+      },
+      {
+        "label": "Profile Completion >= 85%",
+        "value": "Profile Completion"
+      },
+      {
+        "label": "Career Counselling Attended",
+        "value": "Counselling Attended"
+      },
+      {
+        "label": "Aptitude & Technical Assessment Cleared",
+        "value": "Assessment Cleared"
+      },
+      {
+        "label": "Skill Training & Certifications Completed",
+        "value": "Training Certified"
+      },
+      {
+        "label": "High Opportunity Engagement (>= 5 Applications)",
+        "value": "High Opportunity Engagement"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Student engagement indicator is required"
+    }
+  },
+  {
+    "name": "exportFormat",
+    "label": "Export Report Format",
+    "type": "select",
+    "placeholder": "Select default export format",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "Excel Workbook (.xlsx)",
+        "value": "Excel (.xlsx)"
+      },
+      {
+        "label": "PDF Analytical Document (.pdf)",
+        "value": "PDF Document (.pdf)"
+      },
+      {
+        "label": "CSV Structured Data (.csv)",
+        "value": "CSV Data Export (.csv)"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Export format selection is required"
+    }
+  },
+  {
+    "name": "startDate",
+    "label": "Reporting Period Start",
+    "type": "date",
+    "placeholder": "Select start date",
+    "gridColumn": 2
+  },
+  {
+    "name": "endDate",
+    "label": "Reporting Period End",
+    "type": "date",
+    "placeholder": "Select end date",
+    "gridColumn": 2
+  },
+  {
+    "name": "remarks",
+    "label": "Report Scope, Notes & Objectives",
+    "type": "textarea",
+    "placeholder": "Enter custom analytical notes, governance compliance references, or specific reporting goals...",
+    "rows": 3,
+    "gridColumn": 4
+  }
+]

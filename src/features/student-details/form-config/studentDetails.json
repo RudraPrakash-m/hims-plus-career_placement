@@ -1,0 +1,317 @@
+{
+  "steps": [
+    {
+      "id": "personal",
+      "label": "Personal Information",
+      "fields": [
+        {
+          "name": "firstName",
+          "label": "First Name",
+          "type": "text",
+          "placeholder": "Enter first name",
+          "gridColumn": 1,
+          "validation": {
+            "required": true,
+            "minLength": 2,
+            "message": "First name is required"
+          }
+        },
+        {
+          "name": "lastName",
+          "label": "Last Name",
+          "type": "text",
+          "placeholder": "Enter last name",
+          "gridColumn": 1,
+          "validation": {
+            "required": true,
+            "minLength": 2,
+            "message": "Last name is required"
+          }
+        },
+        {
+          "name": "email",
+          "label": "Email",
+          "type": "email",
+          "placeholder": "Enter email address",
+          "gridColumn": 1,
+          "validation": {
+            "required": true,
+            "pattern": "^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$",
+            "message": "Enter valid email"
+          }
+        },
+        {
+          "name": "phone",
+          "label": "Phone Number",
+          "type": "tel",
+          "placeholder": "Enter phone number",
+          "gridColumn": 1,
+          "maxLength": 10,
+          "validation": {
+            "required": true,
+            "pattern": "^[0-9]{10}$",
+            "message": "Enter valid 10 digit phone number"
+          }
+        },
+        {
+          "name": "dateOfBirth",
+          "label": "Date of Birth",
+          "type": "date",
+          "gridColumn": 1,
+          "validation": {
+            "required": true,
+            "message": "Date of birth is required"
+          }
+        },
+        {
+          "name": "gender",
+          "label": "Gender",
+          "type": "select",
+          "placeholder": "Select gender",
+          "gridColumn": 1,
+          "options": [
+            {
+              "label": "Male",
+              "value": "Male"
+            },
+            {
+              "label": "Female",
+              "value": "Female"
+            },
+            {
+              "label": "Other",
+              "value": "Other"
+            }
+          ],
+          "validation": {
+            "required": true,
+            "message": "Gender is required"
+          }
+        }
+      ]
+    },
+    {
+      "id": "academic",
+      "label": "Academic Information",
+      "fields": [
+        {
+          "name": "studentId",
+          "label": "Student ID",
+          "type": "text",
+          "placeholder": "Enter student ID",
+          "gridColumn": 1,
+          "validation": {
+            "required": true,
+            "message": "Student ID is required"
+          }
+        },
+        {
+          "name": "enrollmentDate",
+          "label": "Enrollment Date",
+          "type": "date",
+          "gridColumn": 1,
+          "validation": {
+            "required": true,
+            "message": "Enrollment date is required"
+          }
+        },
+        {
+          "name": "course",
+          "label": "Course",
+          "type": "select",
+          "placeholder": "Select course",
+          "gridColumn": 1,
+          "options": [
+            {
+              "label": "B.Tech",
+              "value": "BTech"
+            },
+            {
+              "label": "B.Sc",
+              "value": "BSc"
+            },
+            {
+              "label": "B.A",
+              "value": "BA"
+            },
+            {
+              "label": "M.Tech",
+              "value": "MTech"
+            },
+            {
+              "label": "M.Sc",
+              "value": "MSc"
+            }
+          ],
+          "validation": {
+            "required": true,
+            "message": "Course is required"
+          }
+        },
+        {
+          "name": "semester",
+          "label": "Semester",
+          "type": "select",
+          "placeholder": "Select semester",
+          "gridColumn": 1,
+          "options": [
+            {
+              "label": "1st Semester",
+              "value": "1"
+            },
+            {
+              "label": "2nd Semester",
+              "value": "2"
+            },
+            {
+              "label": "3rd Semester",
+              "value": "3"
+            },
+            {
+              "label": "4th Semester",
+              "value": "4"
+            },
+            {
+              "label": "5th Semester",
+              "value": "5"
+            },
+            {
+              "label": "6th Semester",
+              "value": "6"
+            },
+            {
+              "label": "7th Semester",
+              "value": "7"
+            },
+            {
+              "label": "8th Semester",
+              "value": "8"
+            }
+          ],
+          "validation": {
+            "required": true,
+            "message": "Semester is required"
+          }
+        },
+        {
+          "name": "gpa",
+          "label": "GPA",
+          "type": "number",
+          "placeholder": "Enter GPA",
+          "gridColumn": 1,
+          "validation": {
+            "required": true,
+            "message": "GPA is required"
+          }
+        },
+        {
+          "name": "department",
+          "label": "Department",
+          "type": "select",
+          "placeholder": "Select department",
+          "gridColumn": 1,
+          "options": [
+            {
+              "label": "Computer Science",
+              "value": "CS"
+            },
+            {
+              "label": "Electronics",
+              "value": "EC"
+            },
+            {
+              "label": "Mechanical",
+              "value": "ME"
+            },
+            {
+              "label": "Civil",
+              "value": "CE"
+            },
+            {
+              "label": "Electrical",
+              "value": "EE"
+            }
+          ],
+          "validation": {
+            "required": true,
+            "message": "Department is required"
+          }
+        }
+      ]
+    },
+    {
+      "id": "address",
+      "label": "Address Information",
+      "fields": [
+        {
+          "name": "street",
+          "label": "Street Address",
+          "type": "text",
+          "placeholder": "Enter street address",
+          "gridColumn": 2,
+          "validation": {
+            "required": true,
+            "message": "Street address is required"
+          }
+        },
+        {
+          "name": "city",
+          "label": "City",
+          "type": "text",
+          "placeholder": "Enter city",
+          "gridColumn": 1,
+          "validation": {
+            "required": true,
+            "message": "City is required"
+          }
+        },
+        {
+          "name": "state",
+          "label": "State",
+          "type": "text",
+          "placeholder": "Enter state",
+          "gridColumn": 1,
+          "validation": {
+            "required": true,
+            "message": "State is required"
+          }
+        },
+        {
+          "name": "zipCode",
+          "label": "Zip Code",
+          "type": "text",
+          "placeholder": "Enter zip code",
+          "gridColumn": 1,
+          "validation": {
+            "required": true,
+            "message": "Zip code is required"
+          }
+        },
+        {
+          "name": "country",
+          "label": "Country",
+          "type": "text",
+          "placeholder": "Enter country",
+          "gridColumn": 1,
+          "validation": {
+            "required": true,
+            "message": "Country is required"
+          }
+        },
+        {
+          "name": "emergencyContact",
+          "label": "Emergency Contact",
+          "type": "tel",
+          "placeholder": "Enter emergency contact",
+          "gridColumn": 1,
+          "maxLength": 10,
+          "validation": {
+            "required": true,
+            "pattern": "^[0-9]{10}$",
+            "message": "Enter valid 10 digit phone number"
+          }
+        }
+      ]
+    }
+  ]
+}

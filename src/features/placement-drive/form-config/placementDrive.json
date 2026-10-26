@@ -1,0 +1,282 @@
+[
+  {
+    "name": "driveName",
+    "label": "Drive Name",
+    "type": "text",
+    "placeholder": "Enter recruitment drive name (e.g., TCS National Campus Drive 2024)",
+    "gridColumn": 4,
+    "validation": {
+      "required": true,
+      "message": "Drive Name is required"
+    }
+  },
+  {
+    "name": "employer",
+    "label": "Employer",
+    "type": "select",
+    "placeholder": "Select participating employer",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "Tata Consultancy Services (TCS)",
+        "value": "Tata Consultancy Services"
+      },
+      {
+        "label": "Infosys Limited",
+        "value": "Infosys Limited"
+      },
+      {
+        "label": "Wipro Technologies",
+        "value": "Wipro Technologies"
+      },
+      {
+        "label": "Tech Mahindra",
+        "value": "Tech Mahindra"
+      },
+      {
+        "label": "Cognizant Technology Solutions",
+        "value": "Cognizant"
+      },
+      {
+        "label": "ABC Technologies Pvt. Ltd.",
+        "value": "ABC Technologies Pvt. Ltd."
+      },
+      {
+        "label": "XYZ Industries",
+        "value": "XYZ Industries"
+      },
+      {
+        "label": "Digital Solutions",
+        "value": "Digital Solutions"
+      },
+      {
+        "label": "Eastern Enterprises",
+        "value": "Eastern Enterprises"
+      },
+      {
+        "label": "Deloitte India",
+        "value": "Deloitte India"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Employer is required"
+    }
+  },
+  {
+    "name": "driveType",
+    "label": "Drive Type",
+    "type": "select",
+    "placeholder": "Select drive type",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "On-Campus Recruitment Drive",
+        "value": "On-Campus Drive"
+      },
+      {
+        "label": "Joint / Pool Campus Drive",
+        "value": "Pool Campus Drive"
+      },
+      {
+        "label": "Virtual / Online Recruitment Drive",
+        "value": "Virtual Drive"
+      },
+      {
+        "label": "Off-Campus Recruitment Drive",
+        "value": "Off-Campus Drive"
+      },
+      {
+        "label": "Industry Internship & Apprenticeship Fair",
+        "value": "Internship Fair"
+      },
+      {
+        "label": "Diversity & Special Inclusion Drive",
+        "value": "Diversity Drive"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Drive Type is required"
+    }
+  },
+  {
+    "name": "schedule",
+    "label": "Schedule (Drive Date)",
+    "type": "date",
+    "placeholder": "Select drive schedule date",
+    "gridColumn": 4,
+    "validation": {
+      "required": true,
+      "message": "Drive Schedule date is required"
+    }
+  },
+  {
+    "name": "registrationDeadline",
+    "label": "Registration Deadline",
+    "type": "date",
+    "placeholder": "Select registration deadline",
+    "gridColumn": 4,
+    "validation": {
+      "required": true,
+      "message": "Registration Deadline is required"
+    }
+  },
+  {
+    "name": "venueMode",
+    "label": "Venue / Mode",
+    "type": "text",
+    "placeholder": "Enter venue or online participation link (e.g., Campus Auditorium & Lab 3)",
+    "gridColumn": 4,
+    "validation": {
+      "required": true,
+      "message": "Venue / Mode is required"
+    }
+  },
+  {
+    "name": "vacanciesRoles",
+    "label": "Vacancies / Roles",
+    "type": "text",
+    "placeholder": "Enter mapped roles and openings (e.g., Associate SDE: 15, Data Analyst: 10)",
+    "gridColumn": 4,
+    "validation": {
+      "required": true,
+      "message": "Vacancies / Roles mapping is required"
+    }
+  },
+  {
+    "name": "driveStatus",
+    "label": "Drive Status",
+    "type": "select",
+    "placeholder": "Select drive status",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "Draft",
+        "value": "Draft"
+      },
+      {
+        "label": "Published",
+        "value": "Published"
+      },
+      {
+        "label": "In Progress",
+        "value": "In Progress"
+      },
+      {
+        "label": "Completed",
+        "value": "Completed"
+      },
+      {
+        "label": "Cancelled",
+        "value": "Cancelled"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Drive Status is required"
+    }
+  },
+  {
+    "name": "eligibleProgrammes",
+    "label": "Eligible Programmes",
+    "type": "multiselect",
+    "placeholder": "Select eligible programmes / branches",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "B.Tech - Computer Science & Engineering (CSE)",
+        "value": "B.Tech CSE"
+      },
+      {
+        "label": "B.Tech - Information Technology (IT)",
+        "value": "B.Tech IT"
+      },
+      {
+        "label": "B.Tech - Electronics & Communication (ECE)",
+        "value": "B.Tech ECE"
+      },
+      {
+        "label": "B.Tech - Electrical Engineering (EE)",
+        "value": "B.Tech EE"
+      },
+      {
+        "label": "B.Tech - Mechanical Engineering (ME)",
+        "value": "B.Tech ME"
+      },
+      {
+        "label": "B.Tech - Civil Engineering (CE)",
+        "value": "B.Tech CE"
+      },
+      {
+        "label": "MCA (Master of Computer Applications)",
+        "value": "MCA"
+      },
+      {
+        "label": "M.Tech (All Branches)",
+        "value": "M.Tech"
+      },
+      {
+        "label": "All Final Year Eligible Students",
+        "value": "All Final Year"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Please select at least one eligible programme"
+    }
+  },
+  {
+    "name": "selectionStages",
+    "label": "Selection Stages",
+    "type": "multiselect",
+    "placeholder": "Select applicable tests and interview stages",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "Online Aptitude & Cognitive Assessment",
+        "value": "Aptitude Test"
+      },
+      {
+        "label": "Hands-on Technical Coding Challenge",
+        "value": "Coding Test"
+      },
+      {
+        "label": "Group Discussion / Jam Session",
+        "value": "Group Discussion"
+      },
+      {
+        "label": "Technical Interview (Round 1)",
+        "value": "Technical Interview 1"
+      },
+      {
+        "label": "Advanced System Design Interview (Round 2)",
+        "value": "Technical Interview 2"
+      },
+      {
+        "label": "Managerial / Project Evaluation Round",
+        "value": "Managerial Round"
+      },
+      {
+        "label": "HR Behavioral Interview & Document Verification",
+        "value": "HR Interview"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Please select applicable selection stages"
+    }
+  },
+  {
+    "name": "eligibilityCriteria",
+    "label": "Eligibility Criteria",
+    "type": "textarea",
+    "rows": 2,
+    "placeholder": "Define academic cutoff (min CGPA / percentage), standing backlogs policy, technical skills, and year of passing",
+    "gridColumn": 8,
+    "validation": {
+      "required": true,
+      "message": "Eligibility Criteria is required"
+    }
+  }
+]

@@ -1,0 +1,130 @@
+[
+  {
+    "name": "organizationName",
+    "label": "Organization Name",
+    "type": "text",
+    "placeholder": "Enter organization name",
+    "gridColumn": 4,
+    "validation": {
+      "required": true,
+      "message": "Organization Name is required"
+    }
+  },
+  {
+    "name": "organizationType",
+    "label": "Organization Type",
+    "type": "select",
+    "placeholder": "Select organization type",
+    "gridColumn": 2,
+    "options": [
+      {
+        "label": "Private",
+        "value": "Private"
+      },
+      {
+        "label": "Public",
+        "value": "Public"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Organization Type / Industry is required"
+    }
+  },
+  {
+    "name": "registrationDetails",
+    "label": "Registration Details",
+    "type": "text",
+    "placeholder": "Enter registration details",
+    "gridColumn": 3,
+    "validation": {
+      "required": true,
+      "message": "Registration Details are required"
+    }
+  },
+  {
+    "name": "addressAndLocation",
+    "label": "Address and Location",
+    "type": "text",
+    "placeholder": "Enter office address and operating locations",
+    "gridColumn": 3,
+    "validation": {
+      "required": true,
+      "message": "Address and Location is required"
+    }
+  },
+  {
+    "name": "contactPerson",
+    "label": "Contact Person",
+    "type": "text",
+    "placeholder": "Enter contact person name, designation, email, and phone number",
+    "gridColumn": 3,
+    "validation": {
+      "required": true,
+      "message": "Contact Person is required"
+    }
+  },
+  {
+    "name": "website",
+    "label": "Website",
+    "type": "url",
+    "placeholder": "https://www.example.com",
+    "gridColumn": 3,
+    "validation": {
+      "required": false,
+      "message": "Enter a valid website URL"
+    }
+  },
+  {
+    "name": "supportingDocuments",
+    "label": "Supporting Documents",
+    "type": "file",
+    "placeholder": "Upload supporting documents",
+    "accept": ".pdf,.doc,.docx,.jpg,.jpeg,.png",
+    "gridColumn": 3,
+    "validation": {
+      "required": false
+    }
+  },
+  {
+    "name": "verificationStatus",
+    "label": "Verification Status",
+    "type": "select",
+    "placeholder": "Select verification status",
+    "gridColumn": 3,
+    "options": [
+      {
+        "label": "Pending",
+        "value": "Pending"
+      },
+      {
+        "label": "Verified",
+        "value": "Verified"
+      },
+      {
+        "label": "Rejected",
+        "value": "Rejected"
+      },
+      {
+        "label": "Returned",
+        "value": "Returned"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Verification Status is required"
+    }
+  },
+  {
+    "name": "companyProfile",
+    "label": "Company Profile",
+    "type": "textarea",
+    "rows": 3,
+    "placeholder": "Enter description of organization and business activities",
+    "gridColumn": 12,
+    "validation": {
+      "required": true,
+      "message": "Company Profile is required"
+    }
+  }
+]

@@ -1,0 +1,183 @@
+[
+  {
+    "name": "applicationNumber",
+    "label": "Application Number",
+    "type": "text",
+    "placeholder": "Auto-generated (e.g., APP-2024-001)",
+    "gridColumn": 3,
+    "validation": {
+      "required": false
+    }
+  },
+  {
+    "name": "studentName",
+    "label": "Student Name",
+    "type": "select",
+    "placeholder": "Select applying student",
+    "gridColumn": 3,
+    "options": [
+      {
+        "label": "Aarav Sharma (STU-2022-001) - B.Tech CSE",
+        "value": "Aarav Sharma"
+      },
+      {
+        "label": "Priya Patel (STU-2022-045) - B.Tech IT",
+        "value": "Priya Patel"
+      },
+      {
+        "label": "Rahul Verma (STU-2023-018) - MCA",
+        "value": "Rahul Verma"
+      },
+      {
+        "label": "Sneha Rao (STU-2023-089) - B.Tech ECE",
+        "value": "Sneha Rao"
+      },
+      {
+        "label": "Vikram Das (STU-2022-104) - B.Tech ME",
+        "value": "Vikram Das"
+      },
+      {
+        "label": "Ananya Mishra (STU-2023-052) - B.Sc CS",
+        "value": "Ananya Mishra"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Student Name is required"
+    }
+  },
+  {
+    "name": "submissionDate",
+    "label": "Submission Date",
+    "type": "date",
+    "placeholder": "Select submission date",
+    "gridColumn": 3,
+    "validation": {
+      "required": true,
+      "message": "Submission Date is required"
+    }
+  },
+  {
+    "name": "applicationStatus",
+    "label": "Application Status",
+    "type": "select",
+    "placeholder": "Select application status",
+    "gridColumn": 3,
+    "options": [
+      {
+        "label": "Submitted",
+        "value": "Submitted"
+      },
+      {
+        "label": "Under Review",
+        "value": "Under Review"
+      },
+      {
+        "label": "Shortlisted",
+        "value": "Shortlisted"
+      },
+      {
+        "label": "Interview Scheduled",
+        "value": "Interview Scheduled"
+      },
+      {
+        "label": "Selected",
+        "value": "Selected"
+      },
+      {
+        "label": "Rejected",
+        "value": "Rejected"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Application Status is required"
+    }
+  },
+  {
+    "name": "opportunity",
+    "label": "Opportunity",
+    "type": "select",
+    "placeholder": "Select an available opportunity",
+    "gridColumn": 6,
+    "options": [
+      {
+        "label": "Software Development Engineer (Frontend) - ABC Technologies Pvt. Ltd.",
+        "value": "Software Development Engineer - ABC Technologies"
+      },
+      {
+        "label": "Data Analyst & Business Intelligence Intern - XYZ Industries",
+        "value": "Data Analyst Intern - XYZ Industries"
+      },
+      {
+        "label": "Systems Engineer (Ninja & Digital) - Tata Consultancy Services (TCS)",
+        "value": "Systems Engineer - TCS"
+      },
+      {
+        "label": "Specialist Programmer - Infosys Limited",
+        "value": "Specialist Programmer - Infosys"
+      },
+      {
+        "label": "GenC Elevate Developer - Cognizant Technology Solutions",
+        "value": "GenC Developer - Cognizant"
+      },
+      {
+        "label": "Industrial Automation Apprentice - Eastern Enterprises",
+        "value": "Automation Apprentice - Eastern Enterprises"
+      },
+      {
+        "label": "DevOps & Cloud Specialist - Digital Solutions",
+        "value": "DevOps Specialist - Digital Solutions"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Opportunity selection is required"
+    }
+  },
+  {
+    "name": "eligibilitySummary",
+    "label": "Eligibility Summary",
+    "type": "textarea",
+    "rows": 2,
+    "placeholder": "System verified: B.Tech CSE/IT, min 65% aggregate, no standing backlogs. Student meets all criteria.",
+    "gridColumn": 6,
+    "validation": {
+      "required": true,
+      "message": "Eligibility Summary is required"
+    }
+  },
+  {
+    "name": "resume",
+    "label": "Resume",
+    "type": "file",
+    "placeholder": "Select or upload resume (PDF, DOCX)",
+    "accept": ".pdf,.doc,.docx",
+    "gridColumn": 6,
+    "validation": {
+      "required": false
+    }
+  },
+  {
+    "name": "applicationQuestions",
+    "label": "Application Questions",
+    "type": "textarea",
+    "rows": 2,
+    "placeholder": "Answer role-specific questions: Describe relevant project experience, core tech stack, and motivation for this role.",
+    "gridColumn": 6,
+    "validation": {
+      "required": true,
+      "message": "Application Questions must be completed"
+    }
+  },
+  {
+    "name": "declarationConsent",
+    "label": "Declaration / Consent: I hereby declare that all information submitted in this application is accurate and complete.",
+    "type": "checkbox",
+    "gridColumn": 12,
+    "validation": {
+      "required": true,
+      "message": "You must confirm the declaration to submit"
+    }
+  }
+]

@@ -1,0 +1,198 @@
+[
+  {
+    "name": "notificationType",
+    "label": "Notification Type",
+    "type": "select",
+    "placeholder": "Select notification type",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "Drive Announcement",
+        "value": "Drive Announcement"
+      },
+      {
+        "label": "Opportunity Alert",
+        "value": "Opportunity Alert"
+      },
+      {
+        "label": "Interview Schedule",
+        "value": "Interview Schedule"
+      },
+      {
+        "label": "Application Deadline Reminder",
+        "value": "Deadline Reminder"
+      },
+      {
+        "label": "Counselling Session Notification",
+        "value": "Counselling Alert"
+      },
+      {
+        "label": "Shortlist / Selection Status Update",
+        "value": "Selection Status Update"
+      },
+      {
+        "label": "Offer Letter Notification",
+        "value": "Offer Notification"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Notification Type is required"
+    }
+  },
+  {
+    "name": "recipient",
+    "label": "Recipient",
+    "type": "select",
+    "placeholder": "Select recipient cohort or student",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "All Final Year Eligible Students (Batch 2024)",
+        "value": "All Final Year Eligible"
+      },
+      {
+        "label": "Shortlisted Candidates - TCS Campus Drive",
+        "value": "TCS Shortlisted Candidates"
+      },
+      {
+        "label": "Shortlisted Candidates - Infosys Drive",
+        "value": "Infosys Shortlisted Candidates"
+      },
+      {
+        "label": "All Pre-Final Year Students (Internships)",
+        "value": "Pre-Final Year Students"
+      },
+      {
+        "label": "Aarav Sharma (STU-2022-001) - Individual",
+        "value": "Aarav Sharma"
+      },
+      {
+        "label": "Priya Patel (STU-2022-045) - Individual",
+        "value": "Priya Patel"
+      },
+      {
+        "label": "Rahul Verma (STU-2023-018) - Individual",
+        "value": "Rahul Verma"
+      },
+      {
+        "label": "Sneha Rao (STU-2023-089) - Individual",
+        "value": "Sneha Rao"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Recipient is required"
+    }
+  },
+  {
+    "name": "deliveryChannel",
+    "label": "Delivery Channel",
+    "type": "select",
+    "placeholder": "Select delivery channel",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "In-Application Notification",
+        "value": "In-App"
+      },
+      {
+        "label": "Email Alert",
+        "value": "Email"
+      },
+      {
+        "label": "SMS Message",
+        "value": "SMS"
+      },
+      {
+        "label": "Email & In-App Notification",
+        "value": "Email & In-App"
+      },
+      {
+        "label": "Omnichannel (In-App, Email & SMS)",
+        "value": "Omnichannel"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Delivery Channel is required"
+    }
+  },
+  {
+    "name": "deadline",
+    "label": "Deadline",
+    "type": "date",
+    "placeholder": "Select action deadline",
+    "gridColumn": 4,
+    "validation": {
+      "required": false
+    }
+  },
+  {
+    "name": "deliveryStatus",
+    "label": "Delivery Status",
+    "type": "select",
+    "placeholder": "Select delivery status",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "Delivered",
+        "value": "Delivered"
+      },
+      {
+        "label": "Sent / In Transit",
+        "value": "Sent"
+      },
+      {
+        "label": "Read / Acknowledged",
+        "value": "Read"
+      },
+      {
+        "label": "Pending / Scheduled",
+        "value": "Pending"
+      },
+      {
+        "label": "Failed",
+        "value": "Failed"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Delivery Status is required"
+    }
+  },
+  {
+    "name": "sentDate",
+    "label": "Sent Date",
+    "type": "date",
+    "placeholder": "Select transmission date",
+    "gridColumn": 4,
+    "validation": {
+      "required": true,
+      "message": "Sent Date is required"
+    }
+  },
+  {
+    "name": "message",
+    "label": "Message",
+    "type": "textarea",
+    "rows": 2,
+    "placeholder": "Enter event details, required action steps, venue/link instructions, and coordinator contact",
+    "gridColumn": 6,
+    "validation": {
+      "required": true,
+      "message": "Message content is required"
+    }
+  },
+  {
+    "name": "communicationHistory",
+    "label": "Communication History",
+    "type": "textarea",
+    "rows": 2,
+    "placeholder": "Transmission log details (e.g., Dispatched via SendGrid SMTP Gateway to 45 verified recipients at 10:30 AM)",
+    "gridColumn": 6,
+    "validation": {
+      "required": false
+    }
+  }
+]

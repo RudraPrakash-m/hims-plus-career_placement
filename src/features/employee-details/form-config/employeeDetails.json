@@ -1,0 +1,205 @@
+[
+  {
+    "name": "employeeId",
+    "label": "Employee ID",
+    "type": "text",
+    "placeholder": "Enter employee ID",
+    "validation": {
+      "required": true,
+      "message": "Employee ID is required"
+    }
+  },
+  {
+    "name": "employeeName",
+    "label": "Employee Name",
+    "type": "text",
+    "placeholder": "Enter employee name",
+    "validation": {
+      "required": true,
+      "minLength": 3,
+      "maxLength": 100,
+      "message": "Employee Name is required"
+    }
+  },
+  {
+    "name": "firstName",
+    "label": "First Name",
+    "type": "text",
+    "placeholder": "Enter first name",
+    "validation": {
+      "required": true,
+      "message": "First Name is required"
+    }
+  },
+  {
+    "name": "lastName",
+    "label": "Last Name",
+    "type": "text",
+    "placeholder": "Enter last name",
+    "validation": {
+      "required": true,
+      "message": "Last Name is required"
+    }
+  },
+  {
+    "name": "gender",
+    "label": "Gender",
+    "type": "select",
+    "placeholder": "Select gender",
+    "key": "gender",
+    "value": "gendername",
+    "options": [
+      {
+        "label": "Male",
+        "value": "Male"
+      },
+      {
+        "label": "Female",
+        "value": "Female"
+      },
+      {
+        "label": "Other",
+        "value": "Other"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Gender is required"
+    }
+  },
+  {
+    "name": "dateOfBirth",
+    "label": "Date of Birth",
+    "type": "date",
+    "placeholder": "Select date of birth",
+    "validation": {
+      "required": true,
+      "message": "Date of Birth is required"
+    }
+  },
+  {
+    "name": "mobileNumber",
+    "label": "Mobile Number",
+    "type": "tel",
+    "placeholder": "Enter mobile number",
+    "maxLength": 10,
+    "validation": {
+      "required": true,
+      "pattern": "^[0-9]{10}$",
+      "message": "Enter valid 10 digit mobile number"
+    }
+  },
+  {
+    "name": "emailId",
+    "label": "Email ID",
+    "type": "email",
+    "placeholder": "Enter email ID",
+    "validation": {
+      "required": true,
+      "pattern": "^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$",
+      "message": "Enter valid email ID"
+    }
+  },
+  {
+    "name": "profilePhoto",
+    "label": "Profile Photo",
+    "type": "file",
+    "placeholder": "Upload profile photo",
+    "gridColumn": 1
+  },
+  {
+    "name": "maritalStatus",
+    "label": "Marital Status",
+    "type": "select",
+    "placeholder": "Select marital status",
+    "options": [
+      {
+        "label": "Single",
+        "value": "Single"
+      },
+      {
+        "label": "Married",
+        "value": "Married"
+      }
+    ]
+  },
+  {
+    "name": "bloodGroup",
+    "label": "Blood Group",
+    "type": "select",
+    "placeholder": "Select blood group",
+    "options": [
+      {
+        "label": "A+",
+        "value": "A+"
+      },
+      {
+        "label": "A-",
+        "value": "A-"
+      },
+      {
+        "label": "B+",
+        "value": "B+"
+      },
+      {
+        "label": "B-",
+        "value": "B-"
+      },
+      {
+        "label": "O+",
+        "value": "O+"
+      },
+      {
+        "label": "O-",
+        "value": "O-"
+      },
+      {
+        "label": "AB+",
+        "value": "AB+"
+      },
+      {
+        "label": "AB-",
+        "value": "AB-"
+      }
+    ]
+  },
+  {
+    "name": "nationality",
+    "label": "Nationality",
+    "type": "text",
+    "placeholder": "Enter nationality",
+    "gridColumn": 1
+  },
+  {
+    "name": "languages",
+    "label": "Languages Known",
+    "type": "multiselect",
+    "placeholder": "Select languages",
+    "options": [
+      {
+        "label": "English",
+        "value": "english"
+      },
+      {
+        "label": "Hindi",
+        "value": "hindi"
+      },
+      {
+        "label": "Odia",
+        "value": "odia"
+      },
+      {
+        "label": "Spanish",
+        "value": "spanish"
+      },
+      {
+        "label": "German",
+        "value": "german"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Select at least one language"
+    }
+  }
+]

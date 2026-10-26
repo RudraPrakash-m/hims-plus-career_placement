@@ -1,0 +1,238 @@
+[
+  {
+    "name": "employeeId",
+    "label": "Employee ID",
+    "type": "text",
+    "placeholder": "EMP-001",
+    "gridColumn": 3,
+    "validation": {
+      "required": true,
+      "message": "Employee ID is required"
+    }
+  },
+  {
+    "name": "fullName",
+    "label": "Full Name",
+    "type": "text",
+    "placeholder": "Enter full name",
+    "gridColumn": 3,
+    "validation": {
+      "required": true,
+      "message": "Full Name is required"
+    }
+  },
+  {
+    "name": "gender",
+    "label": "Gender",
+    "type": "select",
+    "placeholder": "Select gender",
+    "gridColumn": 3,
+    "options": [
+      {
+        "label": "Male",
+        "value": "Male"
+      },
+      {
+        "label": "Female",
+        "value": "Female"
+      },
+      {
+        "label": "Other",
+        "value": "Other"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Gender is required"
+    }
+  },
+  {
+    "name": "profilePhoto",
+    "label": "Profile Photo",
+    "type": "profile-upload",
+    "gridColumn": 3,
+    "rowSpan": 2
+  },
+  {
+    "name": "designation",
+    "label": "Designation",
+    "type": "text",
+    "placeholder": "Software Engineer",
+    "gridColumn": 3,
+    "validation": {
+      "required": true,
+      "message": "Designation is required"
+    }
+  },
+  {
+    "name": "department",
+    "label": "Department",
+    "type": "select",
+    "placeholder": "Select department",
+    "gridColumn": 3,
+    "options": [
+      {
+        "label": "Engineering",
+        "value": "Engineering"
+      },
+      {
+        "label": "Human Resources",
+        "value": "HR"
+      },
+      {
+        "label": "Marketing",
+        "value": "Marketing"
+      },
+      {
+        "label": "Finance",
+        "value": "Finance"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Department is required"
+    }
+  },
+  {
+    "name": "dateOfJoining",
+    "label": "Date of Joining",
+    "type": "date",
+    "placeholder": "Select joining date",
+    "gridColumn": 3,
+    "maxDate": "today",
+    "validation": {
+      "required": true,
+      "message": "Date of Joining is required"
+    }
+  },
+  {
+    "name": "employeeType",
+    "label": "Employee Type",
+    "type": "select",
+    "placeholder": "Select type",
+    "gridColumn": 3,
+    "options": [
+      {
+        "label": "Full Time",
+        "value": "Full Time"
+      },
+      {
+        "label": "Part Time",
+        "value": "Part Time"
+      },
+      {
+        "label": "Contract",
+        "value": "Contract"
+      },
+      {
+        "label": "Intern",
+        "value": "Intern"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Employee Type is required"
+    }
+  },
+  {
+    "name": "mobileNumber",
+    "label": "Mobile Number",
+    "type": "tel",
+    "placeholder": "Enter mobile number",
+    "gridColumn": 3,
+    "maxLength": 10,
+    "validation": {
+      "required": true,
+      "pattern": "^[0-9]{10}$",
+      "message": "Enter valid 10 digit mobile number"
+    }
+  },
+  {
+    "name": "shiftStartTime",
+    "label": "Shift Start Time",
+    "type": "time",
+    "placeholder": "hh:mm aa",
+    "gridColumn": 3,
+    "validation": {
+      "required": true,
+      "message": "Start time is required"
+    }
+  },
+  {
+    "name": "shiftEndTime",
+    "label": "Shift End Time",
+    "type": "time",
+    "placeholder": "hh:mm aa",
+    "gridColumn": 3,
+    "validation": {
+      "required": true,
+      "message": "End time is required"
+    }
+  },
+  {
+    "name": "email",
+    "label": "Email Address",
+    "type": "email",
+    "placeholder": "example@domain.com",
+    "gridColumn": 3,
+    "validation": {
+      "required": true,
+      "message": "Valid email address is required"
+    }
+  },
+  {
+    "name": "emergencyContact",
+    "label": "Emergency Contact Name",
+    "type": "text",
+    "placeholder": "Emergency contact person name",
+    "gridColumn": 3,
+    "validation": {
+      "required": true,
+      "message": "Emergency contact name is required"
+    }
+  },
+  {
+    "name": "primarySkills",
+    "label": "Primary Skills / Tech Stack",
+    "type": "multiselect",
+    "placeholder": "Select core skills",
+    "gridColumn": 3,
+    "options": [
+      {
+        "label": "React",
+        "value": "React"
+      },
+      {
+        "label": "TypeScript",
+        "value": "TypeScript"
+      },
+      {
+        "label": "Node.js",
+        "value": "Node.js"
+      },
+      {
+        "label": "Python",
+        "value": "Python"
+      },
+      {
+        "label": "Java",
+        "value": "Java"
+      },
+      {
+        "label": "Docker",
+        "value": "Docker"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Select at least one skill"
+    }
+  },
+  {
+    "name": "remarks",
+    "label": "Additional Remarks",
+    "type": "textarea",
+    "placeholder": "Enter any additional information...",
+    "gridColumn": 3
+  }
+]

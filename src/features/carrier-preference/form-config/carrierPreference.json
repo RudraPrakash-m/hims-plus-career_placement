@@ -1,0 +1,287 @@
+[
+  {
+    "name": "preferredJobRoles",
+    "label": "Preferred Job Roles",
+    "type": "multiselect",
+    "placeholder": "Select preferred job roles",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "Software Engineer / Developer",
+        "value": "Software Engineer"
+      },
+      {
+        "label": "Frontend Developer",
+        "value": "Frontend Developer"
+      },
+      {
+        "label": "Backend Developer",
+        "value": "Backend Developer"
+      },
+      {
+        "label": "Full Stack Developer",
+        "value": "Full Stack Developer"
+      },
+      {
+        "label": "Data Analyst / Scientist",
+        "value": "Data Analyst"
+      },
+      {
+        "label": "Machine Learning Engineer",
+        "value": "Machine Learning Engineer"
+      },
+      {
+        "label": "DevOps / Cloud Engineer",
+        "value": "DevOps Engineer"
+      },
+      {
+        "label": "QA / Automation Tester",
+        "value": "QA Automation Tester"
+      },
+      {
+        "label": "UI / UX Designer",
+        "value": "UI / UX Designer"
+      },
+      {
+        "label": "Product / Project Manager",
+        "value": "Product Manager"
+      },
+      {
+        "label": "Cybersecurity Analyst",
+        "value": "Cybersecurity Analyst"
+      },
+      {
+        "label": "Business Analyst",
+        "value": "Business Analyst"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Please select at least one preferred job role"
+    }
+  },
+  {
+    "name": "preferredIndustry",
+    "label": "Preferred Industry",
+    "type": "select",
+    "placeholder": "Select preferred industry",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "Information Technology (IT) & Services",
+        "value": "IT & Services"
+      },
+      {
+        "label": "Banking, Financial Services & Insurance (BFSI)",
+        "value": "BFSI"
+      },
+      {
+        "label": "Healthcare & Pharmaceuticals",
+        "value": "Healthcare & Pharmaceuticals"
+      },
+      {
+        "label": "E-Commerce & Retail",
+        "value": "E-Commerce & Retail"
+      },
+      {
+        "label": "Manufacturing & Automotive",
+        "value": "Manufacturing & Automotive"
+      },
+      {
+        "label": "Education & EdTech",
+        "value": "Education & EdTech"
+      },
+      {
+        "label": "Telecommunications & Media",
+        "value": "Telecommunications & Media"
+      },
+      {
+        "label": "Consulting & Professional Services",
+        "value": "Consulting & Professional Services"
+      },
+      {
+        "label": "Government & Public Sector",
+        "value": "Government & Public Sector"
+      },
+      {
+        "label": "Energy, Oil & Gas",
+        "value": "Energy, Oil & Gas"
+      },
+      {
+        "label": "Other",
+        "value": "Other"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Preferred Industry is required"
+    }
+  },
+  {
+    "name": "preferredLocation",
+    "label": "Preferred Location",
+    "type": "text",
+    "placeholder": "e.g., Bangalore, Hyderabad, Pune, Bhubaneswar, Remote",
+    "gridColumn": 4,
+    "validation": {
+      "required": true,
+      "message": "Preferred Location is required"
+    }
+  },
+  {
+    "name": "employmentType",
+    "label": "Employment Type",
+    "type": "select",
+    "placeholder": "Select employment type",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "Full-Time",
+        "value": "Full-Time"
+      },
+      {
+        "label": "Internship",
+        "value": "Internship"
+      },
+      {
+        "label": "Apprenticeship",
+        "value": "Apprenticeship"
+      },
+      {
+        "label": "Part-Time",
+        "value": "Part-Time"
+      },
+      {
+        "label": "Contractual / Freelance",
+        "value": "Contractual"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Employment Type is required"
+    }
+  },
+  {
+    "name": "careerGoals",
+    "label": "Higher Study / Career Goals",
+    "type": "textarea",
+    "rows": 2,
+    "placeholder": "Enter longer-term career goals or higher study plans (e.g., MS, MBA, PhD)",
+    "gridColumn": 4,
+    "validation": {
+      "required": false
+    }
+  },
+  {
+    "name": "expectedSalaryRange",
+    "label": "Expected Salary Range",
+    "type": "select",
+    "placeholder": "Select expected salary range",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "Less than 3 LPA",
+        "value": "< 3 LPA"
+      },
+      {
+        "label": "3 - 5 LPA",
+        "value": "3 - 5 LPA"
+      },
+      {
+        "label": "5 - 8 LPA",
+        "value": "5 - 8 LPA"
+      },
+      {
+        "label": "8 - 12 LPA",
+        "value": "8 - 12 LPA"
+      },
+      {
+        "label": "12 - 18 LPA",
+        "value": "12 - 18 LPA"
+      },
+      {
+        "label": "Above 18 LPA",
+        "value": "> 18 LPA"
+      },
+      {
+        "label": "As per Industry Standards / Negotiable",
+        "value": "Negotiable"
+      }
+    ],
+    "validation": {
+      "required": false
+    }
+  },
+  {
+    "name": "workMode",
+    "label": "Work Mode",
+    "type": "select",
+    "placeholder": "Select work mode preference",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "On-site",
+        "value": "On-site"
+      },
+      {
+        "label": "Hybrid",
+        "value": "Hybrid"
+      },
+      {
+        "label": "Remote",
+        "value": "Remote"
+      },
+      {
+        "label": "Open to Any",
+        "value": "Open to Any"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Work Mode preference is required"
+    }
+  },
+  {
+    "name": "availability",
+    "label": "Availability",
+    "type": "select",
+    "placeholder": "Select availability for employment or internship",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "Immediate (Within 15 days)",
+        "value": "Immediate"
+      },
+      {
+        "label": "1 Month Notice",
+        "value": "1 Month"
+      },
+      {
+        "label": "After Final Semester Exams",
+        "value": "After Exams"
+      },
+      {
+        "label": "Summer Internship (May - July)",
+        "value": "Summer Internship"
+      },
+      {
+        "label": "6 Months Final Semester Internship",
+        "value": "6 Months Internship"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Availability is required"
+    }
+  },
+  {
+    "name": "lastUpdated",
+    "label": "Last Updated",
+    "type": "date",
+    "placeholder": "Select latest update date",
+    "gridColumn": 4,
+    "validation": {
+      "required": false
+    }
+  }
+]

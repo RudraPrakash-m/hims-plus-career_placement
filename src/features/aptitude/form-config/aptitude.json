@@ -1,0 +1,219 @@
+[
+  {
+    "name": "assessmentType",
+    "label": "Assessment Type",
+    "type": "select",
+    "placeholder": "Select assessment type",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "Aptitude & Quantitative Ability",
+        "value": "Aptitude & Quantitative Ability"
+      },
+      {
+        "label": "Technical Skill Assessment",
+        "value": "Technical Skill Assessment"
+      },
+      {
+        "label": "Soft Skills & Communication",
+        "value": "Soft Skills & Communication"
+      },
+      {
+        "label": "Logical Reasoning & Critical Thinking",
+        "value": "Logical Reasoning"
+      },
+      {
+        "label": "Domain Specific / Core Engineering",
+        "value": "Core Engineering"
+      },
+      {
+        "label": "Psychometric & Behavioral Assessment",
+        "value": "Psychometric Assessment"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Assessment Type is required"
+    }
+  },
+  {
+    "name": "assessmentName",
+    "label": "Assessment Name",
+    "type": "text",
+    "placeholder": "Enter assessment name (e.g., National Aptitude Test 2024)",
+    "gridColumn": 4,
+    "validation": {
+      "required": true,
+      "message": "Assessment Name is required"
+    }
+  },
+  {
+    "name": "schedule",
+    "label": "Schedule",
+    "type": "datetime-local",
+    "placeholder": "Select assessment schedule date and time",
+    "gridColumn": 4,
+    "validation": {
+      "required": true,
+      "message": "Schedule date and time is required"
+    }
+  },
+  {
+    "name": "studentBatch",
+    "label": "Student / Batch",
+    "type": "select",
+    "placeholder": "Select eligible students or batch",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "Batch 2024 - B.Tech CSE (All Sections)",
+        "value": "Batch 2024 - B.Tech CSE"
+      },
+      {
+        "label": "Batch 2024 - B.Tech IT & ECE",
+        "value": "Batch 2024 - B.Tech IT & ECE"
+      },
+      {
+        "label": "Batch 2025 - MCA & M.Tech",
+        "value": "Batch 2025 - MCA"
+      },
+      {
+        "label": "Batch 2024 - Mechanical & Civil Engineering",
+        "value": "Batch 2024 - Core Engg"
+      },
+      {
+        "label": "Aarav Sharma (STU-2022-001) - Individual",
+        "value": "Aarav Sharma"
+      },
+      {
+        "label": "Priya Patel (STU-2022-045) - Individual",
+        "value": "Priya Patel"
+      },
+      {
+        "label": "All Final Year Eligible Students",
+        "value": "All Eligible Students"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Student / Batch is required"
+    }
+  },
+  {
+    "name": "assessmentResult",
+    "label": "Assessment Result",
+    "type": "select",
+    "placeholder": "Select or record assessment result",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "Distinction / Grade A (85% - 100%)",
+        "value": "Distinction"
+      },
+      {
+        "label": "Merit / Grade B (70% - 84%)",
+        "value": "Merit"
+      },
+      {
+        "label": "Pass / Grade C (50% - 69%)",
+        "value": "Pass"
+      },
+      {
+        "label": "Needs Improvement / Grade D (< 50%)",
+        "value": "Needs Improvement"
+      },
+      {
+        "label": "Result Awaited / Pending Evaluation",
+        "value": "Result Awaited"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Assessment Result is required"
+    }
+  },
+  {
+    "name": "skillCategory",
+    "label": "Skill Category",
+    "type": "select",
+    "placeholder": "Select assessed skill category",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "Quantitative & Numerical Ability",
+        "value": "Quantitative Ability"
+      },
+      {
+        "label": "Logical & Analytical Reasoning",
+        "value": "Logical Reasoning"
+      },
+      {
+        "label": "Verbal Ability & Reading Comprehension",
+        "value": "Verbal Ability"
+      },
+      {
+        "label": "Data Structures & Algorithmic Problem Solving",
+        "value": "Data Structures & Algorithms"
+      },
+      {
+        "label": "Core Programming & Software Engineering",
+        "value": "Programming"
+      },
+      {
+        "label": "Interpersonal & Workplace Communication",
+        "value": "Communication"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Skill Category is required"
+    }
+  },
+  {
+    "name": "recommendation",
+    "label": "Recommendation",
+    "type": "textarea",
+    "rows": 2,
+    "placeholder": "Enter suggested career paths, training modules, or improvement activities",
+    "gridColumn": 6,
+    "validation": {
+      "required": false
+    }
+  },
+  {
+    "name": "followUp",
+    "label": "Follow-up",
+    "type": "select",
+    "placeholder": "Select follow-up counselling session or training programme",
+    "gridColumn": 6,
+    "options": [
+      {
+        "label": "Map to 1-on-1 Career Counselling Session",
+        "value": "Career Counselling"
+      },
+      {
+        "label": "Enroll in Advanced Technical Training Bootcamp",
+        "value": "Technical Bootcamp"
+      },
+      {
+        "label": "Enroll in Soft Skills & Communication Workshop",
+        "value": "Soft Skills Workshop"
+      },
+      {
+        "label": "Schedule Mock Practice Re-assessment",
+        "value": "Re-assessment"
+      },
+      {
+        "label": "Map to Placement Drive Preparation Programme",
+        "value": "Placement Prep"
+      },
+      {
+        "label": "No Immediate Follow-up Required",
+        "value": "None"
+      }
+    ],
+    "validation": {
+      "required": false
+    }
+  }
+]

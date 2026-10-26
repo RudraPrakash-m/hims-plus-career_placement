@@ -1,0 +1,251 @@
+[
+  {
+    "name": "opportunityDrive",
+    "label": "Opportunity / Drive",
+    "type": "select",
+    "placeholder": "Select opportunity or recruitment drive",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "TCS National Campus Drive 2024 - Tata Consultancy Services",
+        "value": "TCS Campus Drive 2024"
+      },
+      {
+        "label": "Software Development Engineer (Frontend) - ABC Technologies Pvt. Ltd.",
+        "value": "SDE Frontend - ABC Technologies"
+      },
+      {
+        "label": "Data Analyst & Business Intelligence Intern - XYZ Industries",
+        "value": "Data Analyst Intern - XYZ Industries"
+      },
+      {
+        "label": "Specialist Programmer Drive - Infosys Limited",
+        "value": "Specialist Programmer - Infosys"
+      },
+      {
+        "label": "GenC Elevate Recruitment - Cognizant Technology Solutions",
+        "value": "GenC Elevate - Cognizant"
+      },
+      {
+        "label": "Industrial Automation Apprentice - Eastern Enterprises",
+        "value": "Automation Apprentice - Eastern Enterprises"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Opportunity / Drive is required"
+    }
+  },
+  {
+    "name": "applicant",
+    "label": "Applicant List",
+    "type": "select",
+    "placeholder": "Select applicant from submitted applications",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "Aarav Sharma (APP-2024-001) - B.Tech CSE (8.8 CGPA)",
+        "value": "Aarav Sharma"
+      },
+      {
+        "label": "Priya Patel (APP-2024-002) - B.Tech IT (8.2 CGPA)",
+        "value": "Priya Patel"
+      },
+      {
+        "label": "Rahul Verma (APP-2024-003) - MCA (7.9 CGPA)",
+        "value": "Rahul Verma"
+      },
+      {
+        "label": "Sneha Rao (APP-2024-004) - B.Tech ECE (8.5 CGPA)",
+        "value": "Sneha Rao"
+      },
+      {
+        "label": "Vikram Das (APP-2024-005) - B.Tech ME (7.4 CGPA)",
+        "value": "Vikram Das"
+      },
+      {
+        "label": "Ananya Mishra (APP-2024-006) - B.Sc CS (7.6 CGPA)",
+        "value": "Ananya Mishra"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Applicant selection is required"
+    }
+  },
+  {
+    "name": "filters",
+    "label": "Filters",
+    "type": "multiselect",
+    "placeholder": "Select applied eligibility filter criteria",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "Minimum 65% / 7.0 CGPA throughout academics",
+        "value": "Min 65% CGPA"
+      },
+      {
+        "label": "Zero Standing / Active Backlogs",
+        "value": "Zero Backlogs"
+      },
+      {
+        "label": "Eligible Branches (CSE / IT / ECE)",
+        "value": "Eligible Branches"
+      },
+      {
+        "label": "Passed Technical & Aptitude Benchmark",
+        "value": "Passed Benchmark"
+      },
+      {
+        "label": "Resume & Documentation Verified",
+        "value": "Docs Verified"
+      },
+      {
+        "label": "Immediate Joining / No Notice Period",
+        "value": "Immediate Joining"
+      }
+    ],
+    "validation": {
+      "required": false
+    }
+  },
+  {
+    "name": "shortlistDecision",
+    "label": "Shortlist Decision",
+    "type": "select",
+    "placeholder": "Select shortlist decision",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "Shortlisted",
+        "value": "Shortlisted"
+      },
+      {
+        "label": "On Hold",
+        "value": "On Hold"
+      },
+      {
+        "label": "Rejected",
+        "value": "Rejected"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Shortlist Decision is required"
+    }
+  },
+  {
+    "name": "interviewRound",
+    "label": "Interview Round",
+    "type": "select",
+    "placeholder": "Select interview or assessment round",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "Technical Round 1 (Data Structures & Core CS)",
+        "value": "Technical Round 1"
+      },
+      {
+        "label": "Technical Round 2 (System Design & Live Coding)",
+        "value": "Technical Round 2"
+      },
+      {
+        "label": "Managerial / Project Evaluation Round",
+        "value": "Managerial Round"
+      },
+      {
+        "label": "HR & Cultural Fitment Interview",
+        "value": "HR Interview"
+      },
+      {
+        "label": "Executive Panel Final Interview",
+        "value": "Final Panel Round"
+      },
+      {
+        "label": "Group Discussion / Assessment Center",
+        "value": "Group Discussion"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Interview Round is required"
+    }
+  },
+  {
+    "name": "dateTime",
+    "label": "Date and Time",
+    "type": "datetime-local",
+    "placeholder": "Select interview date and time",
+    "gridColumn": 4,
+    "validation": {
+      "required": true,
+      "message": "Interview Date and Time is required"
+    }
+  },
+  {
+    "name": "modeVenue",
+    "label": "Mode / Venue",
+    "type": "text",
+    "placeholder": "Enter mode or venue (e.g., Campus Placement Room 204 / Google Meet Link)",
+    "gridColumn": 4,
+    "validation": {
+      "required": true,
+      "message": "Mode / Venue is required"
+    }
+  },
+  {
+    "name": "panelContact",
+    "label": "Panel / Contact",
+    "type": "text",
+    "placeholder": "Enter interviewers and contact coordinator details",
+    "gridColumn": 4,
+    "validation": {
+      "required": true,
+      "message": "Panel / Contact is required"
+    }
+  },
+  {
+    "name": "outcome",
+    "label": "Outcome",
+    "type": "select",
+    "placeholder": "Select interview outcome",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "Passed",
+        "value": "Passed"
+      },
+      {
+        "label": "Failed",
+        "value": "Failed"
+      },
+      {
+        "label": "Attended - Result Awaited",
+        "value": "Attended - Result Awaited"
+      },
+      {
+        "label": "Absent",
+        "value": "Absent"
+      },
+      {
+        "label": "Rescheduled",
+        "value": "Rescheduled"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Outcome is required"
+    }
+  },
+  {
+    "name": "remarks",
+    "label": "Remarks",
+    "type": "textarea",
+    "rows": 2,
+    "placeholder": "Record selection-related remarks, evaluation notes, and interview feedback",
+    "gridColumn": 12,
+    "validation": {
+      "required": false
+    }
+  }
+]

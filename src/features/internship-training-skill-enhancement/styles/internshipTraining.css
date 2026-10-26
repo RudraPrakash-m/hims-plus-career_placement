@@ -1,0 +1,36 @@
+.internship-training-form button.ui-field,
+.internship-training-form .ui-field:read-only:not(input, textarea) {
+    border-style: solid;
+    background-color: var(--input-bg);
+    border-color: var(--border-dark);
+}
+
+.internship-training-form button.ui-field:hover:not(:disabled, .ui-field--disabled, .ui-field--error),
+.internship-training-form .ui-field:read-only:not(input, textarea):hover:not(:disabled, .ui-field--disabled, .ui-field--error) {
+    border-color: var(--muted);
+}
+
+.internship-training-form button.ui-field:focus,
+.internship-training-form button.ui-field:focus-within,
+.internship-training-form .ui-field:read-only:not(input, textarea):focus,
+.internship-training-form .ui-field:read-only:not(input, textarea):focus-within {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--focus-ring) 30%, transparent);
+}
+
+.internship-training-form button.ui-field.ui-field--error,
+.internship-training-form .ui-field--error:read-only:not(input, textarea) {
+    border-color: var(--danger);
+}
+
+.internship-training-form button.ui-field:disabled,
+.internship-training-form button.ui-field.ui-field--disabled {
+    cursor: not-allowed;
+    border-color: var(--border);
+    background-color: var(--surface-active);
+    color: var(--muted-foreground);
+}
+
+.internship-training-form div.flex.justify-center {
+    justify-content: flex-start;
+}

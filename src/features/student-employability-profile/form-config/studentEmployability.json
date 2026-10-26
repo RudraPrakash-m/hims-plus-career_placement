@@ -1,0 +1,158 @@
+[
+  {
+    "name": "studentDetails",
+    "label": "Student Details",
+    "type": "text",
+    "placeholder": "Enter student name / ID (or auto-fetched from HIMS)",
+    "gridColumn": 4,
+    "validation": {
+      "required": true,
+      "message": "Student Details are required"
+    }
+  },
+  {
+    "name": "academicAchievements",
+    "label": "Academic Achievements",
+    "type": "text",
+    "placeholder": "Enter programme, institution, marks/CGPA, year, and achievements",
+    "gridColumn": 4,
+    "validation": {
+      "required": true,
+      "message": "Academic Achievements are required"
+    }
+  },
+  {
+    "name": "skills",
+    "label": "Skills",
+    "type": "multiselect",
+    "placeholder": "Select technical, professional, and soft skills",
+    "gridColumn": 3,
+    "options": [
+      {
+        "label": "Python & Data Science",
+        "value": "Python & Data Science"
+      },
+      {
+        "label": "Java & Spring Boot",
+        "value": "Java & Spring Boot"
+      },
+      {
+        "label": "React & Frontend Development",
+        "value": "React & Frontend Development"
+      },
+      {
+        "label": "Node.js & Backend APIs",
+        "value": "Node.js & Backend APIs"
+      },
+      {
+        "label": "SQL & Database Management",
+        "value": "SQL & Database Management"
+      },
+      {
+        "label": "Cloud Computing (AWS / Azure)",
+        "value": "Cloud Computing"
+      },
+      {
+        "label": "Machine Learning & AI",
+        "value": "Machine Learning & AI"
+      },
+      {
+        "label": "Problem Solving & Analytical Skills",
+        "value": "Problem Solving"
+      },
+      {
+        "label": "Communication & Presentation",
+        "value": "Communication"
+      },
+      {
+        "label": "Team Collaboration & Leadership",
+        "value": "Team Leadership"
+      },
+      {
+        "label": "Project Management & Agile",
+        "value": "Project Management"
+      },
+      {
+        "label": "UI/UX Design & Prototyping",
+        "value": "UI/UX Design"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Please select at least one skill"
+    }
+  },
+  {
+    "name": "certifications",
+    "label": "Certifications",
+    "type": "text",
+    "placeholder": "Enter certification name, issuing organization, and issue date",
+    "gridColumn": 4,
+    "validation": {
+      "required": false
+    }
+  },
+  
+  {
+    "name": "resume",
+    "label": "Resume",
+    "type": "file",
+    "placeholder": "Upload or update resume (.pdf, .doc, .docx)",
+    "accept": ".pdf,.doc,.docx",
+    "gridColumn": 3,
+    "validation": {
+      "required": true,
+      "message": "Resume is required"
+    }
+  },
+  {
+    "name": "projectsExperience",
+    "label": "Projects / Experience",
+    "type": "textarea",
+    "rows": 2,
+    "placeholder": "Enter projects, internships, work experience, and achievements",
+    "gridColumn": 4,
+    "validation": {
+      "required": false
+    }
+  },
+  {
+    "name": "portfolioLinks",
+    "label": "Portfolio / Links",
+    "type": "text",
+    "placeholder": "e.g., https://github.com/username or https://linkedin.com/in/username",
+    "gridColumn": 3,
+    "validation": {
+      "required": false
+    }
+  },
+  {
+    "name": "profileCompletion",
+    "label": "Profile Completion",
+    "type": "select",
+    "placeholder": "Select profile completion status",
+    "gridColumn": 4,
+    "options": [
+      {
+        "label": "Completed (100%)",
+        "value": "Completed"
+      },
+      {
+        "label": "In Progress (75%)",
+        "value": "In Progress"
+      },
+      {
+        "label": "Partially Complete (50%)",
+        "value": "Partially Complete"
+      },
+      {
+        "label": "Needs Attention (25%)",
+        "value": "Needs Attention"
+      }
+    ],
+    "validation": {
+      "required": true,
+      "message": "Profile Completion status is required"
+    }
+  }
+]
