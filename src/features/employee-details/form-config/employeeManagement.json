@@ -23,7 +23,7 @@
     "name": "gender",
     "label": "Gender",
     "type": "select",
-    "placeholder": "Select gender",
+    "placeholder": "-- Select --",
     "gridColumn": 3,
     "options": [
       {
@@ -65,7 +65,7 @@
     "name": "department",
     "label": "Department",
     "type": "select",
-    "placeholder": "Select department",
+    "placeholder": "-- Select --",
     "gridColumn": 3,
     "options": [
       {
@@ -105,7 +105,7 @@
     "name": "employeeType",
     "label": "Employee Type",
     "type": "select",
-    "placeholder": "Select type",
+    "placeholder": "-- Select --",
     "gridColumn": 3,
     "options": [
       {
@@ -186,7 +186,7 @@
     "name": "primarySkills",
     "label": "Primary Skills / Tech Stack",
     "type": "multiselect",
-    "placeholder": "Select core skills",
+    "placeholder": "-- Select --",
     "gridColumn": 3,
     "options": [
       {

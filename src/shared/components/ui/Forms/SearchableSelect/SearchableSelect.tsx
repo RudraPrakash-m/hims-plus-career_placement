@@ -34,7 +34,7 @@ export const SearchableSelect: React.FC<Readonly<SearchableSelectProps>> = ({
     label,
     error,
     helpText,
-    placeholder = "Search and select...",
+    placeholder = "-- Select --",
     disabled = false,
     required = false,
     wrapperClassName = "",

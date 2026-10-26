@@ -13,7 +13,7 @@
     "name": "academicSession",
     "label": "Academic Session",
     "type": "select",
-    "placeholder": "Select reporting session",
+    "placeholder": "-- Select --",
     "gridColumn": 3,
     "options": [
       {
@@ -46,7 +46,7 @@
     "name": "institutionProgramme",
     "label": "Institution / Programme",
     "type": "select",
-    "placeholder": "Filter results by permitted institution or programme",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {
@@ -83,7 +83,7 @@
     "name": "employer",
     "label": "Employer / Industry",
     "type": "select",
-    "placeholder": "Filter by employer or industry sector",
+    "placeholder": "-- Select --",
     "gridColumn": 3,
     "options": [
       {
@@ -148,7 +148,7 @@
     "name": "opportunityType",
     "label": "Opportunity Type",
     "type": "select",
-    "placeholder": "Filter job, internship, apprenticeship, or training",
+    "placeholder": "-- Select --",
     "gridColumn": 3,
     "options": [
       {
@@ -181,7 +181,7 @@
     "name": "placementStatistics",
     "label": "Placement Statistics Stage Focus",
     "type": "select",
-    "placeholder": "Select placement stage metric focus",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {
@@ -218,7 +218,7 @@
     "name": "employerParticipation",
     "label": "Employer Participation Scope",
     "type": "select",
-    "placeholder": "Filter by employer registration & drive participation",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {
@@ -247,7 +247,7 @@
     "name": "salaryTrends",
     "label": "Salary Trends / CTC Range",
     "type": "select",
-    "placeholder": "Filter by package bracket / salary trend",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {
@@ -280,7 +280,7 @@
     "name": "studentEngagement",
     "label": "Student Engagement Indicator",
     "type": "select",
-    "placeholder": "Select student engagement metric indicator",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {
@@ -317,7 +317,7 @@
     "name": "exportFormat",
     "label": "Export Report Format",
     "type": "select",
-    "placeholder": "Select default export format",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {

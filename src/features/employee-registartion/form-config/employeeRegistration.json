@@ -13,7 +13,7 @@
     "name": "organizationType",
     "label": "Organization Type",
     "type": "select",
-    "placeholder": "Select organization type",
+    "placeholder": "-- Select --",
     "gridColumn": 2,
     "options": [
       {
@@ -84,7 +84,7 @@
     "name": "verificationStatus",
     "label": "Verification Status",
     "type": "select",
-    "placeholder": "Select verification status",
+    "placeholder": "-- Select --",
     "gridColumn": 3,
     "options": [
       {

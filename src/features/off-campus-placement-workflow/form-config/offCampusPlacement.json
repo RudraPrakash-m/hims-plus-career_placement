@@ -3,7 +3,7 @@
     "name": "opportunity",
     "label": "Opportunity",
     "type": "select",
-    "placeholder": "Select approved off-campus opportunity",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {
@@ -44,7 +44,7 @@
     "name": "employer",
     "label": "Employer",
     "type": "select",
-    "placeholder": "Select employer",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {
@@ -85,7 +85,7 @@
     "name": "studentName",
     "label": "Student / Applicant",
     "type": "select",
-    "placeholder": "Select student applicant",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {
@@ -132,7 +132,7 @@
     "name": "studentApplicationStatus",
     "label": "Student Application Status",
     "type": "select",
-    "placeholder": "Select student application status",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {
@@ -161,7 +161,7 @@
     "name": "interviewSelectionStatus",
     "label": "Interview / Selection Status",
     "type": "select",
-    "placeholder": "Select interview / selection status",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {
@@ -211,7 +211,7 @@
     "name": "joiningOutcome",
     "label": "Joining Outcome",
     "type": "select",
-    "placeholder": "Select joining outcome",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {

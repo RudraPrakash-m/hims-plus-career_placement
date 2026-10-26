@@ -3,7 +3,7 @@
     "name": "student",
     "label": "Student",
     "type": "select",
-    "placeholder": "Select student",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {
@@ -40,7 +40,7 @@
     "name": "employer",
     "label": "Employer",
     "type": "select",
-    "placeholder": "Select employer",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {
@@ -81,7 +81,7 @@
     "name": "opportunityDrive",
     "label": "Opportunity / Drive",
     "type": "select",
-    "placeholder": "Select linked opportunity or drive",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {
@@ -118,7 +118,7 @@
     "name": "outcomeStatus",
     "label": "Outcome Status",
     "type": "select",
-    "placeholder": "Select outcome status",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {
@@ -171,7 +171,7 @@
     "name": "employmentType",
     "label": "Employment Type",
     "type": "select",
-    "placeholder": "Select employment type",
+    "placeholder": "-- Select --",
     "gridColumn": 6,
     "options": [
       {
@@ -204,7 +204,7 @@
     "name": "verificationStatus",
     "label": "Verification Status",
     "type": "select",
-    "placeholder": "Select verification status",
+    "placeholder": "-- Select --",
     "gridColumn": 6,
     "options": [
       {

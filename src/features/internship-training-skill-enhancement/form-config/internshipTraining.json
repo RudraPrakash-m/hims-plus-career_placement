@@ -13,7 +13,7 @@
     "name": "programmeType",
     "label": "Programme Type",
     "type": "select",
-    "placeholder": "Select programme type",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {
@@ -50,7 +50,7 @@
     "name": "providerEmployer",
     "label": "Provider / Employer",
     "type": "select",
-    "placeholder": "Select or enter provider",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {
@@ -129,7 +129,7 @@
     "name": "registration",
     "label": "Registration",
     "type": "select",
-    "placeholder": "Select registration status",
+    "placeholder": "-- Select --",
     "gridColumn": 3,
     "options": [
       {
@@ -158,7 +158,7 @@
     "name": "skillsCovered",
     "label": "Skills Covered",
     "type": "multiselect",
-    "placeholder": "Select skills addressed by the programme",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {
@@ -199,7 +199,7 @@
     "name": "attendanceParticipation",
     "label": "Attendance / Participation",
     "type": "select",
-    "placeholder": "Select attendance or participation",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {
@@ -232,7 +232,7 @@
     "name": "assessmentCompletion",
     "label": "Assessment / Completion",
     "type": "select",
-    "placeholder": "Select assessment / completion status",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {

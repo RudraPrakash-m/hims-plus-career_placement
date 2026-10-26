@@ -23,7 +23,7 @@
     "name": "skills",
     "label": "Skills",
     "type": "multiselect",
-    "placeholder": "Select technical, professional, and soft skills",
+    "placeholder": "-- Select --",
     "gridColumn": 3,
     "options": [
       {
@@ -123,7 +123,7 @@
     "name": "profileCompletion",
     "label": "Profile Completion",
     "type": "select",
-    "placeholder": "Select profile completion status",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {

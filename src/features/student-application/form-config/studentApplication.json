@@ -12,7 +12,7 @@
     "name": "studentName",
     "label": "Student Name",
     "type": "select",
-    "placeholder": "Select applying student",
+    "placeholder": "-- Select --",
     "gridColumn": 3,
     "options": [
       {
@@ -59,7 +59,7 @@
     "name": "applicationStatus",
     "label": "Application Status",
     "type": "select",
-    "placeholder": "Select application status",
+    "placeholder": "-- Select --",
     "gridColumn": 3,
     "options": [
       {
@@ -96,7 +96,7 @@
     "name": "opportunity",
     "label": "Opportunity",
     "type": "select",
-    "placeholder": "Select an available opportunity",
+    "placeholder": "-- Select --",
     "gridColumn": 6,
     "options": [
       {

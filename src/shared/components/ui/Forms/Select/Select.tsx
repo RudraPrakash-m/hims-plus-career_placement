@@ -17,7 +17,7 @@ interface SelectProps extends Omit<React.SelectHTMLAttributes<HTMLSelectElement>
 }
 
 const Select = forwardRef<HTMLSelectElement, SelectProps>(
-    ({ label, options, error, helpText, multiple = false, placeholder = "Select an option", className = "", wrapperClassName = "", labelClassName = "", selectClassName = "", errorClassName = "", disabled, required, id, ...props }, ref) => {
+    ({ label, options, error, helpText, multiple = false, placeholder = "-- Select --", className = "", wrapperClassName = "", labelClassName = "", selectClassName = "", errorClassName = "", disabled, required, id, ...props }, ref) => {
         const selectId = id || `select-${props.name || "field"}`;
         const selectClasses = [inputBase, error ? inputError : inputNormal, disabled ? inputDisabled : "", "", selectClassName, className].join(" ");
 

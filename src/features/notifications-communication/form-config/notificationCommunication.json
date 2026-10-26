@@ -3,7 +3,7 @@
     "name": "notificationType",
     "label": "Notification Type",
     "type": "select",
-    "placeholder": "Select notification type",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {
@@ -44,7 +44,7 @@
     "name": "recipient",
     "label": "Recipient",
     "type": "select",
-    "placeholder": "Select recipient cohort or student",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {
@@ -89,7 +89,7 @@
     "name": "deliveryChannel",
     "label": "Delivery Channel",
     "type": "select",
-    "placeholder": "Select delivery channel",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {
@@ -131,7 +131,7 @@
     "name": "deliveryStatus",
     "label": "Delivery Status",
     "type": "select",
-    "placeholder": "Select delivery status",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {

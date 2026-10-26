@@ -13,7 +13,7 @@
     "name": "employer",
     "label": "Employer",
     "type": "select",
-    "placeholder": "Select participating employer",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {
@@ -66,7 +66,7 @@
     "name": "driveType",
     "label": "Drive Type",
     "type": "select",
-    "placeholder": "Select drive type",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {
@@ -143,7 +143,7 @@
     "name": "driveStatus",
     "label": "Drive Status",
     "type": "select",
-    "placeholder": "Select drive status",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {
@@ -176,7 +176,7 @@
     "name": "eligibleProgrammes",
     "label": "Eligible Programmes",
     "type": "multiselect",
-    "placeholder": "Select eligible programmes / branches",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {
@@ -225,7 +225,7 @@
     "name": "selectionStages",
     "label": "Selection Stages",
     "type": "multiselect",
-    "placeholder": "Select applicable tests and interview stages",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {

@@ -3,7 +3,7 @@
     "name": "academicSession",
     "label": "Academic Session",
     "type": "select",
-    "placeholder": "Select academic session",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {
@@ -32,7 +32,7 @@
     "name": "institutionProgramme",
     "label": "Institution / Programme",
     "type": "select",
-    "placeholder": "Select institution and eligible programme",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {
@@ -65,7 +65,7 @@
     "name": "employerDrive",
     "label": "Employer / Drive",
     "type": "select",
-    "placeholder": "Select employer and campus drive",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {
@@ -102,7 +102,7 @@
     "name": "eligibleStudent",
     "label": "Eligible Student List",
     "type": "select",
-    "placeholder": "Select eligible student matching criteria",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {
@@ -139,7 +139,7 @@
     "name": "registrationStatus",
     "label": "Registration Status",
     "type": "select",
-    "placeholder": "Select registration status",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {
@@ -168,7 +168,7 @@
     "name": "selectionStages",
     "label": "Selection Stages",
     "type": "select",
-    "placeholder": "Select tracked stage",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {
@@ -209,7 +209,7 @@
     "name": "offerStatus",
     "label": "Offer Status",
     "type": "select",
-    "placeholder": "Select offer status",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {
@@ -238,7 +238,7 @@
     "name": "joiningStatus",
     "label": "Joining Status",
     "type": "select",
-    "placeholder": "Select joining status",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {

@@ -29,7 +29,7 @@ const MultiSelect: React.FC<Readonly<MultiSelectProps>> = ({
     onChange,
     error,
     helpText,
-    placeholder = "Select options...",
+    placeholder = "-- Select --",
     disabled = false,
     required = false,
     maxSelected,

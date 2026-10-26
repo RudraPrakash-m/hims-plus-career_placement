@@ -3,7 +3,7 @@
     "name": "opportunityType",
     "label": "Opportunity Type",
     "type": "select",
-    "placeholder": "Select opportunity type",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {
@@ -40,7 +40,7 @@
     "name": "employer",
     "label": "Employer",
     "type": "select",
-    "placeholder": "Select registered employer",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {
@@ -149,7 +149,7 @@
     "name": "requiredDocuments",
     "label": "Required Documents",
     "type": "multiselect",
-    "placeholder": "Select required documents",
+    "placeholder": "-- Select --",
     "gridColumn": 3,
     "options": [
       {
@@ -189,7 +189,7 @@
     "name": "status",
     "label": "Status",
     "type": "select",
-    "placeholder": "Select status",
+    "placeholder": "-- Select --",
     "gridColumn": 3,
     "options": [
       {

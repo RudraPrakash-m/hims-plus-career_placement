@@ -41,7 +41,7 @@
     "name": "gender",
     "label": "Gender",
     "type": "select",
-    "placeholder": "Select gender",
+    "placeholder": "-- Select --",
     "key": "gender",
     "value": "gendername",
     "options": [
@@ -103,7 +103,7 @@
     "name": "maritalStatus",
     "label": "Marital Status",
     "type": "select",
-    "placeholder": "Select marital status",
+    "placeholder": "-- Select --",
     "options": [
       {
         "label": "Single",
@@ -119,7 +119,7 @@
     "name": "bloodGroup",
     "label": "Blood Group",
     "type": "select",
-    "placeholder": "Select blood group",
+    "placeholder": "-- Select --",
     "options": [
       {
         "label": "A+",
@@ -165,7 +165,7 @@
     "name": "languages",
     "label": "Languages Known",
     "type": "multiselect",
-    "placeholder": "Select languages",
+    "placeholder": "-- Select --",
     "options": [
       {
         "label": "English",

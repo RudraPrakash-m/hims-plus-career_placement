@@ -3,7 +3,7 @@
     "name": "sourceModule",
     "label": "Source Module",
     "type": "select",
-    "placeholder": "Select HIMS source module",
+    "placeholder": "-- Select --",
     "gridColumn": 6,
     "options": [
       {
@@ -58,7 +58,7 @@
     "name": "internshipRecord",
     "label": "Internship Record",
     "type": "select",
-    "placeholder": "Link approved internship record",
+    "placeholder": "-- Select --",
     "gridColumn": 6,
     "options": [
       {
@@ -95,7 +95,7 @@
     "name": "alumniRecord",
     "label": "Alumni Record",
     "type": "select",
-    "placeholder": "Link eligible former-student record",
+    "placeholder": "-- Select --",
     "gridColumn": 6,
     "options": [
       {
@@ -128,7 +128,7 @@
     "name": "synchronizationStatus",
     "label": "Synchronization Status",
     "type": "select",
-    "placeholder": "Select synchronization state",
+    "placeholder": "-- Select --",
     "gridColumn": 6,
     "options": [
       {
@@ -153,7 +153,7 @@
     "name": "reconciliation",
     "label": "Reconciliation Status",
     "type": "select",
-    "placeholder": "Select reconciliation state",
+    "placeholder": "-- Select --",
     "gridColumn": 6,
     "options": [
       {

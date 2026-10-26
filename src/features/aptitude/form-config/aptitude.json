@@ -3,7 +3,7 @@
     "name": "assessmentType",
     "label": "Assessment Type",
     "type": "select",
-    "placeholder": "Select assessment type",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {
@@ -60,7 +60,7 @@
     "name": "studentBatch",
     "label": "Student / Batch",
     "type": "select",
-    "placeholder": "Select eligible students or batch",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {
@@ -101,7 +101,7 @@
     "name": "assessmentResult",
     "label": "Assessment Result",
     "type": "select",
-    "placeholder": "Select or record assessment result",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {
@@ -134,7 +134,7 @@
     "name": "skillCategory",
     "label": "Skill Category",
     "type": "select",
-    "placeholder": "Select assessed skill category",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {
@@ -181,7 +181,7 @@
     "name": "followUp",
     "label": "Follow-up",
     "type": "select",
-    "placeholder": "Select follow-up counselling session or training programme",
+    "placeholder": "-- Select --",
     "gridColumn": 6,
     "options": [
       {

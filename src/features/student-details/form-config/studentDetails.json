@@ -8,7 +8,6 @@
           "name": "firstName",
           "label": "First Name",
           "type": "text",
-          "placeholder": "Enter first name",
           "gridColumn": 1,
           "validation": {
             "required": true,
@@ -20,7 +19,6 @@
           "name": "lastName",
           "label": "Last Name",
           "type": "text",
-          "placeholder": "Enter last name",
           "gridColumn": 1,
           "validation": {
             "required": true,
@@ -32,7 +30,6 @@
           "name": "email",
           "label": "Email",
           "type": "email",
-          "placeholder": "Enter email address",
           "gridColumn": 1,
           "validation": {
             "required": true,
@@ -44,7 +41,6 @@
           "name": "phone",
           "label": "Phone Number",
           "type": "tel",
-          "placeholder": "Enter phone number",
           "gridColumn": 1,
           "maxLength": 10,
           "validation": {
@@ -67,7 +63,7 @@
           "name": "gender",
           "label": "Gender",
           "type": "select",
-          "placeholder": "Select gender",
+          "placeholder": "-- Select --",
           "gridColumn": 1,
           "options": [
             {
@@ -98,7 +94,6 @@
           "name": "studentId",
           "label": "Student ID",
           "type": "text",
-          "placeholder": "Enter student ID",
           "gridColumn": 1,
           "validation": {
             "required": true,
@@ -119,7 +114,7 @@
           "name": "course",
           "label": "Course",
           "type": "select",
-          "placeholder": "Select course",
+          "placeholder": "-- Select --",
           "gridColumn": 1,
           "options": [
             {
@@ -152,7 +147,7 @@
           "name": "semester",
           "label": "Semester",
           "type": "select",
-          "placeholder": "Select semester",
+          "placeholder": "-- Select --",
           "gridColumn": 1,
           "options": [
             {
@@ -197,7 +192,6 @@
           "name": "gpa",
           "label": "GPA",
           "type": "number",
-          "placeholder": "Enter GPA",
           "gridColumn": 1,
           "validation": {
             "required": true,
@@ -208,7 +202,7 @@
           "name": "department",
           "label": "Department",
           "type": "select",
-          "placeholder": "Select department",
+          "placeholder": "-- Select --",
           "gridColumn": 1,
           "options": [
             {
@@ -247,7 +241,6 @@
           "name": "street",
           "label": "Street Address",
           "type": "text",
-          "placeholder": "Enter street address",
           "gridColumn": 2,
           "validation": {
             "required": true,
@@ -258,7 +251,6 @@
           "name": "city",
           "label": "City",
           "type": "text",
-          "placeholder": "Enter city",
           "gridColumn": 1,
           "validation": {
             "required": true,
@@ -269,7 +261,6 @@
           "name": "state",
           "label": "State",
           "type": "text",
-          "placeholder": "Enter state",
           "gridColumn": 1,
           "validation": {
             "required": true,
@@ -280,7 +271,6 @@
           "name": "zipCode",
           "label": "Zip Code",
           "type": "text",
-          "placeholder": "Enter zip code",
           "gridColumn": 1,
           "validation": {
             "required": true,
@@ -291,7 +281,6 @@
           "name": "country",
           "label": "Country",
           "type": "text",
-          "placeholder": "Enter country",
           "gridColumn": 1,
           "validation": {
             "required": true,
@@ -302,7 +291,6 @@
           "name": "emergencyContact",
           "label": "Emergency Contact",
           "type": "tel",
-          "placeholder": "Enter emergency contact",
           "gridColumn": 1,
           "maxLength": 10,
           "validation": {

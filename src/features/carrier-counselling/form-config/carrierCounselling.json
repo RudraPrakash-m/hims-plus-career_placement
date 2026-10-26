@@ -3,7 +3,7 @@
     "name": "sessionType",
     "label": "Session Type",
     "type": "select",
-    "placeholder": "Select session type",
+    "placeholder": "-- Select --",
     "gridColumn": 3,
     "options": [
       {
@@ -32,7 +32,7 @@
     "name": "student",
     "label": "Student",
     "type": "select",
-    "placeholder": "Select student",
+    "placeholder": "-- Select --",
     "gridColumn": 3,
     "options": [
       {
@@ -69,7 +69,7 @@
     "name": "counsellor",
     "label": "Counsellor / Mentor",
     "type": "select",
-    "placeholder": "Select counsellor or mentor",
+    "placeholder": "-- Select --",
     "gridColumn": 3,
     "options": [
       {
@@ -112,7 +112,7 @@
     "name": "modeVenue",
     "label": "Mode / Venue",
     "type": "select",
-    "placeholder": "Select mode or venue",
+    "placeholder": "-- Select --",
     "gridColumn": 3,
     "options": [
       {
@@ -155,7 +155,7 @@
     "name": "attendance",
     "label": "Attendance",
     "type": "select",
-    "placeholder": "Select attendance",
+    "placeholder": "-- Select --",
     "gridColumn": 3,
     "options": [
       {
@@ -184,7 +184,7 @@
     "name": "status",
     "label": "Status",
     "type": "select",
-    "placeholder": "Select status",
+    "placeholder": "-- Select --",
     "gridColumn": 3,
     "options": [
       {

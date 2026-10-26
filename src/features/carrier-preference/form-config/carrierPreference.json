@@ -3,7 +3,7 @@
     "name": "preferredJobRoles",
     "label": "Preferred Job Roles",
     "type": "multiselect",
-    "placeholder": "Select preferred job roles",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {
@@ -64,7 +64,7 @@
     "name": "preferredIndustry",
     "label": "Preferred Industry",
     "type": "select",
-    "placeholder": "Select preferred industry",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {
@@ -131,7 +131,7 @@
     "name": "employmentType",
     "label": "Employment Type",
     "type": "select",
-    "placeholder": "Select employment type",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {
@@ -174,7 +174,7 @@
     "name": "expectedSalaryRange",
     "label": "Expected Salary Range",
     "type": "select",
-    "placeholder": "Select expected salary range",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {
@@ -214,7 +214,7 @@
     "name": "workMode",
     "label": "Work Mode",
     "type": "select",
-    "placeholder": "Select work mode preference",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {
@@ -243,7 +243,7 @@
     "name": "availability",
     "label": "Availability",
     "type": "select",
-    "placeholder": "Select availability for employment or internship",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {

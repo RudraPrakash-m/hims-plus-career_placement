@@ -3,7 +3,7 @@
     "name": "opportunityDrive",
     "label": "Opportunity / Drive",
     "type": "select",
-    "placeholder": "Select opportunity or recruitment drive",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {
@@ -40,7 +40,7 @@
     "name": "applicant",
     "label": "Applicant List",
     "type": "select",
-    "placeholder": "Select applicant from submitted applications",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {
@@ -77,7 +77,7 @@
     "name": "filters",
     "label": "Filters",
     "type": "multiselect",
-    "placeholder": "Select applied eligibility filter criteria",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {
@@ -113,7 +113,7 @@
     "name": "shortlistDecision",
     "label": "Shortlist Decision",
     "type": "select",
-    "placeholder": "Select shortlist decision",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {
@@ -138,7 +138,7 @@
     "name": "interviewRound",
     "label": "Interview Round",
     "type": "select",
-    "placeholder": "Select interview or assessment round",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {
@@ -205,7 +205,7 @@
     "name": "outcome",
     "label": "Outcome",
     "type": "select",
-    "placeholder": "Select interview outcome",
+    "placeholder": "-- Select --",
     "gridColumn": 4,
     "options": [
       {
