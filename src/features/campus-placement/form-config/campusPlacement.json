@@ -271,7 +271,6 @@
     "name": "joiningDate",
     "label": "Joining Date",
     "type": "date",
-    "placeholder": "Select joining date",
     "gridColumn": 4,
     "validation": {
       "required": false
@@ -282,7 +281,6 @@
     "label": "Remarks",
     "type": "textarea",
     "rows": 2,
-    "placeholder": "Record placement package details (CTC/stipend), joining date, bonding terms, and coordinator remarks",
     "gridColumn": 12,
     "validation": {
       "required": false

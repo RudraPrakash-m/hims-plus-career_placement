@@ -151,7 +151,6 @@
     "name": "offerJoiningDate",
     "label": "Offer / Joining Date",
     "type": "date",
-    "placeholder": "Select offer or joining date",
     "gridColumn": 4,
     "validation": {
       "required": true,
@@ -162,7 +161,6 @@
     "name": "salaryPackage",
     "label": "Salary / Package",
     "type": "text",
-    "placeholder": "e.g. ₹ 9.5 LPA or ₹ 45,000 / month",
     "gridColumn": 4,
     "validation": {
       "required": true,
@@ -236,7 +234,6 @@
     "label": "Employer Feedback",
     "type": "textarea",
     "rows": 3,
-    "placeholder": "Record feedback on candidate readiness, technical competence, interview performance, and curriculum recommendations...",
     "gridColumn": 12,
     "validation": {
       "required": true,

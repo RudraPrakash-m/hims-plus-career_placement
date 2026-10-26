@@ -40,7 +40,6 @@
     "name": "industryRole",
     "label": "Industry / Role",
     "type": "text",
-    "placeholder": "Enter industry and role (e.g., Information Technology / Staff Software Engineer)",
     "gridColumn": 4,
     "validation": {
       "required": true,
@@ -121,7 +120,6 @@
     "name": "referralOpportunity",
     "label": "Referral Opportunity",
     "type": "text",
-    "placeholder": "Enter shared opportunity details (e.g., SDE 1 Referral - Ref ID: GOOG-2024-REF-01)",
     "gridColumn": 4,
     "validation": {
       "required": false
@@ -131,7 +129,6 @@
     "name": "sessionSchedule",
     "label": "Session Schedule",
     "type": "datetime-local",
-    "placeholder": "Select mentoring session date and time",
     "gridColumn": 4,
     "validation": {
       "required": true,
@@ -172,7 +169,6 @@
     "label": "Feedback",
     "type": "textarea",
     "rows": 2,
-    "placeholder": "Record participant feedback, session takeaways, mentor rating, and recommended action steps",
     "gridColumn": 8,
     "validation": {
       "required": false

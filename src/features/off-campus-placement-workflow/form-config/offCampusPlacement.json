@@ -122,7 +122,6 @@
     "name": "applicationLinkMethod",
     "label": "Application Link / Method",
     "type": "text",
-    "placeholder": "Enter careers portal URL or application method (e.g., https://careers.google.com / Referral)",
     "gridColumn": 4,
     "validation": {
       "required": true,
@@ -203,7 +202,6 @@
     "name": "offerDetails",
     "label": "Offer Details",
     "type": "text",
-    "placeholder": "Enter package and role details (e.g., 14.5 LPA CTC + 2L Bonus, SDE 1)",
     "gridColumn": 4,
     "validation": {
       "required": false
@@ -246,7 +244,6 @@
     "name": "applicationDate",
     "label": "Application / Offer Date",
     "type": "date",
-    "placeholder": "Select application or offer date",
     "gridColumn": 4,
     "validation": {
       "required": true,
@@ -257,7 +254,6 @@
     "name": "supportingEvidence",
     "label": "Supporting Evidence",
     "type": "file",
-    "placeholder": "Upload offer letter, email confirmation, or portal screenshot",
     "accept": ".pdf,.doc,.docx,.jpg,.jpeg,.png",
     "gridColumn": 6,
     "validation": {
@@ -269,7 +265,6 @@
     "label": "Eligibility",
     "type": "textarea",
     "rows": 2,
-    "placeholder": "Display eligibility criteria: B.Tech (CSE/IT/ECE), MCA with min 65% aggregate, 2024 pass-out batch, strong DSA & system design fundamentals.",
     "gridColumn": 6,
     "validation": {
       "required": true,

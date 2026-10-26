@@ -3,7 +3,6 @@
     "name": "applicationNumber",
     "label": "Application Number",
     "type": "text",
-    "placeholder": "Auto-generated (e.g., APP-2024-001)",
     "gridColumn": 3,
     "validation": {
       "required": false
@@ -50,7 +49,6 @@
     "name": "submissionDate",
     "label": "Submission Date",
     "type": "date",
-    "placeholder": "Select submission date",
     "gridColumn": 3,
     "validation": {
       "required": true,
@@ -140,7 +138,6 @@
     "label": "Eligibility Summary",
     "type": "textarea",
     "rows": 2,
-    "placeholder": "System verified: B.Tech CSE/IT, min 65% aggregate, no standing backlogs. Student meets all criteria.",
     "gridColumn": 6,
     "validation": {
       "required": true,
@@ -151,7 +148,6 @@
     "name": "resume",
     "label": "Resume",
     "type": "file",
-    "placeholder": "Select or upload resume (PDF, DOCX)",
     "accept": ".pdf,.doc,.docx",
     "gridColumn": 6,
     "validation": {
@@ -163,7 +159,6 @@
     "label": "Application Questions",
     "type": "textarea",
     "rows": 2,
-    "placeholder": "Answer role-specific questions: Describe relevant project experience, core tech stack, and motivation for this role.",
     "gridColumn": 6,
     "validation": {
       "required": true,

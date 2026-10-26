@@ -28,7 +28,6 @@
     "name": "studentIdentifier",
     "label": "HIMS Student Identifier",
     "type": "text",
-    "placeholder": "e.g., HIMS-STU-2024-001",
     "gridColumn": 6,
     "validation": {
       "required": true,
@@ -39,7 +38,6 @@
     "name": "studentName",
     "label": "Student Name",
     "type": "text",
-    "placeholder": "Enter student full name",
     "gridColumn": 6,
     "validation": {
       "required": true,
@@ -50,7 +48,6 @@
     "name": "academicRollNo",
     "label": "Academic Roll / Reg. No",
     "type": "text",
-    "placeholder": "e.g., STU-2022-001",
     "gridColumn": 6,
     "validation": {
       "required": true,
@@ -185,7 +182,6 @@
     "name": "errorDetails",
     "label": "Error Details (For Troubleshooting)",
     "type": "textarea",
-    "placeholder": "Log specific error codes, schema validation issues, API timeouts, or data mismatch details...",
     "rows": 3,
     "gridColumn": 12
   },
@@ -193,7 +189,6 @@
     "name": "reconciliationNotes",
     "label": "Reconciliation & Resolution Remarks",
     "type": "textarea",
-    "placeholder": "Document authorized reconciliation resolution, interface override reasoning, or sync approval notes...",
     "rows": 3,
     "gridColumn": 12
   }

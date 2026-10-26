@@ -3,7 +3,6 @@
     "name": "employeeId",
     "label": "Employee ID",
     "type": "text",
-    "placeholder": "Enter employee ID",
     "validation": {
       "required": true,
       "message": "Employee ID is required"
@@ -13,7 +12,6 @@
     "name": "employeeName",
     "label": "Employee Name",
     "type": "text",
-    "placeholder": "Enter employee name",
     "validation": {
       "required": true,
       "minLength": 3,
@@ -25,7 +23,6 @@
     "name": "firstName",
     "label": "First Name",
     "type": "text",
-    "placeholder": "Enter first name",
     "validation": {
       "required": true,
       "message": "First Name is required"
@@ -35,7 +32,6 @@
     "name": "lastName",
     "label": "Last Name",
     "type": "text",
-    "placeholder": "Enter last name",
     "validation": {
       "required": true,
       "message": "Last Name is required"
@@ -71,7 +67,6 @@
     "name": "dateOfBirth",
     "label": "Date of Birth",
     "type": "date",
-    "placeholder": "Select date of birth",
     "validation": {
       "required": true,
       "message": "Date of Birth is required"
@@ -81,7 +76,6 @@
     "name": "mobileNumber",
     "label": "Mobile Number",
     "type": "tel",
-    "placeholder": "Enter mobile number",
     "maxLength": 10,
     "validation": {
       "required": true,
@@ -93,7 +87,6 @@
     "name": "emailId",
     "label": "Email ID",
     "type": "email",
-    "placeholder": "Enter email ID",
     "validation": {
       "required": true,
       "pattern": "^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$",
@@ -104,7 +97,6 @@
     "name": "profilePhoto",
     "label": "Profile Photo",
     "type": "file",
-    "placeholder": "Upload profile photo",
     "gridColumn": 1
   },
   {
@@ -167,7 +159,6 @@
     "name": "nationality",
     "label": "Nationality",
     "type": "text",
-    "placeholder": "Enter nationality",
     "gridColumn": 1
   },
   {

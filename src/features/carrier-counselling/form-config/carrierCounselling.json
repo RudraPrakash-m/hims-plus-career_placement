@@ -102,7 +102,6 @@
     "name": "dateTime",
     "label": "Date and Time",
     "type": "datetime-local",
-    "placeholder": "Select session date and time",
     "gridColumn": 3,
     "validation": {
       "required": true,
@@ -146,7 +145,6 @@
     "name": "purposeTopic",
     "label": "Purpose / Topic",
     "type": "text",
-    "placeholder": "e.g., Resume Review, Technical Mock Interview, Career Roadmap",
     "gridColumn": 3,
     "validation": {
       "required": true,
@@ -182,7 +180,7 @@
       "message": "Attendance is required"
     }
   },
-    {
+  {
     "name": "status",
     "label": "Status",
     "type": "select",
@@ -216,7 +214,6 @@
     "label": "Session Notes",
     "type": "textarea",
     "rows": 2,
-    "placeholder": "Enter session notes, observations, and discussion summary",
     "gridColumn": 6,
     "validation": {
       "required": false
@@ -227,7 +224,6 @@
     "label": "Follow-up Action",
     "type": "textarea",
     "rows": 2,
-    "placeholder": "Enter recommended next actions and follow-up timeline",
     "gridColumn": 6,
     "validation": {
       "required": false

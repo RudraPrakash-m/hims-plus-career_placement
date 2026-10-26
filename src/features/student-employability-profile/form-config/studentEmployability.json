@@ -3,7 +3,6 @@
     "name": "studentDetails",
     "label": "Student Details",
     "type": "text",
-    "placeholder": "Enter student name / ID (or auto-fetched from HIMS)",
     "gridColumn": 4,
     "validation": {
       "required": true,
@@ -14,7 +13,6 @@
     "name": "academicAchievements",
     "label": "Academic Achievements",
     "type": "text",
-    "placeholder": "Enter programme, institution, marks/CGPA, year, and achievements",
     "gridColumn": 4,
     "validation": {
       "required": true,
@@ -86,18 +84,15 @@
     "name": "certifications",
     "label": "Certifications",
     "type": "text",
-    "placeholder": "Enter certification name, issuing organization, and issue date",
     "gridColumn": 4,
     "validation": {
       "required": false
     }
   },
-  
   {
     "name": "resume",
     "label": "Resume",
     "type": "file",
-    "placeholder": "Upload or update resume (.pdf, .doc, .docx)",
     "accept": ".pdf,.doc,.docx",
     "gridColumn": 3,
     "validation": {
@@ -110,7 +105,6 @@
     "label": "Projects / Experience",
     "type": "textarea",
     "rows": 2,
-    "placeholder": "Enter projects, internships, work experience, and achievements",
     "gridColumn": 4,
     "validation": {
       "required": false
@@ -120,7 +114,6 @@
     "name": "portfolioLinks",
     "label": "Portfolio / Links",
     "type": "text",
-    "placeholder": "e.g., https://github.com/username or https://linkedin.com/in/username",
     "gridColumn": 3,
     "validation": {
       "required": false

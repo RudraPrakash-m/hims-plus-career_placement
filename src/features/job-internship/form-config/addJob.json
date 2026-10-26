@@ -89,7 +89,6 @@
     "name": "jobTitle",
     "label": "Job Title / Role",
     "type": "text",
-    "placeholder": "Enter job title or role (e.g., Software Development Engineer)",
     "gridColumn": 4,
     "validation": {
       "required": true,
@@ -100,7 +99,6 @@
     "name": "locationWorkMode",
     "label": "Location / Work Mode",
     "type": "text",
-    "placeholder": "Enter location and work mode (e.g., Bhubaneswar, Odisha - Hybrid)",
     "gridColumn": 4,
     "validation": {
       "required": true,
@@ -111,7 +109,6 @@
     "name": "salaryStipend",
     "label": "Salary / Stipend",
     "type": "text",
-    "placeholder": "Enter salary or stipend (e.g., 6 - 8 LPA or ₹25,000 / month)",
     "gridColumn": 4,
     "validation": {
       "required": false
@@ -121,7 +118,6 @@
     "name": "vacancies",
     "label": "Vacancies",
     "type": "number",
-    "placeholder": "Enter number of openings (e.g., 5)",
     "min": 1,
     "gridColumn": 4,
     "validation": {
@@ -133,7 +129,6 @@
     "name": "applicationStartDate",
     "label": "Application Start Date",
     "type": "date",
-    "placeholder": "Select start date",
     "gridColumn": 3,
     "validation": {
       "required": true,
@@ -144,7 +139,6 @@
     "name": "applicationEndDate",
     "label": "Application End Date",
     "type": "date",
-    "placeholder": "Select end date",
     "gridColumn": 3,
     "validation": {
       "required": true,
@@ -233,7 +227,6 @@
     "label": "Job Description",
     "type": "textarea",
     "rows": 2,
-    "placeholder": "Enter role responsibilities, job overview, and key deliverables",
     "gridColumn": 6,
     "validation": {
       "required": true,
@@ -245,7 +238,6 @@
     "label": "Eligibility Criteria",
     "type": "textarea",
     "rows": 2,
-    "placeholder": "Specify programme, academic score (CGPA/% min), skills, and experience criteria",
     "gridColumn": 6,
     "validation": {
       "required": true,

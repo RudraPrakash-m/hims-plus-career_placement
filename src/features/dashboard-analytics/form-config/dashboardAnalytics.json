@@ -3,7 +3,6 @@
     "name": "reportTitle",
     "label": "Report Title / Configuration Name",
     "type": "text",
-    "placeholder": "e.g., Annual Placement & Employability Comprehensive Report 2024-2025",
     "gridColumn": 3,
     "validation": {
       "required": true,
@@ -343,21 +342,18 @@
     "name": "startDate",
     "label": "Reporting Period Start",
     "type": "date",
-    "placeholder": "Select start date",
     "gridColumn": 2
   },
   {
     "name": "endDate",
     "label": "Reporting Period End",
     "type": "date",
-    "placeholder": "Select end date",
     "gridColumn": 2
   },
   {
     "name": "remarks",
     "label": "Report Scope, Notes & Objectives",
     "type": "textarea",
-    "placeholder": "Enter custom analytical notes, governance compliance references, or specific reporting goals...",
     "rows": 3,
     "gridColumn": 4
   }

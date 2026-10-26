@@ -175,7 +175,6 @@
     "name": "dateTime",
     "label": "Date and Time",
     "type": "datetime-local",
-    "placeholder": "Select interview date and time",
     "gridColumn": 4,
     "validation": {
       "required": true,
@@ -186,7 +185,6 @@
     "name": "modeVenue",
     "label": "Mode / Venue",
     "type": "text",
-    "placeholder": "Enter mode or venue (e.g., Campus Placement Room 204 / Google Meet Link)",
     "gridColumn": 4,
     "validation": {
       "required": true,
@@ -197,7 +195,6 @@
     "name": "panelContact",
     "label": "Panel / Contact",
     "type": "text",
-    "placeholder": "Enter interviewers and contact coordinator details",
     "gridColumn": 4,
     "validation": {
       "required": true,
@@ -242,7 +239,6 @@
     "label": "Remarks",
     "type": "textarea",
     "rows": 2,
-    "placeholder": "Record selection-related remarks, evaluation notes, and interview feedback",
     "gridColumn": 12,
     "validation": {
       "required": false

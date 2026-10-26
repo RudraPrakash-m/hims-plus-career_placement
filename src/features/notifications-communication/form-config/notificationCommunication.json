@@ -122,7 +122,6 @@
     "name": "deadline",
     "label": "Deadline",
     "type": "date",
-    "placeholder": "Select action deadline",
     "gridColumn": 4,
     "validation": {
       "required": false
@@ -165,7 +164,6 @@
     "name": "sentDate",
     "label": "Sent Date",
     "type": "date",
-    "placeholder": "Select transmission date",
     "gridColumn": 4,
     "validation": {
       "required": true,
@@ -177,7 +175,6 @@
     "label": "Message",
     "type": "textarea",
     "rows": 2,
-    "placeholder": "Enter event details, required action steps, venue/link instructions, and coordinator contact",
     "gridColumn": 6,
     "validation": {
       "required": true,
@@ -189,7 +186,6 @@
     "label": "Communication History",
     "type": "textarea",
     "rows": 2,
-    "placeholder": "Transmission log details (e.g., Dispatched via SendGrid SMTP Gateway to 45 verified recipients at 10:30 AM)",
     "gridColumn": 6,
     "validation": {
       "required": false

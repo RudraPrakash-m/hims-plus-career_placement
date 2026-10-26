@@ -3,7 +3,6 @@
     "name": "programmeName",
     "label": "Programme Name",
     "type": "text",
-    "placeholder": "Enter programme name (e.g., Full Stack Cloud Architecture & AI Internship)",
     "gridColumn": 4,
     "validation": {
       "required": true,
@@ -100,7 +99,6 @@
     "name": "startDate",
     "label": "Start Date",
     "type": "date",
-    "placeholder": "Select start date",
     "gridColumn": 3,
     "validation": {
       "required": true,
@@ -111,7 +109,6 @@
     "name": "endDate",
     "label": "End Date",
     "type": "date",
-    "placeholder": "Select end date",
     "gridColumn": 3,
     "validation": {
       "required": true,
@@ -122,7 +119,6 @@
     "name": "scheduleDuration",
     "label": "Schedule / Duration",
     "type": "text",
-    "placeholder": "e.g., 8 Weeks (Mon-Fri, 2 hrs/day, 10:00 AM - 12:00 PM)",
     "gridColumn": 3,
     "validation": {
       "required": true,
@@ -269,7 +265,6 @@
     "name": "certificate",
     "label": "Certificate",
     "type": "file",
-    "placeholder": "Upload completion certificate details",
     "accept": ".pdf,.doc,.docx,.jpg,.jpeg,.png",
     "gridColumn": 4,
     "validation": {
@@ -281,7 +276,6 @@
     "label": "Eligibility",
     "type": "textarea",
     "rows": 2,
-    "placeholder": "Define eligible student cohorts, academic branches, minimum marks/CGPA cutoff, and technical prerequisites",
     "gridColumn": 8,
     "validation": {
       "required": true,

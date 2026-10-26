@@ -1,44 +1,40 @@
 [
-    {
-        "name": "parentId",
-        "label": "Parent ID",
-        "type": "text",
-        "placeholder": "Enter parent ID",
-        "validation": {
-            "required": true,
-            "message": "Parent ID is required"
-        }
-    },
-    {
-        "name": "parentName",
-        "label": "Parent Name",
-        "type": "text",
-        "placeholder": "Enter parent name",
-        "validation": {
-            "required": true,
-            "minLength": 3,
-            "maxLength": 100,
-            "message": "Parent Name is required"
-        }
-    },
-    {
-        "name": "fatherName",
-        "label": "Father's Name",
-        "type": "text",
-        "placeholder": "Enter father's name",
-        "validation": {
-            "required": true,
-            "message": "Father's Name is required"
-        }
-    },
-    {
-        "name": "motherName",
-        "label": "Mother's Name",
-        "type": "text",
-        "placeholder": "Enter mother's name",
-        "validation": {
-            "required": true,
-            "message": "Mother's Name is required"
-        }
+  {
+    "name": "parentId",
+    "label": "Parent ID",
+    "type": "text",
+    "validation": {
+      "required": true,
+      "message": "Parent ID is required"
     }
+  },
+  {
+    "name": "parentName",
+    "label": "Parent Name",
+    "type": "text",
+    "validation": {
+      "required": true,
+      "minLength": 3,
+      "maxLength": 100,
+      "message": "Parent Name is required"
+    }
+  },
+  {
+    "name": "fatherName",
+    "label": "Father's Name",
+    "type": "text",
+    "validation": {
+      "required": true,
+      "message": "Father's Name is required"
+    }
+  },
+  {
+    "name": "motherName",
+    "label": "Mother's Name",
+    "type": "text",
+    "validation": {
+      "required": true,
+      "message": "Mother's Name is required"
+    }
+  }
 ]

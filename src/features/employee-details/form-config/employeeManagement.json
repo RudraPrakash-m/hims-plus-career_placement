@@ -3,7 +3,6 @@
     "name": "employeeId",
     "label": "Employee ID",
     "type": "text",
-    "placeholder": "EMP-001",
     "gridColumn": 3,
     "validation": {
       "required": true,
@@ -14,7 +13,6 @@
     "name": "fullName",
     "label": "Full Name",
     "type": "text",
-    "placeholder": "Enter full name",
     "gridColumn": 3,
     "validation": {
       "required": true,
@@ -57,7 +55,6 @@
     "name": "designation",
     "label": "Designation",
     "type": "text",
-    "placeholder": "Software Engineer",
     "gridColumn": 3,
     "validation": {
       "required": true,
@@ -97,7 +94,6 @@
     "name": "dateOfJoining",
     "label": "Date of Joining",
     "type": "date",
-    "placeholder": "Select joining date",
     "gridColumn": 3,
     "maxDate": "today",
     "validation": {
@@ -138,7 +134,6 @@
     "name": "mobileNumber",
     "label": "Mobile Number",
     "type": "tel",
-    "placeholder": "Enter mobile number",
     "gridColumn": 3,
     "maxLength": 10,
     "validation": {
@@ -151,7 +146,6 @@
     "name": "shiftStartTime",
     "label": "Shift Start Time",
     "type": "time",
-    "placeholder": "hh:mm aa",
     "gridColumn": 3,
     "validation": {
       "required": true,
@@ -162,7 +156,6 @@
     "name": "shiftEndTime",
     "label": "Shift End Time",
     "type": "time",
-    "placeholder": "hh:mm aa",
     "gridColumn": 3,
     "validation": {
       "required": true,
@@ -173,7 +166,6 @@
     "name": "email",
     "label": "Email Address",
     "type": "email",
-    "placeholder": "example@domain.com",
     "gridColumn": 3,
     "validation": {
       "required": true,
@@ -184,7 +176,6 @@
     "name": "emergencyContact",
     "label": "Emergency Contact Name",
     "type": "text",
-    "placeholder": "Emergency contact person name",
     "gridColumn": 3,
     "validation": {
       "required": true,
@@ -232,7 +223,6 @@
     "name": "remarks",
     "label": "Additional Remarks",
     "type": "textarea",
-    "placeholder": "Enter any additional information...",
     "gridColumn": 3
   }
 ]

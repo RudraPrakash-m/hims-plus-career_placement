@@ -121,7 +121,6 @@
     "name": "preferredLocation",
     "label": "Preferred Location",
     "type": "text",
-    "placeholder": "e.g., Bangalore, Hyderabad, Pune, Bhubaneswar, Remote",
     "gridColumn": 4,
     "validation": {
       "required": true,
@@ -166,7 +165,6 @@
     "label": "Higher Study / Career Goals",
     "type": "textarea",
     "rows": 2,
-    "placeholder": "Enter longer-term career goals or higher study plans (e.g., MS, MBA, PhD)",
     "gridColumn": 4,
     "validation": {
       "required": false
@@ -278,7 +276,6 @@
     "name": "lastUpdated",
     "label": "Last Updated",
     "type": "date",
-    "placeholder": "Select latest update date",
     "gridColumn": 4,
     "validation": {
       "required": false

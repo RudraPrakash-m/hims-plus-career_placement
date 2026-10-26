@@ -9,16 +9,14 @@
     "header": "Employee Name",
     "size": 250,
     "editable": true,
-    "type": "text",
-    "placeholder": "Enter name"
+    "type": "text"
   },
   {
     "accessorKey": "designation",
     "header": "Designation",
     "size": 250,
     "editable": true,
-    "type": "text",
-    "placeholder": "Enter designation"
+    "type": "text"
   },
   {
     "accessorKey": "department",
@@ -27,10 +25,22 @@
     "editable": true,
     "type": "select",
     "options": [
-      { "label": "Engineering", "value": "Engineering" },
-      { "label": "HR", "value": "HR" },
-      { "label": "Marketing", "value": "Marketing" },
-      { "label": "Finance", "value": "Finance" }
+      {
+        "label": "Engineering",
+        "value": "Engineering"
+      },
+      {
+        "label": "HR",
+        "value": "HR"
+      },
+      {
+        "label": "Marketing",
+        "value": "Marketing"
+      },
+      {
+        "label": "Finance",
+        "value": "Finance"
+      }
     ]
   },
   {

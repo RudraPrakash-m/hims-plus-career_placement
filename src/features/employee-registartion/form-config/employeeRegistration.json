@@ -3,7 +3,6 @@
     "name": "organizationName",
     "label": "Organization Name",
     "type": "text",
-    "placeholder": "Enter organization name",
     "gridColumn": 4,
     "validation": {
       "required": true,
@@ -35,7 +34,6 @@
     "name": "registrationDetails",
     "label": "Registration Details",
     "type": "text",
-    "placeholder": "Enter registration details",
     "gridColumn": 3,
     "validation": {
       "required": true,
@@ -46,7 +44,6 @@
     "name": "addressAndLocation",
     "label": "Address and Location",
     "type": "text",
-    "placeholder": "Enter office address and operating locations",
     "gridColumn": 3,
     "validation": {
       "required": true,
@@ -57,7 +54,6 @@
     "name": "contactPerson",
     "label": "Contact Person",
     "type": "text",
-    "placeholder": "Enter contact person name, designation, email, and phone number",
     "gridColumn": 3,
     "validation": {
       "required": true,
@@ -68,7 +64,6 @@
     "name": "website",
     "label": "Website",
     "type": "url",
-    "placeholder": "https://www.example.com",
     "gridColumn": 3,
     "validation": {
       "required": false,
@@ -79,7 +74,6 @@
     "name": "supportingDocuments",
     "label": "Supporting Documents",
     "type": "file",
-    "placeholder": "Upload supporting documents",
     "accept": ".pdf,.doc,.docx,.jpg,.jpeg,.png",
     "gridColumn": 3,
     "validation": {
@@ -120,7 +114,6 @@
     "label": "Company Profile",
     "type": "textarea",
     "rows": 3,
-    "placeholder": "Enter description of organization and business activities",
     "gridColumn": 12,
     "validation": {
       "required": true,

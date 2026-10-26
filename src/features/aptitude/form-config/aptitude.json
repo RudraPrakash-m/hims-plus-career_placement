@@ -40,7 +40,6 @@
     "name": "assessmentName",
     "label": "Assessment Name",
     "type": "text",
-    "placeholder": "Enter assessment name (e.g., National Aptitude Test 2024)",
     "gridColumn": 4,
     "validation": {
       "required": true,
@@ -51,7 +50,6 @@
     "name": "schedule",
     "label": "Schedule",
     "type": "datetime-local",
-    "placeholder": "Select assessment schedule date and time",
     "gridColumn": 4,
     "validation": {
       "required": true,
@@ -174,7 +172,6 @@
     "label": "Recommendation",
     "type": "textarea",
     "rows": 2,
-    "placeholder": "Enter suggested career paths, training modules, or improvement activities",
     "gridColumn": 6,
     "validation": {
       "required": false
