@@ -7,7 +7,7 @@ import { animLevel } from "@/shared/utils/interactionFx";
 import { Highlight } from "../Header/parts/GlobalSearch";
 import { useNavMemory } from "../PageTabs";
 import { flattenMenu, getMenuItemsForRole, type MenuItem } from "./menuItems";
-import { RailFlyout, RailTooltip } from "./RailPopover";
+import { RailFlyout, RailTooltip, TruncatedNavTooltip } from "./RailPopover";
 
 /* Ported from hims-ui-new components/layout/Sidebar.tsx. Styles: src/shared/styles/sidebar.css */
 
@@ -76,9 +76,9 @@ const Leaf: React.FC<Readonly<LeafProps>> = ({ item, depth, collapsed, onNavigat
     const label = t(item.label);
     const Icon = item.icon;
 
-    const link = (ref?: React.Ref<HTMLAnchorElement>) => (
+    const link = (ref?: (el: HTMLElement | null) => void, labelRef?: React.Ref<HTMLSpanElement>) => (
         <NavLink
-            ref={ref}
+            ref={ref as any}
             to={item.path ?? "#"}
             end
             onClick={onNavigate}
@@ -87,34 +87,43 @@ const Leaf: React.FC<Readonly<LeafProps>> = ({ item, depth, collapsed, onNavigat
         >
             {(depth === 0 || collapsed) && Icon && <Icon size={18} />}
             {!collapsed && (
-                <span className="nav-item__label">
+                <span ref={labelRef} className="nav-item__label">
                     <Highlight text={label} query={query} />
                 </span>
             )}
         </NavLink>
     );
 
-    if (collapsed) return <RailTooltip label={label}>{(ref) => link(ref as React.Ref<HTMLAnchorElement>)}</RailTooltip>;
-    if (!starred || !item.path) return link();
+    if (collapsed) return <RailTooltip label={label}>{(ref) => link((el) => { (ref as any).current = el; })}</RailTooltip>;
 
-    const fav = favourites.includes(item.path);
+    const fav = favourites.includes(item.path ?? "");
+
     return (
-        <div className={`nav-fav ${fav ? "is-starred" : ""}`}>
-            {link()}
-            <button
-                type="button"
-                aria-pressed={fav}
-                aria-label={`${fav ? t("Remove from favourites") : t("Add to favourites")}: ${label}`}
-                onClick={() => {
-                    if (!fav && animLevel() !== "off") setBurst((b) => b + 1);
-                    toggleFavourite(item.path!);
-                }}
-                className={`nav-fav__star ${fav ? "is-on" : ""}`}
-            >
-                <Star size={13} />
-            </button>
-            {burst > 0 && <Sparks key={burst} />}
-        </div>
+        <TruncatedNavTooltip label={label}>
+            {(anchorRef, labelRef) => {
+                const navLink = link(anchorRef, labelRef);
+                if (!starred || !item.path) return navLink;
+
+                return (
+                    <div className={`nav-fav ${fav ? "is-starred" : ""}`}>
+                        {navLink}
+                        <button
+                            type="button"
+                            aria-pressed={fav}
+                            aria-label={`${fav ? t("Remove from favourites") : t("Add to favourites")}: ${label}`}
+                            onClick={() => {
+                                if (!fav && animLevel() !== "off") setBurst((b) => b + 1);
+                                toggleFavourite(item.path!);
+                            }}
+                            className={`nav-fav__star ${fav ? "is-on" : ""}`}
+                        >
+                            <Star size={13} />
+                        </button>
+                        {burst > 0 && <Sparks key={burst} />}
+                    </div>
+                );
+            }}
+        </TruncatedNavTooltip>
     );
 };
 
@@ -143,7 +152,7 @@ const Group: React.FC<Readonly<GroupProps>> = ({ item, depth = 0, collapsed, onN
         if (childActive) setOpen(true);
     }, [childActive]);
 
-    const button = (ref: React.Ref<HTMLButtonElement>) => (
+    const button = (ref: (el: HTMLButtonElement | null) => void, labelRef?: React.Ref<HTMLSpanElement>) => (
         <button
             ref={ref}
             type="button"
@@ -157,7 +166,7 @@ const Group: React.FC<Readonly<GroupProps>> = ({ item, depth = 0, collapsed, onN
             {(depth === 0 || collapsed) && Icon && <Icon size={18} />}
             {!collapsed && (
                 <>
-                    <span className="nav-item__label">
+                    <span ref={labelRef} className="nav-item__label">
                         <Highlight text={label} query={query} />
                     </span>
                     <ChevronDown size={14} className={`nav-item__chevron ${open ? "is-open" : ""}`} />
@@ -172,7 +181,7 @@ const Group: React.FC<Readonly<GroupProps>> = ({ item, depth = 0, collapsed, onN
                 <RailTooltip label={label} disabled={fly}>
                     {(ref) =>
                         button((el) => {
-                            ref.current = el;
+                            (ref as any).current = el;
                             btnRef.current = el;
                         })
                     }
@@ -200,7 +209,14 @@ const Group: React.FC<Readonly<GroupProps>> = ({ item, depth = 0, collapsed, onN
 
     return (
         <div>
-            {button(btnRef)}
+            <TruncatedNavTooltip label={label}>
+                {(anchorRef, labelRef) =>
+                    button((el) => {
+                        anchorRef(el);
+                        btnRef.current = el;
+                    }, labelRef)
+                }
+            </TruncatedNavTooltip>
             <div hidden={!mounted} className="nav-submenu" data-closing={open ? undefined : ""}>
                 <div className="app-sidebar__list">
                     {mounted &&

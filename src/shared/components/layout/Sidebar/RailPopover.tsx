@@ -65,6 +65,75 @@ export const RailTooltip = ({ label, disabled, children }: { label: string; disa
     );
 };
 
+/** Shows a tooltip beside the anchor on hover/focus ONLY IF the text in labelRef is truncated. */
+export const TruncatedNavTooltip = ({
+    label,
+    disabled = false,
+    children,
+}: {
+    label: string;
+    disabled?: boolean;
+    children: (
+        anchorRef: (el: HTMLElement | null) => void,
+        labelRef: RefObject<HTMLSpanElement | null>,
+    ) => ReactNode;
+}) => {
+    const anchorElRef = useRef<HTMLElement | null>(null);
+    const labelRef = useRef<HTMLSpanElement | null>(null);
+    const [show, setShow] = useState(false);
+    const pos = useBesideAnchor(anchorElRef, show && !disabled);
+
+    const setAnchorRef = (el: HTMLElement | null) => {
+        anchorElRef.current = el;
+    };
+
+    useEffect(() => {
+        const el = anchorElRef.current;
+        if (!el || disabled) return;
+
+        const checkAndShow = () => {
+            const span = labelRef.current;
+            if (!span) return;
+            // The full text is truncated when scrollWidth exceeds clientWidth
+            const isTruncated = span.scrollWidth > span.clientWidth + 1;
+            if (isTruncated) {
+                setShow(true);
+            }
+        };
+
+        const hide = () => setShow(false);
+
+        el.addEventListener("mouseenter", checkAndShow);
+        el.addEventListener("mouseleave", hide);
+        el.addEventListener("focus", checkAndShow);
+        el.addEventListener("blur", hide);
+        el.addEventListener("click", hide);
+
+        return () => {
+            el.removeEventListener("mouseenter", checkAndShow);
+            el.removeEventListener("mouseleave", hide);
+            el.removeEventListener("focus", checkAndShow);
+            el.removeEventListener("blur", hide);
+            el.removeEventListener("click", hide);
+        };
+    }, [disabled]);
+
+    return (
+        <>
+            {children(setAnchorRef, labelRef)}
+            {show &&
+                !disabled &&
+                pos &&
+                createPortal(
+                    <span role="tooltip" className="rail-tip sidebar-nav-tip" style={{ left: pos.left, top: pos.mid }}>
+                        {label}
+                    </span>,
+                    document.body,
+                )}
+        </>
+    );
+};
+
 /** Menu panel to the right of a rail group: closes on Esc (focus back to the icon) or a click outside. */
 export const RailFlyout = ({
     anchorRef,
