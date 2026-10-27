@@ -239,7 +239,17 @@ const renderStaticField = (
 ) => {
     switch (field.type) {
         case 'textarea':
-            return <TextArea key={field.name} {...commonProps} rows={field.rows} maxLength={field.maxLength} {...register(fieldName)} />;
+            return (
+                <TextArea
+                    key={field.name}
+                    {...commonProps}
+                    rows={field.rows}
+                    maxLength={field.maxLength}
+                    showCount={field.showCount}
+                    autoResize={field.autoResize}
+                    {...register(fieldName)}
+                />
+            );
         case 'multiselect':
             return (
                 <MultiSelect

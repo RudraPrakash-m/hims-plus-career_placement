@@ -29,12 +29,11 @@ export const NotificationCenter = ({ notifications, onRead, onReadAll }: Notific
     const unread = notifications.filter((n) => !n.read).length;
 
     const prev = useRef(unread);
-    const [swing, setSwing] = useState(0);
+    const [swing, setSwing] = useState(false);
     useEffect(() => {
         if (prev.current === unread) return;
         prev.current = unread;
-        const id = requestAnimationFrame(() => setSwing((n) => n + 1));
-        return () => cancelAnimationFrame(id);
+        setSwing(true);
     }, [unread]);
 
     return (
@@ -49,10 +48,13 @@ export const NotificationCenter = ({ notifications, onRead, onReadAll }: Notific
                 data-tip={open ? undefined : t("Notifications")}
                 className="header-icon-btn"
             >
-                <span key={swing} className={swing ? "fx-swing inline-flex" : "inline-flex"}>
+                <span
+                    className={swing ? "fx-swing inline-flex" : "inline-flex"}
+                    onAnimationEnd={() => setSwing(false)}
+                >
                     <Bell size={18} />
                 </span>
-                <CountBadge key={unread} count={unread} className={`hdr-count--corner ${swing ? "fx-pulse" : ""}`} />
+                <CountBadge count={unread} className={`hdr-count--corner ${swing ? "fx-pulse" : ""}`} />
             </button>
 
             {open && (

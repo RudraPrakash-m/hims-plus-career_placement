@@ -34,7 +34,8 @@ export interface FormField {
     readOnly?: boolean;
     options?: Option[];
     multiple?: boolean;
-    rows?: number;
+    rows?: number | string;
+    autoResize?: boolean;
     min?: number | string;
     max?: number | string;
     step?: number;

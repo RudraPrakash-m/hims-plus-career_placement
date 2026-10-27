@@ -24,7 +24,7 @@ const EmployeeRegistration = () => {
     const multiline = rawFields.filter((f) => f.type === "textarea").map((f) => ({
       ...f,
       gridColumn: 6,
-      rows: f.rows && f.rows > 1 ? f.rows : 3,
+      rows: f.rows ?? 3,
     }));
     return [...regular, ...multiline];
   }, []);
