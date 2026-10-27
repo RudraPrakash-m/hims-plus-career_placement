@@ -268,7 +268,11 @@ const NotificationPreview = ({ item }: { item: NotificationCommunicationData }) 
   );
 };
 
-const NotificationCommunicationView = () => {
+export interface NotificationCommunicationViewProps {
+  hideHeader?: boolean;
+}
+
+const NotificationCommunicationView = ({ hideHeader }: NotificationCommunicationViewProps = {}) => {
   const navigate = useAppNavigate();
   const [notifications, setNotifications] =
     useState<NotificationCommunicationData[]>(INITIAL_NOTIFICATIONS);
@@ -307,25 +311,27 @@ const NotificationCommunicationView = () => {
 
   return (
     <>
-      <PageHeader
-        title="Notifications & Communication"
-        description="Broadcast announcements, interview schedules and deadline alerts."
-        breadcrumb={[
-          { label: "Placement" },
-          { label: "Notifications" },
-        ]}
-        actions={
-          <Button
-            icon={<Plus size={16} />}
-            onClick={() => navigate("/notifications-communication")}
-          >
-            Send Notification
-          </Button>
-        }
-      />
+      {!hideHeader && (
+        <PageHeader
+          title="Notifications & Communication"
+          description="Broadcast announcements, interview schedules and deadline alerts."
+          breadcrumb={[
+            { label: "Placement" },
+            { label: "Notifications" },
+          ]}
+          actions={
+            <Button
+              icon={<Plus size={16} />}
+              onClick={() => navigate("/notifications-communication")}
+            >
+              Send Notification
+            </Button>
+          }
+        />
+      )}
 
       <div className="space-y-4">
-        <Card flush>
+        <Card title={hideHeader ? "Notifications and Communication" : undefined} flush>
         <DataTable
           caption="Event Notifications, Deadline Alerts & Broadcast Communication"
           data={rows}

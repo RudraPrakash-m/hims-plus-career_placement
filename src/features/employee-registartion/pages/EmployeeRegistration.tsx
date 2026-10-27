@@ -4,6 +4,7 @@ import { Button, Card, FormGenerator, PageHeader, showToast, useAppNavigate, typ
 import { RotateCcw, Save } from 'lucide-react';
 import employeeConfig from "../form-config/employeeRegistration.json";
 import "../styles/employeeRegistration.css";
+import RegistrationView from "./RegistrationView";
 
 const EmployeeRegistration = () => {
   const location = useLocation();
@@ -14,7 +15,7 @@ const EmployeeRegistration = () => {
 
   const handleSubmit = () => {
     showToast.success(editRecord?.id ? "Employee updated successfully!" : "Employee saved successfully!");
-    navigate("/employee-details-view");
+    navigate("/registration-view");
   };
 
   // Ensure regular input fields appear before multiline textarea fields while preserving relative order
@@ -30,8 +31,14 @@ const EmployeeRegistration = () => {
   }, []);
 
   return (
-    <div className="space-y-4">
-      <PageHeader title={editRecord?.id ? "Edit Employee" : "Employer Registration"} />
+    <div className="space-y-6">
+      <PageHeader
+        title={editRecord?.id ? "Edit Employee" : "Employer Registration"}
+        breadcrumb={[
+          { label: "Home", path: "/" },
+          { label: "Employer Registration and Management", path: "/employer-registration-profile" },
+        ]}
+      />
       <Card title="Employer Profile">
         <FormGenerator
           fields={fields}
@@ -47,6 +54,8 @@ const EmployeeRegistration = () => {
           </div>
         </FormGenerator>
       </Card>
+
+      <RegistrationView hideHeader />
     </div>
   );
 };

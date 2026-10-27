@@ -275,7 +275,11 @@ const PreferencePreview = ({
   );
 };
 
-const ViewcarrierPreference = () => {
+export interface ViewcarrierPreferenceProps {
+  hideHeader?: boolean;
+}
+
+const ViewcarrierPreference = ({ hideHeader }: ViewcarrierPreferenceProps = {}) => {
   const navigate = useAppNavigate();
   const [preferences] =
     useState<CarrierPreferenceData[]>(INITIAL_PREFERENCES);
@@ -299,26 +303,28 @@ const ViewcarrierPreference = () => {
 
   return (
     <>
-      <PageHeader
-        title="Career Preferences"
-        description="Jobs, preferred roles and employment aspirations open to you."
-        breadcrumb={[
-          { label: "Home", path: "/" },
-          { label: "Career Preferences and Employment Aspirations" },
-          { label: "View Aspirations" },
-        ]}
-        actions={
-          <Button
-            icon={<Plus size={16} />}
-            onClick={() => navigate("/carrier-preference")}
-          >
-            Add Preferences
-          </Button>
-        }
-      />
+      {!hideHeader && (
+        <PageHeader
+          title="Career Preferences"
+          description="Jobs, preferred roles and employment aspirations open to you."
+          breadcrumb={[
+            { label: "Home", path: "/" },
+            { label: "Career Preferences and Employment Aspirations" },
+            { label: "View Aspirations" },
+          ]}
+          actions={
+            <Button
+              icon={<Plus size={16} />}
+              onClick={() => navigate("/carrier-preference")}
+            >
+              Add Preferences
+            </Button>
+          }
+        />
+      )}
 
       <div className="space-y-4">
-        <Card flush>
+        <Card title={hideHeader ? "Career Preferences" : undefined} flush>
           <DataTable
             caption="Student Career Preferences"
             data={rows}
@@ -363,11 +369,10 @@ const ViewcarrierPreference = () => {
         onClose={() => setIsModalOpen(false)}
         title={
           selectedPreference
-            ? `Career Preferences - ${
-                Array.isArray(selectedPreference.preferredJobRoles)
-                  ? selectedPreference.preferredJobRoles.join(", ")
-                  : selectedPreference.preferredJobRoles
-              }`
+            ? `Career Preferences - ${Array.isArray(selectedPreference.preferredJobRoles)
+              ? selectedPreference.preferredJobRoles.join(", ")
+              : selectedPreference.preferredJobRoles
+            }`
             : "Career Preference Details"
         }
         size="2xl"

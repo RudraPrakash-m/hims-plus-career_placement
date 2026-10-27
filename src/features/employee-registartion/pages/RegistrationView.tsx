@@ -192,7 +192,11 @@ const OrganizationPreview = ({
   );
 };
 
-const RegistrationView = () => {
+export interface RegistrationViewProps {
+  hideHeader?: boolean;
+}
+
+const RegistrationView = ({ hideHeader }: RegistrationViewProps = {}) => {
   const navigate = useAppNavigate();
 
   const [organizations, setOrganizations] =
@@ -241,25 +245,27 @@ const RegistrationView = () => {
 
   return (
     <>
-      <PageHeader
-        title="Organization Registrations"
-        description="Registered partner organizations, corporate profiles and verification status."
-        breadcrumb={[
-          { label: "Administration" },
-          { label: "Organizations" },
-        ]}
-        actions={
-          <Button
-            icon={<Plus size={16} />}
-            onClick={() => navigate("/employer-registration-profile")}
-          >
-            Add Organization
-          </Button>
-        }
-      />
+      {!hideHeader && (
+        <PageHeader
+          title="Organization Registrations"
+          description="Registered partner organizations, corporate profiles and verification status."
+          breadcrumb={[
+            { label: "Administration" },
+            { label: "Organizations" },
+          ]}
+          actions={
+            <Button
+              icon={<Plus size={16} />}
+              onClick={() => navigate("/employer-registration-profile")}
+            >
+              Add Organization
+            </Button>
+          }
+        />
+      )}
 
       <div className="space-y-4">
-        <Card flush>
+        <Card title={hideHeader ? "Employer Registration & Profiles" : undefined} flush>
         <DataTable
           caption="Organizations"
           data={rows}

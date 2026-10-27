@@ -36,170 +36,110 @@ export const ALL_MENU_ITEMS: MenuItem[] = [
     {
         icon: Building2,
         label: "Employer Registration and Management",
-        submenu: [
-            { label: "Employer Registration", path: "/employer-registration-profile" },
-            { label: "View Registration", path: "/registration-view" },
-        ],
+        path: "/employer-registration-profile",
     },
     {
         icon: GraduationCap,
         label: "Student Employability Profile",
-        submenu: [
-            { label: "Student Employability", path: "/student-employability-profile" },
-            { label: "View Employability", path: "/view-student-employability" },
-        ],
+        path: "/student-employability-profile",
     },
     {
         icon: Compass,
         label: "Career Preferences and Employment Aspirations",
-        submenu: [
-            { label: "Career Preferences", path: "/carrier-preference" },
-            { label: "View Aspirations", path: "/view-carrier-preference" },
-        ],
+        path: "/carrier-preference",
     },
     {
         icon: UserCheck,
         label: "Career Counselling and Mentoring",
-        submenu: [
-            { label: "Career Counselling", path: "/carrier-counselling" },
-            { label: "View Counselling", path: "/carrier-counselling-view" },
-        ],
+        path: "/carrier-counselling",
     },
     {
         icon: BookOpen,
         label: "Aptitude, Skill Assessment and Career Recommendations",
-        submenu: [
-            { label: "Aptitude", path: "/aptitude" },
-            { label: "View Aptitude", path: "/aptitude-view" },
-        ],
+        path: "/aptitude",
     },
     {
         icon: Briefcase,
         label: "Job / Internship / Apprenticeship Opportunity Management",
-        submenu: [
-            { label: "Add Opportunity", path: "/add-job" },
-            { label: "View Opportunities", path: "/view-job" },
-        ],
+        path: "/add-job",
     },
     {
         icon: CalendarCheck,
         label: "Placement Drive Management",
-        submenu: [
-            { label: "Add Placement Drive", path: "/placement-drive" },
-            { label: "View Placement Drives", path: "/placement-drive-view" },
-        ],
+        path: "/placement-drive",
     },
     {
         icon: FileSpreadsheet,
         label: "Student Application and Opportunity Tracking",
-        submenu: [
-            { label: "Add Student Application", path: "/student-application" },
-            { label: "View Student Applications", path: "/student-application-view" },
-        ],
+        path: "/student-application",
     },
     {
         icon: UserCheck,
         label: "Shortlisting and Interview Scheduling",
-        submenu: [
-            { label: "Shortlisting", path: "/short-listing" },
-            { label: "View Shortlisted Students", path: "/shortlisting-view" },
-        ],
+        path: "/short-listing",
     },
     {
         icon: Building,
         label: "Campus Placement Workflow",
-        submenu: [
-            { label: "Campus Placement", path: "/campus-placement" },
-            { label: "View Campus Placement", path: "/campus-placement-view" },
-        ],
+        path: "/campus-placement",
     },
     {
         icon: ExternalLink,
         label: "Off-campus Placement Workflow",
-        submenu: [
-            { label: "Off-campus Placement", path: "/off-campus-placement" },
-            { label: "View Off-campus Placement", path: "/off-campus-placement-view" },
-        ],
+        path: "/off-campus-placement",
     },
     {
         icon: Award,
         label: "Internship, Training and Skill Enhancement",
-        submenu: [
-            { label: "Training & Internship", path: "/training-internship" },
-            { label: "View Programmes", path: "/training-internship-view" },
-        ],
+        path: "/training-internship",
     },
     {
         icon: Users,
         label: "Alumni Engagement and Referrals",
-        submenu: [
-            { label: "Alumni Engagement", path: "/alumni-engagement" },
-            { label: "View Alumni Engagements", path: "/alumni-engagement-view" },
-        ],
+        path: "/alumni-engagement",
     },
     {
         icon: Bell,
         label: "Notifications and Communication",
-        submenu: [
-            { label: "Send Notification", path: "/notifications-communication" },
-            { label: "View Notifications", path: "/notifications-communication-view" },
-        ],
+        path: "/notifications-communication",
     },
     {
         icon: Award,
         label: "Placement Outcomes and Employer Feedback",
-        submenu: [
-            { label: "Record Outcome & Feedback", path: "/placement-outcomes-feedback" },
-            { label: "View Placement Outcomes", path: "/placement-outcomes-feedback-view" },
-        ],
+        path: "/placement-outcomes-feedback",
     },
     {
         icon: BarChart3,
         label: "Dashboard, Analytics and Reports",
-        submenu: [
-            { label: "Dashboard Analytics", path: "/dashboard-analytics" },
-            { label: "View Dashboard", path: "/view-dashboard" },
-        ],
+        path: "/dashboard-analytics",
     },
     {
         icon: Network,
         label: "Integration with HIMS Modules",
-        submenu: [
-            { label: "Sync & Map HIMS Record", path: "/integration-hims-modules" },
-            { label: "View HIMS Integrations", path: "/integration-hims-modules-view" },
-        ],
+        path: "/integration-hims-modules",
     },
     {
         icon: UserCheck,
         label: "Counsellor, Mentor and Training Provider",
         submenu: [
-            { label: "Counsellors & Mentors", path: "/carrier-counselling-view" },
-            { label: "Training Providers", path: "/training-internship-view" },
+            { label: "Counsellors & Mentors", path: "/carrier-counselling" },
+            { label: "Training Providers", path: "/training-internship" },
         ],
     },
     {
         icon: Building2,
         label: "Industry, Job Role and Employment Type",
-        submenu: [
-            { label: "Job Roles & Types", path: "/carrier-preference" },
-            { label: "View Configurations", path: "/view-carrier-preference" },
-        ],
+        path: "/carrier-preference",
     },
     {
         icon: BookOpen,
         label: "Skills and Certification Catalogue",
-        submenu: [
-            { label: "Skills Assessment", path: "/aptitude" },
-            { label: "View Certifications", path: "/aptitude-view" },
-        ],
+        path: "/aptitude",
     },
     {
         icon: Settings,
         label: "Assessment and Selection Stage Configuration",
-        submenu: [
-            { label: "Selection Stages", path: "/short-listing" },
-            { label: "View Stages", path: "/shortlisting-view" },
-        ],
+        path: "/short-listing",
     },
     {
         icon: ShieldCheck,

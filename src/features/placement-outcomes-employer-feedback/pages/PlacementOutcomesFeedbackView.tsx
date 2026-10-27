@@ -299,7 +299,11 @@ const OutcomePreview = ({ item }: { item: PlacementOutcomeFeedbackData }) => {
   );
 };
 
-const PlacementOutcomesFeedbackView = () => {
+export interface PlacementOutcomesFeedbackViewProps {
+  hideHeader?: boolean;
+}
+
+const PlacementOutcomesFeedbackView = ({ hideHeader }: PlacementOutcomesFeedbackViewProps = {}) => {
   const navigate = useAppNavigate();
   const [data, setData] = useState<PlacementOutcomeFeedbackData[]>(INITIAL_OUTCOMES);
   const [selectedItem, setSelectedItem] = useState<PlacementOutcomeFeedbackData | null>(null);
@@ -356,25 +360,27 @@ const PlacementOutcomesFeedbackView = () => {
 
   return (
     <div className="space-y-6">
-      <PageHeader
-        title="Placement Outcomes & Feedback"
-        description="Recorded placement selections, offer packages and employer feedback."
-        breadcrumb={[
-          { label: "Placement" },
-          { label: "Placement Outcomes" },
-        ]}
-        actions={
-          <Button
-            variant="primary"
-            size="sm"
-            onClick={() => navigate("/placement-outcomes-feedback")}
-            className="flex items-center gap-1.5"
-          >
-            <Plus className="h-4 w-4" />
-            Record Outcome & Feedback
-          </Button>
-        }
-      />
+      {!hideHeader && (
+        <PageHeader
+          title="Placement Outcomes & Feedback"
+          description="Recorded placement selections, offer packages and employer feedback."
+          breadcrumb={[
+            { label: "Placement" },
+            { label: "Placement Outcomes" },
+          ]}
+          actions={
+            <Button
+              variant="primary"
+              size="sm"
+              onClick={() => navigate("/placement-outcomes-feedback")}
+              className="flex items-center gap-1.5"
+            >
+              <Plus className="h-4 w-4" />
+              Record Outcome & Feedback
+            </Button>
+          }
+        />
+      )}
 
       <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
         <div className="rounded-lg border bg-card p-4">
@@ -395,7 +401,7 @@ const PlacementOutcomesFeedbackView = () => {
         </div>
       </div>
 
-      <Card flush>
+      <Card title={hideHeader ? "Placement Outcomes and Employer Feedback" : undefined} flush>
       <DataTable
         caption="Placement Outcomes & Employer Feedback"
         data={data}

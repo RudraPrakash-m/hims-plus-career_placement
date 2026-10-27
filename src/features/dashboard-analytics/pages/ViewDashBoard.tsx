@@ -412,7 +412,11 @@ const getStageBadgeClass = (stage: SelectionStageType) => {
 };
 
 
-const ViewDashBoard = () => {
+export interface ViewDashBoardProps {
+  hideHeader?: boolean;
+}
+
+const ViewDashBoard = ({ hideHeader }: ViewDashBoardProps = {}) => {
   const navigate = useAppNavigate();
 
   // Selected filters from user
@@ -703,16 +707,18 @@ const ViewDashBoard = () => {
   return (
     <div className="space-y-6">
       {/* Top Breadcrumb & PageHeader */}
-      <div className="flex flex-col gap-1">
-        <PageHeader
-          title="Placement Analytics & Reports"
-          description="Institutional placement metrics, employer participation insights and cohort engagement."
-          breadcrumb={[
-            { label: "Analytics" },
-            { label: "Overview" },
-          ]}
-        />
-      </div>
+      {!hideHeader && (
+        <div className="flex flex-col gap-1">
+          <PageHeader
+            title="Placement Analytics & Reports"
+            description="Institutional placement metrics, employer participation insights and cohort engagement."
+            breadcrumb={[
+              { label: "Analytics" },
+              { label: "Overview" },
+            ]}
+          />
+        </div>
+      )}
       {/* SECTION 5: TABBED REPORTS & DETAILED DATA TABLES */}
       <div className="space-y-4">
         {/* Navigation Tabs */}
@@ -759,7 +765,7 @@ const ViewDashBoard = () => {
 
         {/* TAB 1: Placement Statistics Table */}
         {activeTab === "placementStats" && (
-          <Card flush>
+          <Card title={hideHeader ? "Placement Statistics & Outcomes" : undefined} flush>
           <DataTable
             caption="Placement Statistics & Outcomes"
             data={filteredData}
@@ -870,7 +876,7 @@ const ViewDashBoard = () => {
 
         {/* TAB 2: Employer Participation Table */}
         {activeTab === "employerParticipation" && (
-          <Card flush>
+          <Card title={hideHeader ? "Employer Participation & Campus Drives" : undefined} flush>
           <DataTable
             caption="Employer Participation & Campus Drives"
             data={filteredEmployers}
@@ -927,7 +933,7 @@ const ViewDashBoard = () => {
 
         {/* TAB 3: Student Engagement Index Table */}
         {activeTab === "studentEngagement" && (
-          <Card flush>
+          <Card title={hideHeader ? "Student Engagement & Readiness Index" : undefined} flush>
           <DataTable
             caption="Student Engagement & Readiness Index"
             data={filteredData}

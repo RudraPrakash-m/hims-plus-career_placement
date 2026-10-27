@@ -264,7 +264,11 @@ const SessionPreview = ({ session }: { session: CarrierCounsellingData }) => {
   );
 };
 
-const CarriercounsellingView = () => {
+export interface CarriercounsellingViewProps {
+  hideHeader?: boolean;
+}
+
+const CarriercounsellingView = ({ hideHeader }: CarriercounsellingViewProps = {}) => {
   const navigate = useAppNavigate();
   const [sessions, setSessions] =
     useState<CarrierCounsellingData[]>(INITIAL_SESSIONS);
@@ -301,25 +305,27 @@ const CarriercounsellingView = () => {
 
   return (
     <>
-      <PageHeader
-        title="Career Counselling"
-        description="One-on-one mentorship sessions, career guidance and skill advisory."
-        breadcrumb={[
-          { label: "Placement" },
-          { label: "Career Counselling" },
-        ]}
-        actions={
-          <Button
-            icon={<Plus size={16} />}
-            onClick={() => navigate("/carrier-counselling")}
-          >
-            Schedule Session
-          </Button>
-        }
-      />
+      {!hideHeader && (
+        <PageHeader
+          title="Career Counselling"
+          description="One-on-one mentorship sessions, career guidance and skill advisory."
+          breadcrumb={[
+            { label: "Placement" },
+            { label: "Career Counselling" },
+          ]}
+          actions={
+            <Button
+              icon={<Plus size={16} />}
+              onClick={() => navigate("/carrier-counselling")}
+            >
+              Schedule Session
+            </Button>
+          }
+        />
+      )}
 
       <div className="space-y-4">
-        <Card flush>
+        <Card title={hideHeader ? "Career Counselling" : undefined} flush>
         <DataTable
           caption="Career Counselling Sessions"
           data={rows}

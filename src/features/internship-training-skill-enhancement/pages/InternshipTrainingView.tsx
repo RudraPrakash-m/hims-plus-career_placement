@@ -348,7 +348,11 @@ const ProgrammePreview = ({ item }: { item: InternshipTrainingData }) => {
   );
 };
 
-const InternshipTrainingView = () => {
+export interface InternshipTrainingViewProps {
+  hideHeader?: boolean;
+}
+
+const InternshipTrainingView = ({ hideHeader }: InternshipTrainingViewProps = {}) => {
   const navigate = useAppNavigate();
   const [programmes, setProgrammes] =
     useState<InternshipTrainingData[]>(INITIAL_PROGRAMMES);
@@ -401,25 +405,27 @@ const InternshipTrainingView = () => {
 
   return (
     <>
-      <PageHeader
-        title="Internships & Training"
-        description="Internship programmes, technical certifications and skill enhancement tracks."
-        breadcrumb={[
-          { label: "Placement" },
-          { label: "Internships & Training" },
-        ]}
-        actions={
-          <Button
-            icon={<Plus size={16} />}
-            onClick={() => navigate("/training-internship")}
-          >
-            Add Programme
-          </Button>
-        }
-      />
+      {!hideHeader && (
+        <PageHeader
+          title="Internships & Training"
+          description="Internship programmes, technical certifications and skill enhancement tracks."
+          breadcrumb={[
+            { label: "Placement" },
+            { label: "Internships & Training" },
+          ]}
+          actions={
+            <Button
+              icon={<Plus size={16} />}
+              onClick={() => navigate("/training-internship")}
+            >
+              Add Programme
+            </Button>
+          }
+        />
+      )}
 
       <div className="space-y-4">
-        <Card flush>
+        <Card title={hideHeader ? "Internship, Training and Skill Enhancement" : undefined} flush>
         <DataTable
           caption="Internships, Technical Trainings, Certifications & Skill Programmes"
           data={rows}

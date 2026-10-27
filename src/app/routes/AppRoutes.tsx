@@ -1,45 +1,28 @@
-
 import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
 import { Suspense, lazy, useEffect } from "react";
+import EmployeeRegistration from "@/features/employee-registartion/pages/EmployeeRegistration";
 import { routes } from "./routeConfig";
 import ProtectedRoute from "./ProtectedRoute";
 import AuthLayout from "@/shared/components/layout/AuthLayout";
 import MainLayout from "@/shared/components/layout/MainLayout";
 import PublicRoute from "./PublicRoute";
 
-import RegistrationView from "@/features/employee-registartion/pages/RegistrationView";
 import StudentEmployability from "@/features/student-employability-profile/pages/StudentEmployability";
-import ViewstudentEmployability from "@/features/student-employability-profile/pages/ViewstudentEmployability";
 import CarrierPreference from "@/features/carrier-preference/pages/CarrierPreference";
-import ViewcarrierPreference from "@/features/carrier-preference/pages/viewcarrierPreference";
 import CarrierCounselling from "@/features/carrier-counselling/pages/CarrierCounselling";
-import CarriercounsellingView from "@/features/carrier-counselling/pages/carriercounsellingView";
 import Aptitude from "@/features/aptitude/pages/Aptitude";
-import AptitudeView from "@/features/aptitude/pages/AptitudeView";
 import AddJob from "@/features/job-internship/pages/AddJob";
-import ViewJob from "@/features/job-internship/pages/ViewJob";
 import PlacementDrive from "@/features/placement-drive/pages/PlacementDrive";
-import PlacementdriveView from "@/features/placement-drive/pages/PlacementdriveView";
 import StudentApplication from "@/features/student-application/pages/StudentApplication";
-import StudentapplicationView from "@/features/student-application/pages/StudentapplicationView";
 import ShortListing from "@/features/shortlisting/pages/ShortListing";
-import ShortlistingView from "@/features/shortlisting/pages/ShortlistingView";
 import CampusPlacement from "@/features/campus-placement/pages/CampusPlacement";
-import CampusplacementView from "@/features/campus-placement/pages/CampusplacementView";
 import OffCampusPlacement from "@/features/off-campus-placement-workflow/pages/OffCampusPlacement";
-import OffCampusPlacementView from "@/features/off-campus-placement-workflow/pages/OffCampusPlacementView";
 import InternshipTraining from "@/features/internship-training-skill-enhancement/pages/InternshipTraining";
-import InternshipTrainingView from "@/features/internship-training-skill-enhancement/pages/InternshipTrainingView";
 import AlumniEngagement from "@/features/alumni-engagement-referrals/pages/AlumniEngagement";
-import AlumniEngagementView from "@/features/alumni-engagement-referrals/pages/AlumniEngagementView";
 import NotificationCommunication from "@/features/notifications-communication/pages/NotificationCommunication";
-import NotificationCommunicationView from "@/features/notifications-communication/pages/NotificationCommunicationView";
 import PlacementOutcomesFeedback from "@/features/placement-outcomes-employer-feedback/pages/PlacementOutcomesFeedback";
-import PlacementOutcomesFeedbackView from "@/features/placement-outcomes-employer-feedback/pages/PlacementOutcomesFeedbackView";
 import DashboardAnalytics from "@/features/dashboard-analytics/pages/DashboardAnalytics";
-import ViewDashBoard from "@/features/dashboard-analytics/pages/ViewDashBoard";
 import IntegrationHimsModules from "@/features/integration-with-hims-modules/pages/IntegrationHimsModules";
-import IntegrationHimsModulesView from "@/features/integration-with-hims-modules/pages/IntegrationHimsModulesView";
 
 const Login = lazy(() => import("@/features/auth/pages/Login"));
 const Dashboard = lazy(() => import("@/features/dashboard/pages/Dashboard"));
@@ -102,64 +85,76 @@ const AppRoutes = () => {
                         <Route path={routes.addParent.path} element={<ParentForm />} />
                         <Route path={routes.AddDoctorDetails.path} element={<AddDoctorDetails />} />
 
-                               {/* Employee / Employer Registration and Management */}
-                        <Route path={routes.employeeRegistration.path} element={<StudentEmployability />} />
-                        <Route path={routes.employerRegistration.path} element={<StudentEmployability />} />
-                        <Route path="/my-employability-profile" element={<Navigate to={routes.employeeRegistration.path} replace />} />
-                        <Route path={routes.registrationView.path} element={<RegistrationView />} />
+                        {/* Employee / Employer Registration and Management */}
+                        <Route path={routes.employeeRegistration.path} element={<EmployeeRegistration />} />
+                        <Route path={routes.employerRegistration.path} element={<EmployeeRegistration />} />
+                        <Route path="/my-employability-profile" element={<EmployeeRegistration />} />
+                        <Route path={routes.registrationView.path} element={<EmployeeRegistration />} />
 
-                      <Route path={routes.studentEmployability.path} element={<StudentEmployability />} />
-                      <Route path="/student-employability" element={<Navigate to={routes.studentEmployability.path} replace />} />
-                     <Route path={routes.viewStudentEmployability.path} element={<ViewstudentEmployability/>} />
+                        {/* Student Employability Profile */}
+                        <Route path={routes.studentEmployability.path} element={<StudentEmployability />} />
+                        <Route path="/student-employability" element={<StudentEmployability />} />
+                        <Route path={routes.viewStudentEmployability.path} element={<StudentEmployability />} />
 
-                      <Route path={routes.carrierPreference.path} element={<CarrierPreference/>} />
-                       <Route path={routes.viewCarrierPreference.path} element={<ViewcarrierPreference/>} />
+                        {/* Career Preferences */}
+                        <Route path={routes.carrierPreference.path} element={<CarrierPreference />} />
+                        <Route path={routes.viewCarrierPreference.path} element={<CarrierPreference />} />
 
-                       <Route path={routes.carrierCounselling.path} element={<CarrierCounselling/>} />
-                       <Route path={routes.carrierCounsellingView.path} element={<CarriercounsellingView/>} />
+                        {/* Career Counselling */}
+                        <Route path={routes.carrierCounselling.path} element={<CarrierCounselling />} />
+                        <Route path={routes.carrierCounsellingView.path} element={<CarrierCounselling />} />
 
-                       <Route path={routes.aptitude.path} element={<Aptitude/>} />
-                       <Route path={routes.aptitudeView.path} element={<AptitudeView/>} />
+                        {/* Aptitude Assessment */}
+                        <Route path={routes.aptitude.path} element={<Aptitude />} />
+                        <Route path={routes.aptitudeView.path} element={<Aptitude />} />
 
-                  <Route path={routes.addJob.path} element={<AddJob/>} />
-                 <Route path={routes.viewJob.path} element={<ViewJob/>} />
+                        {/* Job / Opportunity Management */}
+                        <Route path={routes.addJob.path} element={<AddJob />} />
+                        <Route path={routes.viewJob.path} element={<AddJob />} />
 
-                 <Route path={routes.placementDrive.path} element={<PlacementDrive/>} />
-                <Route path={routes.placementDriveView.path} element={<PlacementdriveView/>} />
+                        {/* Placement Drive Management */}
+                        <Route path={routes.placementDrive.path} element={<PlacementDrive />} />
+                        <Route path={routes.placementDriveView.path} element={<PlacementDrive />} />
 
-                <Route path={routes.studentApplication.path} element={<StudentApplication/>} />
-                 <Route path={routes.studentApplicationView.path} element={<StudentapplicationView/>} />
+                        {/* Student Applications */}
+                        <Route path={routes.studentApplication.path} element={<StudentApplication />} />
+                        <Route path={routes.studentApplicationView.path} element={<StudentApplication />} />
 
-                 <Route path={routes.shortListing.path} element={<ShortListing/>} />
-               <Route path={routes.shortlistingView.path} element={<ShortlistingView/>} />
+                        {/* Shortlisting */}
+                        <Route path={routes.shortListing.path} element={<ShortListing />} />
+                        <Route path={routes.shortlistingView.path} element={<ShortListing />} />
 
-               <Route path={routes.campusPlacement.path} element={<CampusPlacement/>} />
-               <Route path={routes.campusPlacementView.path} element={<CampusplacementView/>} />
+                        {/* Campus Placement */}
+                        <Route path={routes.campusPlacement.path} element={<CampusPlacement />} />
+                        <Route path={routes.campusPlacementView.path} element={<CampusPlacement />} />
 
-               <Route path={routes.offCampusPlacement.path} element={<OffCampusPlacement/>} />
-               <Route path={routes.offCampusPlacementView.path} element={<OffCampusPlacementView/>} />
+                        {/* Off-Campus Placement */}
+                        <Route path={routes.offCampusPlacement.path} element={<OffCampusPlacement />} />
+                        <Route path={routes.offCampusPlacementView.path} element={<OffCampusPlacement />} />
 
-               <Route path={routes.trainingInternship.path} element={<InternshipTraining/>} />
-               <Route path={routes.trainingInternshipView.path} element={<InternshipTrainingView/>} />
+                        {/* Internship & Training */}
+                        <Route path={routes.trainingInternship.path} element={<InternshipTraining />} />
+                        <Route path={routes.trainingInternshipView.path} element={<InternshipTraining />} />
 
-               <Route path={routes.alumniEngagement.path} element={<AlumniEngagement/>} />
-               <Route path={routes.alumniEngagementView.path} element={<AlumniEngagementView/>} />
+                        {/* Alumni Engagement */}
+                        <Route path={routes.alumniEngagement.path} element={<AlumniEngagement />} />
+                        <Route path={routes.alumniEngagementView.path} element={<AlumniEngagement />} />
 
-               <Route path={routes.notificationCommunication.path} element={<NotificationCommunication/>} />
-               <Route path={routes.notificationCommunicationView.path} element={<NotificationCommunicationView/>} />
+                        {/* Notification & Communication */}
+                        <Route path={routes.notificationCommunication.path} element={<NotificationCommunication />} />
+                        <Route path={routes.notificationCommunicationView.path} element={<NotificationCommunication />} />
 
-               <Route path={routes.placementOutcomesFeedback.path} element={<PlacementOutcomesFeedback/>} />
-               <Route path={routes.placementOutcomesFeedbackView.path} element={<PlacementOutcomesFeedbackView/>} />
+                        {/* Placement Outcomes & Feedback */}
+                        <Route path={routes.placementOutcomesFeedback.path} element={<PlacementOutcomesFeedback />} />
+                        <Route path={routes.placementOutcomesFeedbackView.path} element={<PlacementOutcomesFeedback />} />
 
-                <Route path={routes.dashboardAnalytics.path} element={<DashboardAnalytics/>} />
-                <Route path={routes.viewDashboard.path} element={<ViewDashBoard/>} />
-                <Route path={routes.integrationHimsModules.path} element={<IntegrationHimsModules/>} />
-                <Route path={routes.viewIntegrationHimsModules.path} element={<IntegrationHimsModulesView/>} />
+                        {/* Dashboard & Analytics */}
+                        <Route path={routes.dashboardAnalytics.path} element={<DashboardAnalytics />} />
+                        <Route path={routes.viewDashboard.path} element={<DashboardAnalytics />} />
 
-
-                        
-                    
-
+                        {/* Integration with HIMS Modules */}
+                        <Route path={routes.integrationHimsModules.path} element={<IntegrationHimsModules />} />
+                        <Route path={routes.viewIntegrationHimsModules.path} element={<IntegrationHimsModules />} />
                     </Route>
                 </Route>
 
@@ -169,4 +164,3 @@ const AppRoutes = () => {
 };
 
 export default AppRoutes;
-

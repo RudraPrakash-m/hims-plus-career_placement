@@ -2,6 +2,7 @@ import { useState, useRef, useMemo, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Badge, Button, Card, Modal, PageHeader, showToast } from '@mfe/components';
 import { Award, BookmarkCheck, Briefcase, Check, ChevronDown, FileText, Lock, PenTool, Plus, Search, ShieldCheck, Trash2, UploadCloud, type LucideIcon } from "lucide-react";
+import ViewstudentEmployability from "./ViewstudentEmployability";
 
 // Types
 interface CertificationItem {
@@ -1133,6 +1134,8 @@ const StudentEmployability = () => {
           {isEmployer ? "Save organization profile" : "Save profile"}
         </Button>
       </div>
+
+      <ViewstudentEmployability hideHeader />
 
       {/* MODALS */}
       {/* 1. Add Certification Modal (Student) */}

@@ -329,7 +329,11 @@ const PlacementPreview = ({ item }: { item: CampusPlacementData }) => {
   );
 };
 
-const CampusplacementView = () => {
+export interface CampusplacementViewProps {
+  hideHeader?: boolean;
+}
+
+const CampusplacementView = ({ hideHeader }: CampusplacementViewProps = {}) => {
   const navigate = useAppNavigate();
   const [placements, setPlacements] =
     useState<CampusPlacementData[]>(INITIAL_PLACEMENTS);
@@ -382,25 +386,27 @@ const CampusplacementView = () => {
 
   return (
     <>
-      <PageHeader
-        title="Campus Placements"
-        description="Monitor campus recruitment workflows, selections, offers and student onboarding."
-        breadcrumb={[
-          { label: "Placement" },
-          { label: "Campus Placements" },
-        ]}
-        actions={
-          <Button
-            icon={<Plus size={16} />}
-            onClick={() => navigate("/campus-placement")}
-          >
-            Add Placement Record
-          </Button>
-        }
-      />
+      {!hideHeader && (
+        <PageHeader
+          title="Campus Placements"
+          description="Monitor campus recruitment workflows, selections, offers and student onboarding."
+          breadcrumb={[
+            { label: "Placement" },
+            { label: "Campus Placements" },
+          ]}
+          actions={
+            <Button
+              icon={<Plus size={16} />}
+              onClick={() => navigate("/campus-placement")}
+            >
+              Add Placement Record
+            </Button>
+          }
+        />
+      )}
 
       <div className="space-y-4">
-        <Card flush>
+        <Card title={hideHeader ? "Campus Placement Workflow" : undefined} flush>
         <DataTable
           caption="Campus Recruitment, Drive Registration & Offer Tracking"
           data={rows}

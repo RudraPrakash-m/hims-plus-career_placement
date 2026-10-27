@@ -4,6 +4,7 @@ import { Button, Card, FormGenerator, PageHeader, showToast, useAppNavigate, typ
 import { RotateCcw, Save } from 'lucide-react';
 import shortListingConfig from "../form-config/shortListing.json";
 import "../styles/shortListing.css";
+import ShortlistingView from "./ShortlistingView";
 
 const ShortListing = () => {
   const location = useLocation();
@@ -38,9 +39,13 @@ const ShortListing = () => {
     (editRecord?.id ? `ID: ${editRecord.id}` : "Candidate");
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-6">
       <PageHeader
         title={editRecord?.id ? "Edit Candidate Evaluation" : "Candidate Shortlisting & Evaluation"}
+        breadcrumb={[
+          { label: "Home", path: "/" },
+          { label: "Shortlisting and Interview Scheduling", path: "/short-listing" },
+        ]}
       />
       <Card
         title={
@@ -63,6 +68,8 @@ const ShortListing = () => {
           </div>
         </FormGenerator>
       </Card>
+
+      <ShortlistingView hideHeader />
     </div>
   );
 };

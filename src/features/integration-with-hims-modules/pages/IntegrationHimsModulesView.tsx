@@ -229,7 +229,11 @@ const RECONCILIATION_OPTIONS = [
   { value: "Pending", label: "Pending" },
 ];
 
-const IntegrationHimsModulesView = () => {
+export interface IntegrationHimsModulesViewProps {
+  hideHeader?: boolean;
+}
+
+const IntegrationHimsModulesView = ({ hideHeader }: IntegrationHimsModulesViewProps = {}) => {
   const navigate = useAppNavigate();
 
   // Filters
@@ -445,31 +449,33 @@ const IntegrationHimsModulesView = () => {
 
   return (
     <div className="space-y-6">
-      <PageHeader
-        title="HIMS Module Integration"
-        description="Enterprise system sync, student records mapping and data reconciliation logs."
-        breadcrumb={[
-          { label: "Administration" },
-          { label: "HIMS Integration" },
-        ]}
-        actions={
-          <div className="flex items-center gap-2">
-            <Button
-              variant="outline"
-              icon={<RotateCw size={16} />}
-              onClick={handleTriggerBatchSync}
-            >
-              Batch Sync
-            </Button>
-            <Button
-              icon={<Plus size={16} />}
-              onClick={() => navigate("/integration-hims-modules")}
-            >
-              Add Mapping
-            </Button>
-          </div>
-        }
-      />
+      {!hideHeader && (
+        <PageHeader
+          title="HIMS Module Integration"
+          description="Enterprise system sync, student records mapping and data reconciliation logs."
+          breadcrumb={[
+            { label: "Administration" },
+            { label: "HIMS Integration" },
+          ]}
+          actions={
+            <div className="flex items-center gap-2">
+              <Button
+                variant="outline"
+                icon={<RotateCw size={16} />}
+                onClick={handleTriggerBatchSync}
+              >
+                Batch Sync
+              </Button>
+              <Button
+                icon={<Plus size={16} />}
+                onClick={() => navigate("/integration-hims-modules")}
+              >
+                Add Mapping
+              </Button>
+            </div>
+          }
+        />
+      )}
 
       {/* Sync & Integration KPI statistics */}
       <div className="grid grid-cols-2 gap-4 md:grid-cols-5">
@@ -533,7 +539,7 @@ const IntegrationHimsModulesView = () => {
       </Card>
 
       {/* DATA TABLE */}
-      <Card flush>
+      <Card title={hideHeader ? "Integration with HIMS Modules" : undefined} flush>
       <DataTable
         caption="Integration with HIMS Modules - Registry & Synchronization Logs"
         data={filteredData}

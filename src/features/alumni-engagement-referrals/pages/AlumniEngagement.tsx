@@ -4,6 +4,7 @@ import { Button, Card, FormGenerator, PageHeader, showToast, useAppNavigate, typ
 import { RotateCcw, Save } from 'lucide-react';
 import alumniConfig from "../form-config/alumniEngagement.json";
 import "../styles/alumniEngagement.css";
+import AlumniEngagementView from "./AlumniEngagementView";
 
 const AlumniEngagement = () => {
   const location = useLocation();
@@ -38,9 +39,13 @@ const AlumniEngagement = () => {
     (editRecord?.id ? `ID: ${editRecord.id}` : "Session");
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-6">
       <PageHeader
         title={editRecord?.id ? "Edit Alumni Engagement" : "Add Alumni Engagement"}
+        breadcrumb={[
+          { label: "Home", path: "/" },
+          { label: "Alumni Engagement and Referrals", path: "/alumni-engagement" },
+        ]}
       />
       <Card
         title={
@@ -63,6 +68,8 @@ const AlumniEngagement = () => {
           </div>
         </FormGenerator>
       </Card>
+
+      <AlumniEngagementView hideHeader />
     </div>
   );
 };

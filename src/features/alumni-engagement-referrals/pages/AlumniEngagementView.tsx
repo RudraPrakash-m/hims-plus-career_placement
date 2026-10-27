@@ -235,7 +235,11 @@ const AlumniPreview = ({ item }: { item: AlumniEngagementData }) => {
   );
 };
 
-const AlumniEngagementView = () => {
+export interface AlumniEngagementViewProps {
+  hideHeader?: boolean;
+}
+
+const AlumniEngagementView = ({ hideHeader }: AlumniEngagementViewProps = {}) => {
   const navigate = useAppNavigate();
   const [sessions, setSessions] =
     useState<AlumniEngagementData[]>(INITIAL_ALUMNI_SESSIONS);
@@ -274,25 +278,27 @@ const AlumniEngagementView = () => {
 
   return (
     <>
-      <PageHeader
-        title="Alumni Engagement & Referrals"
-        description="Alumni mentorship network, job referrals and career guidance sessions."
-        breadcrumb={[
-          { label: "Placement" },
-          { label: "Alumni Engagement" },
-        ]}
-        actions={
-          <Button
-            icon={<Plus size={16} />}
-            onClick={() => navigate("/alumni-engagement")}
-          >
-            Add Engagement
-          </Button>
-        }
-      />
+      {!hideHeader && (
+        <PageHeader
+          title="Alumni Engagement & Referrals"
+          description="Alumni mentorship network, job referrals and career guidance sessions."
+          breadcrumb={[
+            { label: "Placement" },
+            { label: "Alumni Engagement" },
+          ]}
+          actions={
+            <Button
+              icon={<Plus size={16} />}
+              onClick={() => navigate("/alumni-engagement")}
+            >
+              Add Engagement
+            </Button>
+          }
+        />
+      )}
 
       <div className="space-y-4">
-        <Card flush>
+        <Card title={hideHeader ? "Alumni Engagement and Referrals" : undefined} flush>
         <DataTable
           caption="Alumni Mentorship Sessions, Referrals & Engagement Tracking"
           data={rows}

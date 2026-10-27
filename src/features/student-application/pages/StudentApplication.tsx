@@ -4,6 +4,7 @@ import { Button, Card, FormGenerator, PageHeader, showToast, useAppNavigate, typ
 import { RotateCcw, Save } from 'lucide-react';
 import studentApplicationConfig from "../form-config/studentApplication.json";
 import "../styles/studentApplication.css";
+import StudentapplicationView from "./StudentapplicationView";
 
 const StudentApplication = () => {
   const location = useLocation();
@@ -45,9 +46,13 @@ const StudentApplication = () => {
   };
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-6">
       <PageHeader
         title={editRecord?.id ? "Edit Student Application" : "Submit Student Application"}
+        breadcrumb={[
+          { label: "Home", path: "/" },
+          { label: "Student Application and Opportunity Tracking", path: "/student-application" },
+        ]}
       />
       <Card
         title={
@@ -70,6 +75,8 @@ const StudentApplication = () => {
           </div>
         </FormGenerator>
       </Card>
+
+      <StudentapplicationView hideHeader />
     </div>
   );
 };

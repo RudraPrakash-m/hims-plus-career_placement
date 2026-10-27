@@ -280,7 +280,11 @@ const JobPreview = ({ job }: { job: JobInternshipData }) => {
   );
 };
 
-const ViewJob = () => {
+export interface ViewJobProps {
+  hideHeader?: boolean;
+}
+
+const ViewJob = ({ hideHeader }: ViewJobProps = {}) => {
   const navigate = useAppNavigate();
   const [jobs] = useState<JobInternshipData[]>(INITIAL_JOBS);
   const [selectedJob, setSelectedJob] = useState<JobInternshipData | null>(null);
@@ -293,21 +297,23 @@ const ViewJob = () => {
 
   return (
     <>
-      <PageHeader
-        title="Opportunities"
-        description="Jobs, internships and apprenticeships open to you."
-        actions={
-          <Button
-            icon={<Plus size={16} />}
-            onClick={() => navigate("/add-job")}
-          >
-            Add Opportunity
-          </Button>
-        }
-      />
+      {!hideHeader && (
+        <PageHeader
+          title="Opportunities"
+          description="Jobs, internships and apprenticeships open to you."
+          actions={
+            <Button
+              icon={<Plus size={16} />}
+              onClick={() => navigate("/add-job")}
+            >
+              Add Opportunity
+            </Button>
+          }
+        />
+      )}
 
       <div className="space-y-4">
-        <Card flush>
+        <Card title={hideHeader ? "Opportunities" : undefined} flush>
           <DataTable
             caption="Opportunities"
             data={jobs}

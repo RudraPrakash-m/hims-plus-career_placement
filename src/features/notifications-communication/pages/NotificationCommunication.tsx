@@ -4,6 +4,7 @@ import { Button, Card, FormGenerator, PageHeader, showToast, useAppNavigate, typ
 import { RotateCcw, Save } from 'lucide-react';
 import notificationConfig from "../form-config/notificationCommunication.json";
 import "../styles/notificationCommunication.css";
+import NotificationCommunicationView from "./NotificationCommunicationView";
 
 const NotificationCommunication = () => {
   const location = useLocation();
@@ -43,9 +44,13 @@ const NotificationCommunication = () => {
   };
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-6">
       <PageHeader
         title={editRecord?.id ? "Edit Notification" : "Send Notification & Announcement"}
+        breadcrumb={[
+          { label: "Home", path: "/" },
+          { label: "Notifications and Communication", path: "/notifications-communication" },
+        ]}
       />
       <Card
         title={
@@ -68,6 +73,8 @@ const NotificationCommunication = () => {
           </div>
         </FormGenerator>
       </Card>
+
+      <NotificationCommunicationView hideHeader />
     </div>
   );
 };

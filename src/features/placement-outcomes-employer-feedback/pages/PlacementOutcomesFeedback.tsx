@@ -4,6 +4,7 @@ import { Button, Card, FormGenerator, PageHeader, showToast, useAppNavigate, typ
 import { RotateCcw, Save } from 'lucide-react';
 import placementConfig from "../form-config/placementOutcomesFeedback.json";
 import "../styles/placementOutcomesFeedback.css";
+import PlacementOutcomesFeedbackView from "./PlacementOutcomesFeedbackView";
 
 const PlacementOutcomesFeedback = () => {
   const location = useLocation();
@@ -45,9 +46,13 @@ const PlacementOutcomesFeedback = () => {
   };
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-6">
       <PageHeader
         title={editRecord?.id ? "Edit Placement Outcome" : "Record Placement Outcome & Feedback"}
+        breadcrumb={[
+          { label: "Home", path: "/" },
+          { label: "Placement Outcomes and Employer Feedback", path: "/placement-outcomes-feedback" },
+        ]}
       />
       <Card
         title={
@@ -70,6 +75,8 @@ const PlacementOutcomesFeedback = () => {
           </div>
         </FormGenerator>
       </Card>
+
+      <PlacementOutcomesFeedbackView hideHeader />
     </div>
   );
 };

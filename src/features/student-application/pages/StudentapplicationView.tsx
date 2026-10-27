@@ -259,7 +259,11 @@ const ApplicationPreview = ({ app }: { app: StudentApplicationData }) => {
   );
 };
 
-const StudentapplicationView = () => {
+export interface StudentapplicationViewProps {
+  hideHeader?: boolean;
+}
+
+const StudentapplicationView = ({ hideHeader }: StudentapplicationViewProps = {}) => {
   const navigate = useAppNavigate();
   const [applications, setApplications] =
     useState<StudentApplicationData[]>(INITIAL_APPLICATIONS);
@@ -298,25 +302,27 @@ const StudentapplicationView = () => {
 
   return (
     <>
-      <PageHeader
-        title="Student Applications"
-        description="Monitor and manage student job, internship and placement applications."
-        breadcrumb={[
-          { label: "Placement" },
-          { label: "Student Applications" },
-        ]}
-        actions={
-          <Button
-            icon={<Plus size={16} />}
-            onClick={() => navigate("/student-application")}
-          >
-            Submit Application
-          </Button>
-        }
-      />
+      {!hideHeader && (
+        <PageHeader
+          title="Student Applications"
+          description="Monitor and manage student job, internship and placement applications."
+          breadcrumb={[
+            { label: "Placement" },
+            { label: "Student Applications" },
+          ]}
+          actions={
+            <Button
+              icon={<Plus size={16} />}
+              onClick={() => navigate("/student-application")}
+            >
+              Submit Application
+            </Button>
+          }
+        />
+      )}
 
       <div className="space-y-4">
-        <Card flush>
+        <Card title={hideHeader ? "Student Applications" : undefined} flush>
         <DataTable
           caption="Placement & Internship Student Applications"
           data={rows}

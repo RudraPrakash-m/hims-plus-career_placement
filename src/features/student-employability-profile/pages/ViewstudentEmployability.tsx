@@ -197,7 +197,11 @@ const ProfilePreview = ({ profile }: { profile: StudentEmployabilityData }) => {
   );
 };
 
-const ViewstudentEmployability = () => {
+export interface ViewstudentEmployabilityProps {
+  hideHeader?: boolean;
+}
+
+const ViewstudentEmployability = ({ hideHeader }: ViewstudentEmployabilityProps = {}) => {
   const navigate = useAppNavigate();
   const [profiles, setProfiles] = useState<StudentEmployabilityData[]>(INITIAL_PROFILES);
   const [selectedProfile, setSelectedProfile] = useState<StudentEmployabilityData | null>(null);
@@ -234,25 +238,27 @@ const ViewstudentEmployability = () => {
 
   return (
     <>
-      <PageHeader
-        title="Student Employability Profiles"
-        description="Student profiles, academic records and employability readiness."
-        breadcrumb={[
-          { label: "Placement" },
-          { label: "Employability Profiles" },
-        ]}
-        actions={
-          <Button
-            icon={<Plus size={16} />}
-            onClick={() => navigate("/student-employability-profile")}
-          >
-            Add Profile
-          </Button>
-        }
-      />
+      {!hideHeader && (
+        <PageHeader
+          title="Student Employability Profiles"
+          description="Student profiles, academic records and employability readiness."
+          breadcrumb={[
+            { label: "Placement" },
+            { label: "Employability Profiles" },
+          ]}
+          actions={
+            <Button
+              icon={<Plus size={16} />}
+              onClick={() => navigate("/student-employability-profile")}
+            >
+              Add Profile
+            </Button>
+          }
+        />
+      )}
 
       <div className="space-y-4">
-        <Card flush>
+        <Card title={hideHeader ? "Student Employability Profile" : undefined} flush>
           <DataTable
             caption="Student Employability Profiles"
             data={rows}

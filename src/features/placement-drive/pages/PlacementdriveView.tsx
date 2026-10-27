@@ -307,7 +307,11 @@ const DrivePreview = ({ drive }: { drive: PlacementDriveData }) => {
   );
 };
 
-const PlacementdriveView = () => {
+export interface PlacementdriveViewProps {
+  hideHeader?: boolean;
+}
+
+const PlacementdriveView = ({ hideHeader }: PlacementdriveViewProps = {}) => {
   const navigate = useAppNavigate();
   const [drives, setDrives] = useState<PlacementDriveData[]>(INITIAL_DRIVES);
   const [selectedDrive, setSelectedDrive] = useState<PlacementDriveData | null>(null);
@@ -341,25 +345,27 @@ const PlacementdriveView = () => {
 
   return (
     <>
-      <PageHeader
-        title="Placement Drives"
-        description="Campus recruitment drives, scheduling and company registration."
-        breadcrumb={[
-          { label: "Placement" },
-          { label: "Placement Drives" },
-        ]}
-        actions={
-          <Button
-            icon={<Plus size={16} />}
-            onClick={() => navigate("/placement-drive")}
-          >
-            Create Drive
-          </Button>
-        }
-      />
+      {!hideHeader && (
+        <PageHeader
+          title="Placement Drives"
+          description="Campus recruitment drives, scheduling and company registration."
+          breadcrumb={[
+            { label: "Placement" },
+            { label: "Placement Drives" },
+          ]}
+          actions={
+            <Button
+              icon={<Plus size={16} />}
+              onClick={() => navigate("/placement-drive")}
+            >
+              Create Drive
+            </Button>
+          }
+        />
+      )}
 
       <div className="space-y-4">
-        <Card flush>
+        <Card title={hideHeader ? "Placement Drives" : undefined} flush>
         <DataTable
           caption="Campus Recruitment & Placement Drives"
           data={rows}

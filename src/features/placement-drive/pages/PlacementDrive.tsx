@@ -4,6 +4,7 @@ import { Button, Card, FormGenerator, PageHeader, showToast, useAppNavigate, typ
 import { RotateCcw, Save } from 'lucide-react';
 import placementDriveConfig from "../form-config/placementDrive.json";
 import "../styles/placementDrive.css";
+import PlacementdriveView from "./PlacementdriveView";
 
 const PlacementDrive = () => {
   const location = useLocation();
@@ -38,9 +39,13 @@ const PlacementDrive = () => {
     (editRecord?.id ? `ID: ${editRecord.id}` : "Drive");
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-6">
       <PageHeader
         title={editRecord?.id ? "Edit Placement Drive" : "Create Placement Drive"}
+        breadcrumb={[
+          { label: "Home", path: "/" },
+          { label: "Placement Drive Management", path: "/placement-drive" },
+        ]}
       />
       <Card
         title={
@@ -63,6 +68,8 @@ const PlacementDrive = () => {
           </div>
         </FormGenerator>
       </Card>
+
+      <PlacementdriveView hideHeader />
     </div>
   );
 };

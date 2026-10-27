@@ -4,6 +4,7 @@ import { Button, Card, FormGenerator, PageHeader, showToast, useAppNavigate, typ
 import { RotateCcw, Save } from 'lucide-react';
 import carrierCounsellingConfig from "../form-config/carrierCounselling.json";
 import "../styles/carrierCounselling.css";
+import CarriercounsellingView from "./carriercounsellingView";
 
 const CarrierCounselling = () => {
   const location = useLocation();
@@ -36,13 +37,17 @@ const CarrierCounselling = () => {
   }, []);
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-6">
       <PageHeader
         title={
           editRecord?.id
             ? "Edit Counselling Session"
             : "Schedule Counselling Session"
         }
+        breadcrumb={[
+          { label: "Home", path: "/" },
+          { label: "Career Counselling and Mentoring", path: "/carrier-counselling" },
+        ]}
       />
       <Card
         title={
@@ -65,6 +70,8 @@ const CarrierCounselling = () => {
           </div>
         </FormGenerator>
       </Card>
+
+      <CarriercounsellingView hideHeader />
     </div>
   );
 };

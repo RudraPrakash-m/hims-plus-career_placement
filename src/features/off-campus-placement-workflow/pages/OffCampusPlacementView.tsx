@@ -350,7 +350,11 @@ const OffCampusPreview = ({ item }: { item: OffCampusPlacementData }) => {
   );
 };
 
-const OffCampusPlacementView = () => {
+export interface OffCampusPlacementViewProps {
+  hideHeader?: boolean;
+}
+
+const OffCampusPlacementView = ({ hideHeader }: OffCampusPlacementViewProps = {}) => {
   const navigate = useAppNavigate();
   const [records, setRecords] =
     useState<OffCampusPlacementData[]>(INITIAL_OFF_CAMPUS_RECORDS);
@@ -403,25 +407,27 @@ const OffCampusPlacementView = () => {
 
   return (
     <>
-      <PageHeader
-        title="Off-Campus Placements"
-        description="Track external job applications, off-campus offers and verification status."
-        breadcrumb={[
-          { label: "Placement" },
-          { label: "Off-Campus Placements" },
-        ]}
-        actions={
-          <Button
-            icon={<Plus size={16} />}
-            onClick={() => navigate("/off-campus-placement")}
-          >
-            Add Off-Campus Record
-          </Button>
-        }
-      />
+      {!hideHeader && (
+        <PageHeader
+          title="Off-Campus Placements"
+          description="Track external job applications, off-campus offers and verification status."
+          breadcrumb={[
+            { label: "Placement" },
+            { label: "Off-Campus Placements" },
+          ]}
+          actions={
+            <Button
+              icon={<Plus size={16} />}
+              onClick={() => navigate("/off-campus-placement")}
+            >
+              Add Off-Campus Record
+            </Button>
+          }
+        />
+      )}
 
       <div className="space-y-4">
-        <Card flush>
+        <Card title={hideHeader ? "Off-campus Placement Workflow" : undefined} flush>
         <DataTable
           caption="Off-Campus Placements, Direct Applications & Offer Verification"
           data={rows}

@@ -4,6 +4,7 @@ import { Button, Card, FormGenerator, PageHeader, showToast, useAppNavigate, typ
 import { Briefcase, Database, GraduationCap, RotateCcw, Save } from 'lucide-react';
 import integrationConfig from "../form-config/integrationHimsModules.json";
 import "../styles/integrationHimsModules.css";
+import IntegrationHimsModulesView from "./IntegrationHimsModulesView";
 
 const IntegrationHimsModules = () => {
   const location = useLocation();
@@ -57,6 +58,10 @@ const IntegrationHimsModules = () => {
             ? "Edit / Reconcile HIMS Integration Record"
             : "Integration with HIMS Modules - Sync & Map"
         }
+        breadcrumb={[
+          { label: "Home", path: "/" },
+          { label: "Integration with HIMS Modules", path: "/integration-hims-modules" },
+        ]}
       />
 
       {/* Overview Reference Cards */}
@@ -128,6 +133,8 @@ const IntegrationHimsModules = () => {
           </div>
         </FormGenerator>
       </Card>
+
+      <IntegrationHimsModulesView hideHeader />
     </div>
   );
 };

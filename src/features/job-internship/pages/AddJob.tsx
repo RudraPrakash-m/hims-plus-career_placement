@@ -4,6 +4,7 @@ import { Button, Card, FormGenerator, PageHeader, showToast, useAppNavigate, typ
 import { RotateCcw, Save } from 'lucide-react';
 import addJobConfig from "../form-config/addJob.json";
 import "../styles/addJob.css";
+import ViewJob from "./ViewJob";
 
 const AddJob = () => {
   const location = useLocation();
@@ -38,9 +39,13 @@ const AddJob = () => {
     (editRecord?.id ? `ID: ${editRecord.id}` : "Opportunity");
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-6">
       <PageHeader
         title={editRecord?.id ? "Edit Opportunity" : "Post Job / Internship"}
+        breadcrumb={[
+          { label: "Home", path: "/" },
+          { label: "Job / Internship / Apprenticeship Opportunity Management", path: "/add-job" },
+        ]}
       />
       <Card
         title={
@@ -63,6 +68,8 @@ const AddJob = () => {
           </div>
         </FormGenerator>
       </Card>
+
+      <ViewJob hideHeader />
     </div>
   );
 };

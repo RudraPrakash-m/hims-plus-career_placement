@@ -225,7 +225,11 @@ const AssessmentPreview = ({ assessment }: { assessment: AptitudeData }) => {
   );
 };
 
-const AptitudeView = () => {
+export interface AptitudeViewProps {
+  hideHeader?: boolean;
+}
+
+const AptitudeView = ({ hideHeader }: AptitudeViewProps = {}) => {
   const navigate = useAppNavigate();
   const [assessments, setAssessments] =
     useState<AptitudeData[]>(INITIAL_ASSESSMENTS);
@@ -264,25 +268,27 @@ const AptitudeView = () => {
 
   return (
     <>
-      <PageHeader
-        title="Aptitude & Technical Assessments"
-        description="Comprehensive evaluation test scores, cut-offs and student performance."
-        breadcrumb={[
-          { label: "Placement" },
-          { label: "Aptitude Assessments" },
-        ]}
-        actions={
-          <Button
-            icon={<Plus size={16} />}
-            onClick={() => navigate("/aptitude")}
-          >
-            Add Assessment
-          </Button>
-        }
-      />
+      {!hideHeader && (
+        <PageHeader
+          title="Aptitude & Technical Assessments"
+          description="Comprehensive evaluation test scores, cut-offs and student performance."
+          breadcrumb={[
+            { label: "Placement" },
+            { label: "Aptitude Assessments" },
+          ]}
+          actions={
+            <Button
+              icon={<Plus size={16} />}
+              onClick={() => navigate("/aptitude")}
+            >
+              Add Assessment
+            </Button>
+          }
+        />
+      )}
 
       <div className="space-y-4">
-        <Card flush>
+        <Card title={hideHeader ? "Aptitude, Skill Assessment and Career Recommendations" : undefined} flush>
         <DataTable
           caption="Aptitude & Skill Evaluation Assessments"
           data={rows}

@@ -15,12 +15,12 @@ export const routes = {
     addParent: { path: "/add-parent", label: "Parent Details", protected: true },
     AddDoctorDetails: { path: "/add-parents", label: "Parent Detailsss", protected: true },
 
-    
+
     // Employee / Employer Registration and Management
     employeeRegistration: { path: "/employer-registration-profile", label: "Employer Registration Profile", protected: true },
     employerRegistration: { path: "/employer-registration", label: "Employer Registration", protected: true },
     registrationView: { path: "/registration-view", label: "Registration View", protected: true },
-    
+
     studentEmployability: { path: "/student-employability-profile", label: "Student Employability Profile", protected: true },
     viewStudentEmployability: { path: "/view-student-employability", label: "View Student Employability", protected: true },
     carrierPreference: { path: "/carrier-preference", label: "Carrier Preference", protected: true },
@@ -40,7 +40,7 @@ export const routes = {
     studentApplicationView: { path: "/student-application-view", label: "Student Application View", protected: true },
 
     shortListing: { path: "/short-listing", label: "Short Listing", protected: true },
-    shortlistingView: { path: "/shortlisting-view", label: "Shortlisting View", protected: true },   
+    shortlistingView: { path: "/shortlisting-view", label: "Shortlisting View", protected: true },
     campusPlacement: { path: "/campus-placement", label: "Campus Placement", protected: true },
     campusPlacementView: { path: "/campus-placement-view", label: "Campus Placement View", protected: true },
 
@@ -58,7 +58,7 @@ export const routes = {
 
     placementOutcomesFeedback: { path: "/placement-outcomes-feedback", label: "Placement Outcomes & Feedback", protected: true },
     placementOutcomesFeedbackView: { path: "/placement-outcomes-feedback-view", label: "View Placement Outcomes", protected: true },
-     dashboardAnalytics: { path: "/dashboard-analytics", label: "Dashboard Analytics", protected: true },
+    dashboardAnalytics: { path: "/dashboard-analytics", label: "Dashboard Analytics", protected: true },
     viewDashboard: { path: "/view-dashboard", label: "View Dashboard", protected: true },
     integrationHimsModules: { path: "/integration-hims-modules", label: "Integration with HIMS Modules", protected: true },
     viewIntegrationHimsModules: { path: "/integration-hims-modules-view", label: "View HIMS Integrations", protected: true },

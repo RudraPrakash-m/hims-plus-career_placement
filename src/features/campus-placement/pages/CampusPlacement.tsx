@@ -4,6 +4,7 @@ import { Button, Card, FormGenerator, PageHeader, showToast, useAppNavigate, typ
 import { RotateCcw, Save } from 'lucide-react';
 import campusPlacementConfig from "../form-config/campusPlacement.json";
 import "../styles/campusPlacement.css";
+import CampusplacementView from "./CampusplacementView";
 
 const CampusPlacement = () => {
   const location = useLocation();
@@ -38,9 +39,13 @@ const CampusPlacement = () => {
     (editRecord?.id ? `ID: ${editRecord.id}` : "Placement");
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-6">
       <PageHeader
         title={editRecord?.id ? "Edit Campus Placement Record" : "Add Campus Placement Record"}
+        breadcrumb={[
+          { label: "Home", path: "/" },
+          { label: "Campus Placement Workflow", path: "/campus-placement" },
+        ]}
       />
       <Card
         title={
@@ -63,6 +68,8 @@ const CampusPlacement = () => {
           </div>
         </FormGenerator>
       </Card>
+
+      <CampusplacementView hideHeader />
     </div>
   );
 };

@@ -297,7 +297,11 @@ const ShortlistPreview = ({ item }: { item: ShortlistingData }) => {
   );
 };
 
-const ShortlistingView = () => {
+export interface ShortlistingViewProps {
+  hideHeader?: boolean;
+}
+
+const ShortlistingView = ({ hideHeader }: ShortlistingViewProps = {}) => {
   const navigate = useAppNavigate();
   const [shortlists, setShortlists] =
     useState<ShortlistingData[]>(INITIAL_SHORTLISTS);
@@ -350,25 +354,27 @@ const ShortlistingView = () => {
 
   return (
     <>
-      <PageHeader
-        title="Candidate Shortlisting"
-        description="Candidate evaluation, interview round tracking and selection outcomes."
-        breadcrumb={[
-          { label: "Placement" },
-          { label: "Shortlisting & Rounds" },
-        ]}
-        actions={
-          <Button
-            icon={<Plus size={16} />}
-            onClick={() => navigate("/short-listing")}
-          >
-            Evaluate Candidate
-          </Button>
-        }
-      />
+      {!hideHeader && (
+        <PageHeader
+          title="Candidate Shortlisting"
+          description="Candidate evaluation, interview round tracking and selection outcomes."
+          breadcrumb={[
+            { label: "Placement" },
+            { label: "Shortlisting & Rounds" },
+          ]}
+          actions={
+            <Button
+              icon={<Plus size={16} />}
+              onClick={() => navigate("/short-listing")}
+            >
+              Evaluate Candidate
+            </Button>
+          }
+        />
+      )}
 
       <div className="space-y-4">
-        <Card flush>
+        <Card title={hideHeader ? "Shortlisting & Interview Scheduling" : undefined} flush>
         <DataTable
           caption="Candidate Shortlisting, Interview Rounds & Outcomes"
           data={rows}

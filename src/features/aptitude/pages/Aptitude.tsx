@@ -4,6 +4,7 @@ import { Button, Card, FormGenerator, PageHeader, showToast, useAppNavigate, typ
 import { RotateCcw, Save } from 'lucide-react';
 import aptitudeConfig from "../form-config/aptitude.json";
 import "../styles/aptitude.css";
+import AptitudeView from "./AptitudeView";
 
 const Aptitude = () => {
   const location = useLocation();
@@ -38,9 +39,13 @@ const Aptitude = () => {
     (editRecord?.id ? `ID: ${editRecord.id}` : "Assessment");
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-6">
       <PageHeader
         title={editRecord?.id ? "Edit Assessment" : "Add Assessment"}
+        breadcrumb={[
+          { label: "Home", path: "/" },
+          { label: "Aptitude, Skill Assessment and Career Recommendations", path: "/aptitude" },
+        ]}
       />
       <Card
         title={
@@ -63,6 +68,8 @@ const Aptitude = () => {
           </div>
         </FormGenerator>
       </Card>
+
+      <AptitudeView hideHeader />
     </div>
   );
 };

@@ -5,6 +5,8 @@ import { RotateCcw, Save } from 'lucide-react';
 import carrierConfig from "../form-config/carrierPreference.json";
 import "../styles/carrierPreference.css";
 
+import ViewcarrierPreference from "./viewcarrierPreference";
+
 const CarrierPreference = () => {
   const location = useLocation();
   const navigate = useAppNavigate();
@@ -18,7 +20,9 @@ const CarrierPreference = () => {
         ? "Career Preferences updated successfully!"
         : "Career Preferences saved successfully!"
     );
-    navigate("/view-carrier-preference");
+    if (editRecord?.id) {
+      navigate("/carrier-preference", { replace: true });
+    }
   };
 
   const fields = useMemo(() => {
@@ -33,11 +37,15 @@ const CarrierPreference = () => {
   }, []);
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-6">
       <PageHeader
         title={
           editRecord?.id ? "Edit Career Preferences" : "Add Career Preferences"
         }
+        breadcrumb={[
+          { label: "Home", path: "/" },
+          { label: "Career Preferences and Employment Aspirations", path: "/carrier-preference" },
+        ]}
       />
       <Card
         title={
@@ -58,6 +66,8 @@ const CarrierPreference = () => {
           </div>
         </FormGenerator>
       </Card>
+
+      <ViewcarrierPreference hideHeader />
     </div>
   );
 };

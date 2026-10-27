@@ -4,6 +4,7 @@ import { Button, Card, FormGenerator, PageHeader, showToast, useAppNavigate, typ
 import { RotateCcw, Save } from 'lucide-react';
 import dashboardAnalyticsConfig from "../form-config/dashboardAnalytics.json";
 import "../styles/dashboardAnalytics.css";
+import ViewDashBoard from "./ViewDashBoard";
 
 const DashboardAnalytics = () => {
   const location = useLocation();
@@ -61,6 +62,10 @@ const DashboardAnalytics = () => {
             ? "Edit Analytics Configuration"
             : "Dashboard Analytics & Reports Configuration"
         }
+        breadcrumb={[
+          { label: "Home", path: "/" },
+          { label: "Dashboard, Analytics and Reports", path: "/dashboard-analytics" },
+        ]}
       />
       <Card
         title={
@@ -83,6 +88,8 @@ const DashboardAnalytics = () => {
           </div>
         </FormGenerator>
       </Card>
+
+      <ViewDashBoard hideHeader />
     </div>
   );
 };

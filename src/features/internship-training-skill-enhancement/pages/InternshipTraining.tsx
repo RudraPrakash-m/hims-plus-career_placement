@@ -4,6 +4,7 @@ import { Button, Card, FormGenerator, PageHeader, showToast, useAppNavigate, typ
 import { RotateCcw, Save } from 'lucide-react';
 import internshipTrainingConfig from "../form-config/internshipTraining.json";
 import "../styles/internshipTraining.css";
+import InternshipTrainingView from "./InternshipTrainingView";
 
 const InternshipTraining = () => {
   const location = useLocation();
@@ -38,9 +39,13 @@ const InternshipTraining = () => {
     (editRecord?.id ? `ID: ${editRecord.id}` : "Programme");
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-6">
       <PageHeader
         title={editRecord?.id ? "Edit Training / Internship Programme" : "Add Training / Internship Programme"}
+        breadcrumb={[
+          { label: "Home", path: "/" },
+          { label: "Internship, Training and Skill Enhancement", path: "/training-internship" },
+        ]}
       />
       <Card
         title={
@@ -63,6 +68,8 @@ const InternshipTraining = () => {
           </div>
         </FormGenerator>
       </Card>
+
+      <InternshipTrainingView hideHeader />
     </div>
   );
 };
